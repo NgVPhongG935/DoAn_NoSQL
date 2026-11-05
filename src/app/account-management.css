@@ -1,0 +1,80 @@
+.account-avatar-frame { flex-shrink: 0; overflow: hidden; }
+.account-avatar-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.account-avatar { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: #f5edf1; color: #a54c71; font-size: 12px; font-weight: 700; }
+.account-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+.account-actions .table-action { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 30px; font-size: 10px; }
+.account-actions .account-delete { color: #b44444; background: #fff3f3; border-color: #eccaca; }
+.customer-account-management { min-width: 0; }
+.customer-account-management .data-table { min-width: 950px; }
+.customer-account-management .account-actions { flex-wrap: nowrap; }
+.customer-password-action { color: #a23c70; background: #fff5fa; border-color: #efd5e3; white-space: nowrap; }
+.customer-password-backdrop { position: fixed; inset: 0; z-index: 1200; display: grid; place-items: center; padding: 18px; overflow-y: auto; background: #17283d99; }
+.customer-password-dialog { width: min(100%,520px); min-width: 0; max-height: calc(100dvh - 36px); overflow-y: auto; padding: 26px; border-radius: 16px; box-shadow: 0 24px 80px #17283d44; background: #fff; color: #4c4350; }
+.customer-password-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.customer-password-heading h2 { margin: 7px 0 0; font-size: 22px; color: #50243f; }
+.customer-password-heading .icon-button { flex: none; width: 36px; height: 36px; }
+.customer-password-identity { display: flex; align-items: center; gap: 12px; margin: 22px 0 14px; padding: 14px; border: 1px solid #f0e0e9; border-radius: 10px; background: #fff8fb; color: #ad4677; }
+.customer-password-identity>div { display: grid; gap: 6px; min-width: 0; }
+.customer-password-identity strong { color: #503c4d; font-size: 14px; overflow-wrap: anywhere; }
+.customer-password-identity span { color: #8e7d89; font-size: 12px; overflow-wrap: anywhere; }
+.customer-password-dialog>p { margin: 0 0 20px; color: #8b8089; font-size: 12px; line-height: 1.8; }
+.customer-password-dialog .account-fieldset { display: grid; gap: 17px; }
+.customer-password-dialog .form-field { gap: 8px; font-size: 12px; }
+.customer-password-dialog .form-field input { min-height: 44px; border-radius: 7px; font-size: 14px; }
+.customer-password-dialog .form-field small { color: #958994; font-size: 11px; font-weight: 400; line-height: 1.7; }
+.customer-password-input { display: flex; align-items: stretch; position: relative; }
+.customer-password-input input { padding-right: 44px; }
+.customer-password-input>button { position: absolute; top: 1px; right: 1px; bottom: 1px; width: 42px; display: grid; place-items: center; border: 0; border-radius: 7px; background: transparent; color: #9c7f91; cursor: pointer; }
+.customer-password-buttons { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.customer-password-buttons>.table-action { min-height: 40px; padding: 8px 18px; font-size: 12px; border-color: #e8dde4; color: #8d7784; background: #fff; }
+.customer-password-buttons>.button { min-height: 40px; font-size: 12px; }
+.account-actions button:disabled, .account-management button:disabled { cursor: wait; opacity: .6; }
+.account-fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.account-person { display: flex; align-items: center; gap: 10px; }
+.account-person > span { display: grid; gap: 5px; }
+.account-person strong { color: #3d4653; font-weight: 650; }
+.account-person small { font-size: 9px; color: #87929b; }
+.account-hint { margin: 10px 0 0; color: #7c8690; font-size: 11px; line-height: 1.7; }
+.account-form .form-field small { font-weight: 400; line-height: 1.6; }
+.avatar-editor { display: flex; align-items: center; gap: 14px; padding: 0 0 18px; }
+.avatar-editor .large-avatar { width: 64px; height: 64px; }
+.avatar-editor-controls { display: grid; gap: 7px; }
+.avatar-editor-controls small, .avatar-editor-controls p { margin: 0; font-size: 10px; line-height: 1.6; color: #7c8690; }
+.profile-dropdown .avatar-editor { padding: 12px 0; border-top: 1px solid #eee; margin-top: 10px; }
+.profile-dropdown .avatar-editor .large-avatar { width: 42px; height: 42px; }
+.profile-dropdown .avatar-editor button { width: auto; padding: 6px 8px; font-size: 10px; }
+.portal-app .profile-dropdown { width: min(360px, calc(100vw - 32px)); }
+.portal-app .status-blocked { background: #fff0f0; color: #af5555; }
+.driver-account-management .data-table { min-width: 1120px; }
+.driver-review-backdrop { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; overflow-y: auto; padding: 20px; background: #101c2bcc; }
+.driver-review-dialog { width: min(100%, 760px); max-height: min(90vh, 900px); overflow-y: auto; padding: clamp(20px, 4vw, 34px); background: #fff; box-shadow: 0 24px 80px #101c2b44; }
+.driver-review-heading,.driver-review-person { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.driver-review-heading { margin-bottom: 22px; }
+.driver-review-heading h2 { margin: 5px 0 0; font-size: 23px; }
+.driver-review-person { justify-content: flex-start; padding: 14px; border: 1px solid #edf0f2; border-radius: 8px; background: #fafbfb; }
+.driver-review-person > div { display: grid; flex: 1; gap: 5px; min-width: 0; }
+.driver-review-person > div strong { font-size: 15px; }
+.driver-review-person > div small { overflow-wrap: anywhere; color: #7c8690; font-size: 10px; }
+.driver-review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 16px; overflow: hidden; border: 1px solid #e9edef; border-radius: 7px; background: #e9edef; }
+.driver-review-grid > div { display: grid; align-content: start; gap: 8px; min-width: 0; padding: 14px; background: #fff; }
+.driver-review-grid > div span { color: #85909a; font-size: 9px; font-weight: 750; letter-spacing: .8px; }
+.driver-review-grid > div strong { overflow-wrap: anywhere; color: #263644; font-size: 13px; }
+.driver-review-vehicle { margin-top: 24px; }
+.driver-review-vehicle > .section-kicker { margin-bottom: 5px; }
+.driver-review-vehicle > p,.driver-review-note { color: #717e88; font-size: 11px; line-height: 1.7; }
+.driver-review-note { margin: 16px 0 0; padding: 11px 13px; border-left: 3px solid #dfa42b; background: #fff9e9; }
+.driver-review-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.driver-review-reject { border: 1px solid #e4c2c2; background: #fff4f4; color: #a33e3e; }
+@media(max-width: 650px) {
+  .customer-password-dialog { padding: 20px; }
+  .customer-password-dialog .form-field input { font-size: 16px; }
+  .customer-password-buttons>.button { flex: 1; }
+  .account-management .page-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .account-management .panel-heading { flex-wrap: wrap; }
+  .account-management .table-search { width: 100%; }
+  .account-management .data-table td { font-size: 10px; }
+  .driver-review-backdrop { align-items: end; padding: 0; }
+  .driver-review-dialog { width: 100%; max-height: 92vh; border-radius: 16px 16px 0 0; }
+  .driver-review-grid { grid-template-columns: 1fr; }
+  .driver-review-actions .button { flex: 1; }
+}

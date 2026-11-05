@@ -1,0 +1,83 @@
+{
+  "at": "2026-11-02T12:44:44.273Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "DRIVER",
+          "redirectTo": "/driver/dashboard",
+          "accountStatus": "ACTIVE"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "DRIVER",
+          "month": "2026-11",
+          "profile": {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "account_status": "ACTIVE",
+            "created_at": "2026-11-02T12:43:54.863Z",
+            "driver_status": "OFFLINE",
+            "email": "qa_test_iso_20261102124130_d@example.invalid",
+            "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+            "license_number": "QA_TEST_ISO_20261102124130_LICENSE",
+            "phone": "0900000002",
+            "rating": 0
+          },
+          "trips": [],
+          "revenue": [],
+          "reviews": [],
+          "stats": {
+            "totalTrips": 0,
+            "todayTrips": 0,
+            "completedTrips": 0,
+            "totalRevenue": 0,
+            "averageRating": 0
+          }
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/392d085f-b7b4-4aa7-8377-61dd3b6a1754?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/392d085f-b7b4-4aa7-8377-61dd3b6a1754/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754/status",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "status": "AVAILABLE"
+        }
+      }
+    }
+  ]
+}

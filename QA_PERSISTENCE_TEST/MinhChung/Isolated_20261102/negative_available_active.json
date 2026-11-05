@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-02T12:47:00.634Z",
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo"
+  },
+  "fixture": "Deliberately corrupt ONLY QA driver availability in isolated demo; restore after test",
+  "checks": [
+    {
+      "name": "Availability update rejected for active canonical trip",
+      "ok": true,
+      "uiError": "Tài xế đang có chuyến hoạt động nên chưa thể đổi trạng thái."
+    },
+    {
+      "name": "Duplicate booking rejected despite AVAILABLE fixture",
+      "ok": true
+    }
+  ],
+  "queries": [],
+  "before": {
+    "oldStatus": "BUSY",
+    "trips": [
+      {
+        "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+        "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+        "status": "ACCEPTED"
+      }
+    ]
+  },
+  "duplicateAttempt": {
+    "method": "Real authenticated API negative test from browser; not claimed as UI booking",
+    "result": {
+      "status": 409,
+      "body": {
+        "success": false,
+        "message": "Hiện chưa có tài xế phù hợp đang rảnh. Vui lòng thử lại sau ít phút."
+      }
+    }
+  },
+  "after": [
+    {
+      "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+      "status": "ACCEPTED"
+    }
+  ],
+  "restored": {
+    "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+    "driver_status": "BUSY"
+  }
+}

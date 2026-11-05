@@ -1,0 +1,2209 @@
+{
+  "at": "2026-11-02T12:53:44.984Z",
+  "node": {
+    "cluster_name": "RideFlow_QA_20261102",
+    "host_id": "4ca6b4c4-33a3-4505-b9cf-aa2a92019821",
+    "release_version": "3.11.17"
+  },
+  "keyspace": [
+    {
+      "keyspace_name": "rideflow_qa_demo",
+      "durable_writes": true,
+      "replication": {
+        "class": "org.apache.cassandra.locator.SimpleStrategy",
+        "replication_factor": "1"
+      }
+    }
+  ],
+  "tables": {
+    "complaints_by_customer": {
+      "keys": [
+        "created_at",
+        "complaint_id",
+        "customer_id"
+      ],
+      "rows": []
+    },
+    "customer_spending_by_month": {
+      "keys": [
+        "trip_date",
+        "trip_id",
+        "customer_id",
+        "year_month"
+      ],
+      "rows": [
+        {
+          "key": {
+            "trip_date": "2026-11-02",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "year_month": "2026-11"
+          },
+          "sha256": "b58d12b6c1efce3f6e6d6f0d511d73540460b6f0f991fc523abfda98eb4bdaff"
+        }
+      ]
+    },
+    "customer_vouchers": {
+      "keys": [
+        "voucher_code",
+        "customer_id"
+      ],
+      "rows": []
+    },
+    "customers": {
+      "keys": [
+        "customer_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "customer_id": "86c37c6d-f4a1-41cb-bbba-0056e56ee61d"
+          },
+          "sha256": "8af65b48a93ec2a3fd5d2638ce0838dea415faddd4bbcc8c92a50bbb6aa46c55"
+        },
+        {
+          "key": {
+            "customer_id": "f2bafd39-9ee7-4c51-a418-715fcf5b9c65"
+          },
+          "sha256": "fabb3bf6950ab61cf5190935a11cf5e6867382e68a9ca150bd98ce08a3f4af33"
+        },
+        {
+          "key": {
+            "customer_id": "96319de8-3698-4547-a036-2bc8651c82de"
+          },
+          "sha256": "2d6514926853a701b0c887e8343b01e317aa892d72d288c4917268bc4ea6cd94"
+        },
+        {
+          "key": {
+            "customer_id": "b390ddab-6176-4950-99ec-4cea03e5c8d6"
+          },
+          "sha256": "b2b875662cfe272b55bba1c4d2b400ed79662452cd39ed5ae6ebb9723e4231b3"
+        },
+        {
+          "key": {
+            "customer_id": "3ced55c8-a525-4e9e-b981-33c7a125ce83"
+          },
+          "sha256": "d64c8c21e231cbac335ca98fef5dac313feadad41fedc6d351526028c296cfdf"
+        },
+        {
+          "key": {
+            "customer_id": "51042b87-1715-4a73-a254-095fe2b96071"
+          },
+          "sha256": "be7d2c76515535b40f3179215de47efc9955a446b4879975fb537010e60717e7"
+        },
+        {
+          "key": {
+            "customer_id": "7b9dcfef-44ea-4f4f-9d17-13efa7ba6b51"
+          },
+          "sha256": "0f0e283483b522a921708386126d86ca9c8f8bfc860be0a15e988033d8bce928"
+        },
+        {
+          "key": {
+            "customer_id": "98e9a773-2719-4543-858a-0dfac0a7db91"
+          },
+          "sha256": "3f8bdb2addf415793989781b579c225d11d7c77494948e46d7d853fb0f7c84d6"
+        },
+        {
+          "key": {
+            "customer_id": "a98cef06-7401-4073-9605-17c694d266f2"
+          },
+          "sha256": "a5648506954452c5b5f65412203cac818b8b4a1540a79d435528a745f0e20a76"
+        },
+        {
+          "key": {
+            "customer_id": "362cdb7f-efcf-4fac-a9c6-d84bd71aa21e"
+          },
+          "sha256": "27ffe32b7c82e67a54cd1dfaa455383fdc7370e1dde0d9d0ec638c4c0f57dde0"
+        },
+        {
+          "key": {
+            "customer_id": "a07d8f8a-defa-452f-9ad3-8bba0d44bcd4"
+          },
+          "sha256": "9b221df2199733b80f4fc58cb8fa8f45d74b2dd7b8677a464b3821ae4de2f1e7"
+        },
+        {
+          "key": {
+            "customer_id": "1ec1a053-2ea9-49c3-b4d5-fafd42442afa"
+          },
+          "sha256": "029e4ee462658f32eec643cd38dc4c60cf85c720c2768282faa0b7d77b5a86c2"
+        },
+        {
+          "key": {
+            "customer_id": "5cecb36b-5ade-4363-8da3-d928aee38e31"
+          },
+          "sha256": "a3f73b395e26765cdacfac42ac623c7b972eb5432b2e3f643ccc77cd0cba742c"
+        },
+        {
+          "key": {
+            "customer_id": "a1076c4d-096d-4fc6-8a31-90dfade3967b"
+          },
+          "sha256": "457ad29d15c154c6fedb0256bdee6670833fcae1a4f8338089360092355f22f2"
+        },
+        {
+          "key": {
+            "customer_id": "dbb29e35-d8ec-42f5-a76d-981882a995e5"
+          },
+          "sha256": "5f210a307297ac276e4b598afcb07a8bc3e3db1e20688e9353a46e88b064ca2d"
+        },
+        {
+          "key": {
+            "customer_id": "93e2f128-ed34-49ff-ab49-758a6b526e55"
+          },
+          "sha256": "7c0873f96295ea00fd8cc3aae11f29c242f6f4702a1a5aba56c24d5533f172f9"
+        },
+        {
+          "key": {
+            "customer_id": "4b142c8f-fe49-466d-a818-bb3ea82ad75e"
+          },
+          "sha256": "124d066694b3ba866212f9e12f4fd9690f63370e35e3f29be64b57838fcac021"
+        },
+        {
+          "key": {
+            "customer_id": "19f43cb3-4816-47f5-8c18-d343af8912f3"
+          },
+          "sha256": "febe7e7269903029560dbe5f2efd1d9386d8e278afe15a10d1da9ce87da8931c"
+        },
+        {
+          "key": {
+            "customer_id": "ada2575c-c23f-406d-91cb-01db20810e9e"
+          },
+          "sha256": "ffd973c98ee8f91a7be66ab1356dbdf6be6577fe44beff27a8891c0b7a19ebc9"
+        },
+        {
+          "key": {
+            "customer_id": "7b1328b4-07e3-4b04-a022-fb6a57446f0d"
+          },
+          "sha256": "4b3379f04ec9fd2f3a8ba1507c8377320f8f9a1dd1b99e005b8957993fc3f51b"
+        },
+        {
+          "key": {
+            "customer_id": "e93a3a2d-e1cb-4371-ac56-d3c1571d02d8"
+          },
+          "sha256": "dde40f86a8766e88f591e64c5579d792873b1a149197b326d4ac98a77b944bd3"
+        },
+        {
+          "key": {
+            "customer_id": "bdfef1b0-9a74-40ff-a92e-0a221f2a0040"
+          },
+          "sha256": "9807e5fcff57aac32a67a1349a5838e586678889aa99d76614a33798347d9d57"
+        },
+        {
+          "key": {
+            "customer_id": "0b3286fc-fade-4b23-8775-0afdfcbcb304"
+          },
+          "sha256": "44d5f413b571d1b18016f86dc7de82d53d47c579549e27b0bb74161acbf09107"
+        },
+        {
+          "key": {
+            "customer_id": "2a735f11-94b8-4075-bce1-6d8b0567c2c2"
+          },
+          "sha256": "201e0367ba3f021da942e9ac978222e888bfd259e988162ea55def2ac99d1c24"
+        },
+        {
+          "key": {
+            "customer_id": "6280223b-c5ae-4c9e-88dd-6534aa55788b"
+          },
+          "sha256": "5046f77e5038a485b190632821f16adeff70fc2f5e656179143f26f848adea09"
+        },
+        {
+          "key": {
+            "customer_id": "8f8032a9-2b9f-499c-80fa-36b2295d5164"
+          },
+          "sha256": "8ab74be0d09669430b00dd79cbba7e3aa84dcd27697b15070a031cfe5d877f59"
+        },
+        {
+          "key": {
+            "customer_id": "a28e5deb-6a38-490b-b5b4-5a7e3b8ead3b"
+          },
+          "sha256": "c2078b6932afb1f48ae679f0af8b7cad6a1eb033620aa1d81054daa44ea86041"
+        },
+        {
+          "key": {
+            "customer_id": "7d224da4-0726-41c0-92b4-2bffd3cad9ec"
+          },
+          "sha256": "5a0eef62ec43c6799cf77207e2afc575b94389d07342a96ad4fe63f6bb39739a"
+        },
+        {
+          "key": {
+            "customer_id": "4680ac6b-d5dd-4668-b28f-bc9f649193e6"
+          },
+          "sha256": "5df967e2234b4aee9f14121b9fbd1784fd76f89309732e0578734ab7ea56efca"
+        },
+        {
+          "key": {
+            "customer_id": "54970f0f-4ece-48d9-8a7f-de14ff0825d6"
+          },
+          "sha256": "fed9b336594349747800e8ff5e46526f6a6756fd3b3981b5912e10adc0f20b22"
+        },
+        {
+          "key": {
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f"
+          },
+          "sha256": "8275b1ece5fdfa1a2819758e770d1ddaeab36551bfb33bb1475958e6789b773f"
+        },
+        {
+          "key": {
+            "customer_id": "8c9ce7a0-34b5-4fe9-810a-0c8214d8cee9"
+          },
+          "sha256": "0e3abfc73de5a9ddf456774f5902b877e8ad24fffba62fda48f33c82ec9d9fed"
+        },
+        {
+          "key": {
+            "customer_id": "92c188b5-bf0b-4026-9aa7-59852dbe0e22"
+          },
+          "sha256": "9a0488979df15da8867f2c7811a066cfae30905e98b87cd548279c47941ccb17"
+        },
+        {
+          "key": {
+            "customer_id": "e1513f2a-f297-46a1-92d1-2fd74474d189"
+          },
+          "sha256": "596874a9b154a745877a68b008c9a9c2dcf6695fc160fc8f9c372dcc995e5a00"
+        },
+        {
+          "key": {
+            "customer_id": "42f82871-654a-4d2a-b038-0d7050392e51"
+          },
+          "sha256": "15a9b9dfc83f75d7611698f5d63091fb5fbd0ee44c6b4057fab264333e114f8d"
+        },
+        {
+          "key": {
+            "customer_id": "88cfa078-a808-46c3-a81c-e253598b6330"
+          },
+          "sha256": "3e27d43fe2e572b90a2b7629adb512b23df5fda1b271c85e4fb72c228087eb6b"
+        },
+        {
+          "key": {
+            "customer_id": "6cef530e-dff9-40f4-92e8-9bc2c874ac5e"
+          },
+          "sha256": "21e524eadde60c21c2286d81253ff92b5fd9a22431f2da96a952ae214277cb5b"
+        },
+        {
+          "key": {
+            "customer_id": "895132d8-7dbb-47fb-b8bb-ae2c9e224528"
+          },
+          "sha256": "d74ed013b941630623ab9671cb236a1cf88f991ce31d89bb60005bdb23711926"
+        },
+        {
+          "key": {
+            "customer_id": "256d33f6-2d9f-44af-b849-5032a2e2bb9c"
+          },
+          "sha256": "c47bdc0c585aad3b91dc796a655b72853972e4d27bd4107c52ab11a4b8ab03cb"
+        },
+        {
+          "key": {
+            "customer_id": "3c628607-06b9-48dc-bae8-dbb2ca5aad46"
+          },
+          "sha256": "be51379dba793462fa1d043ef7f63f8d5707c1d40de630d81ebf8e1d72ba02bb"
+        },
+        {
+          "key": {
+            "customer_id": "d85e0d29-88b2-4c19-91d8-408f48f25bcc"
+          },
+          "sha256": "5e3ad6f711feefa916aafc50a43a8863d6d57fa0e20a1c25577e1c5732af20f2"
+        },
+        {
+          "key": {
+            "customer_id": "5ba94498-9070-456f-94a8-d0387fa432b4"
+          },
+          "sha256": "3416861580a5e3afd7bd9266fe4b2af476ff107d8184af5a4c69d00bbff74ed7"
+        },
+        {
+          "key": {
+            "customer_id": "1277ac9f-0cdb-4316-9a4e-81aac48f18d5"
+          },
+          "sha256": "1556351aaeea23839dcbfbd5f07c7deb4c84aa64e7d758c36c8f47795a2ab28a"
+        },
+        {
+          "key": {
+            "customer_id": "d85dda7e-daff-4f9e-b8b3-04ff9503dabb"
+          },
+          "sha256": "0884a3ed9db63a10e7e2b00952efc8d358614e635e385b311667be263dd51d2c"
+        },
+        {
+          "key": {
+            "customer_id": "0da91335-8fde-455b-a593-692cc4b58177"
+          },
+          "sha256": "9d4448af2838ada2f3276dad009ae91d5b105a34f835eee3ebbda934d8880903"
+        },
+        {
+          "key": {
+            "customer_id": "ab39e493-260d-4a64-9d4d-16344cacb1d1"
+          },
+          "sha256": "0c60b63a3de1c5679fa34ff4047a927609e8683b312ad55059e8878a407ae6e3"
+        },
+        {
+          "key": {
+            "customer_id": "5a2c4e4c-726d-443f-ae82-80fd025b896b"
+          },
+          "sha256": "0844326064a9269a2c59d89477c9522a4fcf941afe88e105a253452d2bb35948"
+        },
+        {
+          "key": {
+            "customer_id": "ad0b39c6-3647-4bea-9f7b-6a41fdbce429"
+          },
+          "sha256": "a292f453887474655b8d394cb5af0c78a8a28a459b49c4893ece5bd55823e90f"
+        },
+        {
+          "key": {
+            "customer_id": "cfcb630c-a0fc-43d3-98b9-3c8812614b58"
+          },
+          "sha256": "78f5bcfec646f0325052a5147725d6808deb705042d2da74df54546a39ac5071"
+        },
+        {
+          "key": {
+            "customer_id": "d2e051e5-0fad-4178-b416-ec81ea13230a"
+          },
+          "sha256": "c9800d800251d08e981d9f0bdd0bf3c6a8e0db3c91fd19d3bb0a57e5de2cf3e3"
+        },
+        {
+          "key": {
+            "customer_id": "627aa042-27c6-4c8f-9018-584cbb363a7a"
+          },
+          "sha256": "a3319ded0762c0a319846b5bea886ec3be8f0c7c888607746633c6551de9a89c"
+        },
+        {
+          "key": {
+            "customer_id": "08baa0cb-4c49-47b7-9a2f-fdbca4983964"
+          },
+          "sha256": "d8a296af0d9281d8aa2c86c6b47d93572a534df768f2b506dffa38a4798fc1f4"
+        },
+        {
+          "key": {
+            "customer_id": "46889328-a4a4-4595-9f9b-ac8187f20ee3"
+          },
+          "sha256": "f83cebb863ff0dd37b5e6e4dddb5ebe522a207d76a32e28bf2b37d64514e54cd"
+        },
+        {
+          "key": {
+            "customer_id": "b8b88c52-503f-480b-9daf-08457dada747"
+          },
+          "sha256": "24f3a62c7aebc18b1d28228ed90477a87f81d07cbd1439820fd66d7fa966cff7"
+        },
+        {
+          "key": {
+            "customer_id": "8fa5c824-3808-4418-947d-75bbf3db3c0a"
+          },
+          "sha256": "482ba40cba68d4721ca2cde772ad13a8a7492f3e55fcc18bb6cf632e41b8a5a9"
+        },
+        {
+          "key": {
+            "customer_id": "e238f579-2c9e-47a8-9ea1-c83c5c0c1e5a"
+          },
+          "sha256": "4c6eabb2e62fcc603be006134c906d08b73369ba84aa882acf1d81818a1ec531"
+        },
+        {
+          "key": {
+            "customer_id": "d6dc74eb-3f89-47d0-a042-ecbcc59a995b"
+          },
+          "sha256": "e0cb4e9a31707252b0bf3612e317341e595279da316174aef2cfecc1358f14ff"
+        },
+        {
+          "key": {
+            "customer_id": "59b7994b-4295-46b9-850e-5b69ad941c14"
+          },
+          "sha256": "390cbd86eac5595164d029ed5a17fc90acce84ea84291d13a994c1a2a1626e79"
+        },
+        {
+          "key": {
+            "customer_id": "c9093c7f-efb7-4562-a28b-7bff256a9277"
+          },
+          "sha256": "54a66b45e69e6d6ea6801f7a87e42cc187514cc6255c95bf3148969c81930bcd"
+        },
+        {
+          "key": {
+            "customer_id": "e1f863c2-0344-4b08-9287-1efcd6135757"
+          },
+          "sha256": "6b0e09e42ef3076b0b9deca05dfab4eff0416ae1213e34aa4ad47065f5949b64"
+        },
+        {
+          "key": {
+            "customer_id": "97071c58-618a-4150-8153-db5183041f7a"
+          },
+          "sha256": "4cea70cb3c2a5941b207460dc11d4cff4a3aae7bbc9490f0bd65c845ac494731"
+        },
+        {
+          "key": {
+            "customer_id": "d63314ad-3bab-40e8-b655-af21e60afe50"
+          },
+          "sha256": "49ae4a1aead0c859c8b0479e1d8d2f434ad1d404116156523b87959166c8354c"
+        },
+        {
+          "key": {
+            "customer_id": "79f4ef1a-5e63-45c2-b97e-d47a195f5b58"
+          },
+          "sha256": "ccdf16bec01d8be61025d9a7e9a85b9a520a1c8fa6782c9fd674036af45d0929"
+        },
+        {
+          "key": {
+            "customer_id": "504643e4-3a8f-43b7-94ba-f7f794a98d62"
+          },
+          "sha256": "7c0cbf297bad82d24bb5c1f68fc2e1796b8571fe14b9239332c6d86a96d5b092"
+        },
+        {
+          "key": {
+            "customer_id": "18b5b8df-e1f4-4804-9030-8583858518e8"
+          },
+          "sha256": "691470596012003af78681db4387804970b746b4446d0b1b81d1bdaddb9deb37"
+        },
+        {
+          "key": {
+            "customer_id": "b94dad9b-7b25-4dec-8469-b65b98fb418a"
+          },
+          "sha256": "6aa3261c8b72a928af133da932c6f04cc062eae94d8f2cbeedff70a5a5ddbde0"
+        },
+        {
+          "key": {
+            "customer_id": "98392af9-2b7f-43d7-9a53-d24902530b91"
+          },
+          "sha256": "10eae702ce3d87e2fb724bbc90018a2dff3810385de1f60d653afceef8bb9a33"
+        },
+        {
+          "key": {
+            "customer_id": "227c23ec-2883-4ccf-b3dc-f4d1587f8ec2"
+          },
+          "sha256": "c4453798d6f20cfb99d625f5c399a119c6ae8efb493dd41806687339a38f2433"
+        },
+        {
+          "key": {
+            "customer_id": "d3e0ce5e-8b02-4721-bf06-19f937c4e43b"
+          },
+          "sha256": "ec652084ab1f5dd20a39f341004c3039eee845bb0b4b3506224ccfbcb89a9bdb"
+        },
+        {
+          "key": {
+            "customer_id": "cde15cb3-6332-4be5-a58a-363664b089e9"
+          },
+          "sha256": "0b15a01c0c3c1e4b97e11993d0e674c88b7537aafeec8f5e87ebfae9a458e068"
+        },
+        {
+          "key": {
+            "customer_id": "4f041827-dcfe-4ef9-8964-ea7ffdfd53b9"
+          },
+          "sha256": "37c3ee5c32ac4563465f42a805bbb213d96f04bdb9d3b76d19ecda80b51e8b1e"
+        },
+        {
+          "key": {
+            "customer_id": "0ac42a21-c5ed-4190-a84a-53270537cca9"
+          },
+          "sha256": "8fa2fdb3deed3e0eab3d6493e7ce08c75d8db5b5e48988acfe9340060c43c900"
+        },
+        {
+          "key": {
+            "customer_id": "42a42b87-6a39-4248-9bcd-3522c2f015d2"
+          },
+          "sha256": "40ccc0a8265f69d48a70d4d605132e3d5e97571e3826b34c8a7a53165a59d7bc"
+        },
+        {
+          "key": {
+            "customer_id": "caa53d98-7e5f-46c7-baf8-6bf14598487f"
+          },
+          "sha256": "948860ef433b640ff73e24d995339ea9ad11af90f91d5281c4128570a9965618"
+        },
+        {
+          "key": {
+            "customer_id": "a69dabb0-a94c-45d4-8cc5-dae78f053b13"
+          },
+          "sha256": "c3a22a71ccda25a5fb627577a11df0a2352d1a873641e1372cb18f719f6c0d1e"
+        },
+        {
+          "key": {
+            "customer_id": "fff45377-79c4-4a1e-af76-aaa6f699660e"
+          },
+          "sha256": "0b2166531307720f238fdea2dde4a468245134508b6f9fb86e7680bdd799364e"
+        },
+        {
+          "key": {
+            "customer_id": "26ce7c09-1e77-4847-9953-c8799fa65889"
+          },
+          "sha256": "6d0abd60d506c3b1e630b27a47f69dfa4db4d83bff242fa46f887ed62aa2d1a6"
+        },
+        {
+          "key": {
+            "customer_id": "9ad380e7-e9ef-4d14-9cc4-8ebf80f84157"
+          },
+          "sha256": "db15f867c0e52c47e926e59cf972c962d0fa9e0723de42746f9c64e1be74a727"
+        },
+        {
+          "key": {
+            "customer_id": "c58ef290-615d-490a-8fce-3a5a4b191b13"
+          },
+          "sha256": "766a5a8879133b7abdeadcce4a3ef2804e9f3c792888471ff07a0bbe4b175094"
+        },
+        {
+          "key": {
+            "customer_id": "4fc1a951-b93f-4b24-a1f9-eb6526974714"
+          },
+          "sha256": "fa18897cea07ae3987b4847e14a0c7386913b60ad4fd26259060de6021b7d648"
+        },
+        {
+          "key": {
+            "customer_id": "e54e6d71-9748-4f09-a874-a7828b288e18"
+          },
+          "sha256": "9c4df3fd1c53df512031f12e4af1569722087be8c259a80fe23d3a56e62a1a9a"
+        },
+        {
+          "key": {
+            "customer_id": "3bc862f3-8b26-4b9f-96ee-2e5535cec5d8"
+          },
+          "sha256": "4c357ddeaf656222a130a912969d8de3e386e6d9527c7868a5ed327705e84fc0"
+        },
+        {
+          "key": {
+            "customer_id": "bfb28a46-7058-430a-b619-4f57bbfb73a7"
+          },
+          "sha256": "65f53c8d0dec333097b6a60ec14bc603608793b1bc0b00b2b013b90a0a920fee"
+        },
+        {
+          "key": {
+            "customer_id": "96d0ebb6-f9e1-48ad-ae08-ce0ec52f632e"
+          },
+          "sha256": "4c3a3e926bc3a5ca0f29cd81b0a99ede6c5e6fd4161057568f49029dbad53a12"
+        },
+        {
+          "key": {
+            "customer_id": "7c2807e6-d70e-4168-9903-b86b0d5062cc"
+          },
+          "sha256": "0da5475c2d9a081eb142eb243b350ab2fdc3661934494c400b87a8ac5aad6535"
+        },
+        {
+          "key": {
+            "customer_id": "ac428af1-8bdd-487f-b23a-6827c5349e84"
+          },
+          "sha256": "cb50f904100ca84504cc7b3c5190faf4d48b9650c6ce33889087314dd2508096"
+        },
+        {
+          "key": {
+            "customer_id": "4e74de10-5300-4558-b87c-412019b4a2ac"
+          },
+          "sha256": "b042df991fb288b54e4be5399a0c8788c8bc17fe1b9721aef129b0355eb0df87"
+        },
+        {
+          "key": {
+            "customer_id": "9600738f-99bc-470f-bbd3-00404236052a"
+          },
+          "sha256": "425429dbd3114f85e0489ee38b90ee65a0fda1dca4db7729ebe536fb71f55071"
+        },
+        {
+          "key": {
+            "customer_id": "ba51bebb-0f9e-46d7-b716-7528eeb6c26a"
+          },
+          "sha256": "20c64dbed5987bc2ed785e91edfa055863ddfe9f7c1bbde11a34edd873e9c596"
+        },
+        {
+          "key": {
+            "customer_id": "32295f02-5ef6-4b50-983e-99259579b605"
+          },
+          "sha256": "c9ba99212f1662f3d4573cfc39464a2452a0520a9f23e6a79e198df1afab00c6"
+        },
+        {
+          "key": {
+            "customer_id": "9dae0f06-1a23-4875-bac6-8b50a70a8b97"
+          },
+          "sha256": "9b0c63c6d9d73cf4b1073f876acdb5e68004a268cdfd0bddc05cb64e9d54c048"
+        },
+        {
+          "key": {
+            "customer_id": "ead2b1e8-2c7d-439f-bbf7-614e4b565914"
+          },
+          "sha256": "f05922b596ee75c35dc68529c06233f2b16158f581fe7bd56a399c36da13adb9"
+        },
+        {
+          "key": {
+            "customer_id": "725a12b2-3be6-4eed-8d5c-b3016edb82a4"
+          },
+          "sha256": "fee2399f5a82e42393f09a509e7af4d0f71e859d9ba0dafddb434999276691a1"
+        },
+        {
+          "key": {
+            "customer_id": "df8260e3-cf92-4a13-90ad-2fce23a49400"
+          },
+          "sha256": "8be2c2e7780bd17e18a319b884d4f3374bbae0f147df7a0893cd13d70d938581"
+        },
+        {
+          "key": {
+            "customer_id": "33245c2c-dda4-4317-b87c-5161876eaea5"
+          },
+          "sha256": "46790c956c47a2f7dd564c09dfcb7f30e56231cc7cc3c8212e1b9fe16a3ddd6e"
+        },
+        {
+          "key": {
+            "customer_id": "ab82eaaf-0c09-459c-8793-592c2634762f"
+          },
+          "sha256": "1694b2dec2147b10cda49c01287ecede0a7e160f16fa2ef9b87bc02ebb080595"
+        },
+        {
+          "key": {
+            "customer_id": "05d532db-fe40-49f0-9841-005613ccb0bb"
+          },
+          "sha256": "1cd22ed8b473d23016fdc6510e9fea7b586f38e2be5b82da0d1a5579945b4bb5"
+        },
+        {
+          "key": {
+            "customer_id": "9634478b-94cc-4d11-acd7-28a7db1735a9"
+          },
+          "sha256": "d72533cb5242867c0b693f82e1dbc1ae3fc535763c6dd114c452715b35c66037"
+        },
+        {
+          "key": {
+            "customer_id": "40e0babd-cf0c-4606-b70b-a9408c3ba9aa"
+          },
+          "sha256": "82e60e05faa012e8123d646edc1e484058595df2d13b7659ba5b1850184a2ae2"
+        },
+        {
+          "key": {
+            "customer_id": "fffd8b99-b1f9-44ef-be24-03e736b391b8"
+          },
+          "sha256": "9bf18b01d94688983b46379beb45ba9e33735e4de219f0231f779460c89896d6"
+        },
+        {
+          "key": {
+            "customer_id": "a6913e39-f10d-4af2-8fc2-bb48c39413ea"
+          },
+          "sha256": "db1ea884662546821f9e7e7cace0bbc7f298093122979aeccd7860cebee25b8c"
+        },
+        {
+          "key": {
+            "customer_id": "d124dd16-7a64-41a1-9300-8e9f154488be"
+          },
+          "sha256": "61f8bc98cd9544c8751cc0a6b65a4469f385496e55bbe1792f51c1495a1655b3"
+        },
+        {
+          "key": {
+            "customer_id": "8a8cf28e-d803-456a-8bc1-aef103e7e286"
+          },
+          "sha256": "83fed01d1eac98c19562c835c3f8577d34b0d89b629797e69bd5bf6625aa46d3"
+        },
+        {
+          "key": {
+            "customer_id": "e3535ed7-284a-4bde-8154-64a2c87b9ba5"
+          },
+          "sha256": "42f35b5309c1c0cf6a0e5fa5486d4b99cda9162317d389e295d1309a52663fc7"
+        },
+        {
+          "key": {
+            "customer_id": "c4145a9e-1b28-42f5-ae62-42491747079c"
+          },
+          "sha256": "c39ba6e7833affeb230340fa3ec29dc4a5a8a59c8a87f829c8c83de8069547de"
+        },
+        {
+          "key": {
+            "customer_id": "b86c2a62-e660-474a-b9d5-cbe5d9448ab4"
+          },
+          "sha256": "2112c8fca38a236981b533d63d22e49aafa0325c35f7c4ece97071df2275a8f5"
+        }
+      ]
+    },
+    "driver_revenue_by_month": {
+      "keys": [
+        "trip_date",
+        "trip_id",
+        "driver_id",
+        "year_month"
+      ],
+      "rows": [
+        {
+          "key": {
+            "trip_date": "2026-11-02",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "year_month": "2026-11"
+          },
+          "sha256": "694eaf7a80dd5ffa2a904d3a2be5e0a99e7c7a48a3bf5baba0935d4cc83491f8"
+        }
+      ]
+    },
+    "drivers": {
+      "keys": [
+        "driver_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "driver_id": "a3782de8-84c6-41bd-ae92-1714aed2a2dd"
+          },
+          "sha256": "48ab52a1d417df22b805bca9d296f7aa6f0ac24d5e5d871540e205e4e8ab7afb"
+        },
+        {
+          "key": {
+            "driver_id": "00c98cb3-615f-4412-af54-c2729ef51d68"
+          },
+          "sha256": "64321c62f7e812aa05f7df62c2bbf060a4b516398484181841a5cb2008a33422"
+        },
+        {
+          "key": {
+            "driver_id": "e2e5e7a8-4c59-4f15-a912-fa5a0d35e53d"
+          },
+          "sha256": "e20a3b78c9a5506cb34d18ea4a6eb25b85b6c45ce037cc3ff747e4f7f4c95a5d"
+        },
+        {
+          "key": {
+            "driver_id": "92c0bc1a-3d7b-4315-bfd1-f14e414066ab"
+          },
+          "sha256": "ef9c214d42212d80660928fd71a0d246052bda93d7ffa46d201a8b969cda2cee"
+        },
+        {
+          "key": {
+            "driver_id": "4273ab30-6a7b-4d3e-97dc-2f8369aa78b9"
+          },
+          "sha256": "21eceaad051a0b4162fea09db92cc425deebf57731aad154b4b479a9ade8d754"
+        },
+        {
+          "key": {
+            "driver_id": "a63bca64-f514-4964-ab4d-1cc791714473"
+          },
+          "sha256": "346f67e1dcbb48dded7699e178daa4b0481d3d356f82f491f01fa674ba092a8f"
+        },
+        {
+          "key": {
+            "driver_id": "52eccc56-426f-40a3-b671-4e556a61b27f"
+          },
+          "sha256": "6648b4db1853f2d848ab2a98b9f73849e470465771fbd4c4a2cfe646c748bc87"
+        },
+        {
+          "key": {
+            "driver_id": "a0a15141-2026-47cd-adfe-51f2ddac6efe"
+          },
+          "sha256": "5157ec21da533dae3cb9bb50d3f18e79477b0126841fd15687d6220791b1b1f3"
+        },
+        {
+          "key": {
+            "driver_id": "6aa936f1-6542-4e9d-b0ed-49d7ad6d11e6"
+          },
+          "sha256": "e2b90d5ce1e5307baad94bd36e8f93bdc99861c22efabe7719dcaa9d8f112dd9"
+        },
+        {
+          "key": {
+            "driver_id": "46cb513a-f57d-45c6-96be-9023d3337372"
+          },
+          "sha256": "78616cf05f99485ba8f8f558f99740e9deade59e5f292d5f345da9dc96bfdbba"
+        },
+        {
+          "key": {
+            "driver_id": "1c5332a8-2e41-4db9-9811-0b5895fc3a43"
+          },
+          "sha256": "57638bda27ff592ef98fffe31886652ab651a52cd3a1412fe9251dc361dd8610"
+        },
+        {
+          "key": {
+            "driver_id": "9871fc08-8e93-4060-89d0-19cee980ebc3"
+          },
+          "sha256": "20090e40397357092768f64715a6e737e9c3846f6e6c781600f3b324a066d114"
+        },
+        {
+          "key": {
+            "driver_id": "9f500edb-ffb6-4c05-9aee-142f21c5fd53"
+          },
+          "sha256": "e489a1bfd8f814b84f3ecdc1d8be015da835fa1fcf18c3ba222fbec42650e6ab"
+        },
+        {
+          "key": {
+            "driver_id": "34ebaf8f-3434-4502-824f-bd29d92e64a7"
+          },
+          "sha256": "62e0e3658b2507bb004536d528feaf6e8c0de889b53973d72f1d0e72ca3dc81a"
+        },
+        {
+          "key": {
+            "driver_id": "3a44a678-a69d-4922-a508-6b6c8ff514c9"
+          },
+          "sha256": "ee0e3ad778bb4128d25735dcb158f92bdfbac276ecafb6bb601b3e780ff27ed1"
+        },
+        {
+          "key": {
+            "driver_id": "7fc772e1-ea3d-46fc-b44d-008f84855175"
+          },
+          "sha256": "ed04d21fb8e3ecd27171458de4f5693a357bbe560b4506c8ccaf51714121cb82"
+        },
+        {
+          "key": {
+            "driver_id": "e8327d12-f20c-4671-a342-43093ef2b7c7"
+          },
+          "sha256": "e0381e706f46d6c47c31c3753ee56875a45d1d536579f154a91b3748f34c9c9c"
+        },
+        {
+          "key": {
+            "driver_id": "29175f93-cc6d-4966-bcd9-7ba917745492"
+          },
+          "sha256": "5079eaa424a20a3fbd5a0464815236c4681f0226de0ca5e475c28e399e1e56a7"
+        },
+        {
+          "key": {
+            "driver_id": "8822e13e-b58f-44b6-9e31-d23621683a4f"
+          },
+          "sha256": "71eba48255a2ceb4b1ebb57b91e8ed47ed31403a243d2a66c01c33d38c0ead30"
+        },
+        {
+          "key": {
+            "driver_id": "b23e8a21-b8e9-4697-bfd8-4cf5b7e896d2"
+          },
+          "sha256": "6b8085e4eb85ed0562e51158a07ace7c0e52822a5717ba7bab315e3ac2d7a20d"
+        },
+        {
+          "key": {
+            "driver_id": "c2eb1709-aafe-4795-96f4-db49cf9278f5"
+          },
+          "sha256": "6c2dd5eaf3d3ef9286e1b6f20306e63426c1b40c04b814a2ce2879e2454fe455"
+        },
+        {
+          "key": {
+            "driver_id": "610eaac1-8f78-4282-a124-78dc8756a54b"
+          },
+          "sha256": "91a07c3f1aaf06bc148237b67e60c4e9eafc74ccc855ecd793f08af7a7c0bdf1"
+        },
+        {
+          "key": {
+            "driver_id": "2f57f071-3f4e-4efd-bf13-a7355e8e4e22"
+          },
+          "sha256": "4eebc68b240437a7c5a524181805e22de6dd477b52df06250f3dc6cc2edae19f"
+        },
+        {
+          "key": {
+            "driver_id": "fa7266aa-5ce1-4c84-8472-29f68d275e44"
+          },
+          "sha256": "ae538dd9fe5cc7c52f012f06992d9b92177d025c361dc653d3ff488c0bee72d7"
+        },
+        {
+          "key": {
+            "driver_id": "0511ee09-202f-401a-baf8-5592f2b5bfbd"
+          },
+          "sha256": "a97ec3107b39361cfab54908dc84dd8dc69ba3482e09af6cfc98128b9190ea79"
+        },
+        {
+          "key": {
+            "driver_id": "fa56fc00-9671-4e63-bf00-3a957e60bf3d"
+          },
+          "sha256": "d6fea9d4f5a7ce8a0a9e355fe5afaaef01e9a14351e3d8ff28ef0371d82bda47"
+        },
+        {
+          "key": {
+            "driver_id": "6644e4d3-aed1-4faf-9bd5-9811b08dd322"
+          },
+          "sha256": "8a2321425fbcdcb3ad769dbf02e7a92271086fe0e0a91c8e4feafaf730822c3c"
+        },
+        {
+          "key": {
+            "driver_id": "caf1011e-1088-40df-8890-ec670aa71443"
+          },
+          "sha256": "f9bfb33be1a125a0cc5bc08347cd5e14420ce3bfbd735f41a5d5bb99774a5039"
+        },
+        {
+          "key": {
+            "driver_id": "f88d6003-a55e-4b78-894d-bb21bc09fa3d"
+          },
+          "sha256": "d15e2a566cbcf4d26170876a4e608bae84cab1a949325be84d76089648235661"
+        },
+        {
+          "key": {
+            "driver_id": "e541f173-00cc-4741-b126-2c80833157ed"
+          },
+          "sha256": "28dd517a16f7ac1f2327a235242fe6a860bbace6a202ed3b8fc69f13c2b22b39"
+        },
+        {
+          "key": {
+            "driver_id": "eea165ee-6b4b-497d-8f90-15ff602e3247"
+          },
+          "sha256": "9e04c761e0d6854573a1e04148a51065a70715912ae0cb5bf09f955048849991"
+        },
+        {
+          "key": {
+            "driver_id": "3fa24ea4-264e-462a-9f11-90826e64f455"
+          },
+          "sha256": "e355fa71bc7036ad6fe61c332c103b95488de03210f0f224116fb2a573b8b930"
+        },
+        {
+          "key": {
+            "driver_id": "60818fe6-a31c-44c3-a9e1-903b3c59133a"
+          },
+          "sha256": "704bcf9a29fda5751dc562b494126f57d9eed2b589b779ae3d9d640c12a60a3a"
+        },
+        {
+          "key": {
+            "driver_id": "f5d7b5bd-67e7-4ac0-823f-6812e5e43511"
+          },
+          "sha256": "4a9654838de543bbb88b6e2e055843e88d01e4b339975be75fffb5e4a2c4f5bd"
+        },
+        {
+          "key": {
+            "driver_id": "3a4c8f40-2afd-4963-8b7e-f0e046b472db"
+          },
+          "sha256": "22ab66f12e5f38a525920eeb9b744215c04d87d5a29625ed5ed90a73c655bf95"
+        },
+        {
+          "key": {
+            "driver_id": "ff89ada7-90ad-4644-a857-68611b90d417"
+          },
+          "sha256": "4ce7f5d9983f0b05689c16f754c19c09d61407ef7a7ca647f32acf06009cbb5f"
+        },
+        {
+          "key": {
+            "driver_id": "b175b908-ba24-4e90-86be-7f3c974431ad"
+          },
+          "sha256": "a0a1d8620b969748086dcfda513cd749ae63e0d4ff7abbc807c849f15c2ea99c"
+        },
+        {
+          "key": {
+            "driver_id": "c9a98372-3ada-4ef3-ab12-064add7f5ff2"
+          },
+          "sha256": "e8cc0f03449664b47a86e62350e213cbe4b54e75dc54d3fc44a4666f54297c7e"
+        },
+        {
+          "key": {
+            "driver_id": "61ccb9bc-e5e6-4b43-afd4-a3ad7f9a49cf"
+          },
+          "sha256": "fb2d05172f7df43fc1940d37181f6e85c55bb9379bad3e604a8146fc3ddb0fb3"
+        },
+        {
+          "key": {
+            "driver_id": "66740133-9e85-461e-bd24-b865c2f5db5f"
+          },
+          "sha256": "a3cd2a5f04a831a7d6ab1786fedb9abe8031950a51e57a5e5827e7398729cdd6"
+        },
+        {
+          "key": {
+            "driver_id": "ee7b6a5e-19c3-46d2-b162-30dfb7bcc780"
+          },
+          "sha256": "f053732dfc53b5fb59a0c46abbf11ae0eff58904b20dc3b5e3e4e1bbfe3fe3fe"
+        },
+        {
+          "key": {
+            "driver_id": "025f62fc-9077-4b3d-81f2-de293488cba3"
+          },
+          "sha256": "af25723f936bad3f5fcfd179050ba839e4250ed0a71427373057c2fcee402ceb"
+        },
+        {
+          "key": {
+            "driver_id": "960825d6-a510-4171-b13a-69dfc10aeb12"
+          },
+          "sha256": "c96084f0eba1c41c09838ce3a2937ef8301d03cece53d31dde7afcbbaf0040c3"
+        },
+        {
+          "key": {
+            "driver_id": "052521e2-d7e9-459e-946f-b396469afaed"
+          },
+          "sha256": "5a06b1559e43b70d7463922c9f8435ae16c8f518350f021ffce7fd986c684b65"
+        },
+        {
+          "key": {
+            "driver_id": "6e41e242-9b8f-4fc4-9d92-5b89a5be494c"
+          },
+          "sha256": "a315e67059b4bd1e678773ff4914432f88ba9bd08b373b3ba3b45ab2a059c634"
+        },
+        {
+          "key": {
+            "driver_id": "9f293a75-2927-48f4-a409-03e5ef35ce46"
+          },
+          "sha256": "77c70f2747752aade4c36bf59552e311f4b17f732a97ba4b99299c725bea3912"
+        },
+        {
+          "key": {
+            "driver_id": "e01e6392-6ea6-4c5b-bfd0-a71a00172934"
+          },
+          "sha256": "472278fd474f9aa68acba7b18cbef9e3a9ebd66d5fa733aa81cc6c4a7d22be37"
+        },
+        {
+          "key": {
+            "driver_id": "27f2ef0d-6438-4358-af56-c9411a1f0d32"
+          },
+          "sha256": "b16dd0b104dba3c32798e7e754c85f0f1995d10beca3bb8f7c5dcdf00f0d84be"
+        },
+        {
+          "key": {
+            "driver_id": "4d3caa77-cc38-4305-b336-5ca598cbede9"
+          },
+          "sha256": "1c26a0ca9b706fb29140745cb625bb15f60f6c0664e051a6f430d33a2c254f38"
+        },
+        {
+          "key": {
+            "driver_id": "98499352-1e55-4a0d-b0e7-be78edccb6f0"
+          },
+          "sha256": "54ffd429a698a4e96b242e6d0208a03e5f31c209e7f34b4441f86f4eff4cfede"
+        },
+        {
+          "key": {
+            "driver_id": "cd96191f-e637-4714-8b8b-8d2a4635c9fe"
+          },
+          "sha256": "3a9e7f958402de73807e554a6d86d98f5f784a567e7208a6dae4fef25f4fb847"
+        },
+        {
+          "key": {
+            "driver_id": "a5abe84c-f0a3-4517-8daa-106e1d5c2029"
+          },
+          "sha256": "5b295e07779b17a9d5f619173c35d2385075c6d5143debf16d02c17f461533cd"
+        },
+        {
+          "key": {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+          },
+          "sha256": "739218a2beb76e6bbd92bd0ef9414cb4696ec42ae65a8c8585f9bd4394e61873"
+        },
+        {
+          "key": {
+            "driver_id": "00890ff5-cd9c-489e-bb0f-6a490306f628"
+          },
+          "sha256": "a698229fdf2b281e6801ac022894eace804af399175ad48a318116fd237668d5"
+        },
+        {
+          "key": {
+            "driver_id": "6d1d4c0b-38b3-438c-995b-ca3103f0e260"
+          },
+          "sha256": "599859d03755b8491ae4e73f0362e5af66d5f8551d930bb18f8d0d2c67371266"
+        },
+        {
+          "key": {
+            "driver_id": "c9368a94-756d-4bee-89e1-945d2f00c3a9"
+          },
+          "sha256": "39b9922d00677f4bdc32eda5d1b242830750921215e21136003ee16261e1f3de"
+        },
+        {
+          "key": {
+            "driver_id": "6058ef9e-af37-45f3-a96a-d9f5ad0b926e"
+          },
+          "sha256": "48b6569489a4ef80f583b673c4146d914806fb654fe680f715a6bbc08d909bff"
+        },
+        {
+          "key": {
+            "driver_id": "d80e95cb-d4e6-4ff6-8523-8d46436d62cf"
+          },
+          "sha256": "9893a968e275ec9e06488ed9bab291051a14aff97b6b4cd673267fab37534821"
+        },
+        {
+          "key": {
+            "driver_id": "5a5f6cb0-19a4-469a-b5b8-4fdca773dbdc"
+          },
+          "sha256": "ea180e7f2b69ec4868e0bc800326c2bc25e0d4a756339ae3492eeea40c6ae7ce"
+        },
+        {
+          "key": {
+            "driver_id": "d662c998-4663-45ef-a2e1-b895b25532d2"
+          },
+          "sha256": "0d92a0802da28b9a2045cbf725b47ce0ac35fdb4ed59e2b32d7a00207134606d"
+        },
+        {
+          "key": {
+            "driver_id": "309af0d4-f094-4594-94e7-1f4fe03d6bdc"
+          },
+          "sha256": "896f30f9e23eec16a6ad96599d9bb036a841dac5f448431b01420236dde1a33d"
+        },
+        {
+          "key": {
+            "driver_id": "844cb445-d705-4a9a-85e6-3cf5c4921575"
+          },
+          "sha256": "7627ddc8afc60a7cf64cb92c8e3206b01fcbad088497e98d79705f0b50b1462d"
+        },
+        {
+          "key": {
+            "driver_id": "7e2cc4c1-cef8-4b25-8234-dd5ad35a731e"
+          },
+          "sha256": "117716b36a879d4184141768651e938db945cb1b6f685ce12fc8b305d0d0bdbb"
+        },
+        {
+          "key": {
+            "driver_id": "786e8c3d-cd99-455e-bf87-8c4893b21c09"
+          },
+          "sha256": "eb4261afb03047c9978035b9ee3dd34f94fa0dcf10aee1ee33be28093749423c"
+        },
+        {
+          "key": {
+            "driver_id": "a9b692db-5de7-4373-88b6-e0496f957f5e"
+          },
+          "sha256": "559284acf396c297e324778635872f37525700855debbb5ce1d0ff46c11d6f21"
+        },
+        {
+          "key": {
+            "driver_id": "97ca224a-10e0-4231-90e4-01b497d71832"
+          },
+          "sha256": "8a111f20a2a88c555b36fbb1e14836c99b4e57cd2dffe285a59f5e7d256d239d"
+        },
+        {
+          "key": {
+            "driver_id": "fb2b586b-9812-4bb0-81a5-cd45a8af7800"
+          },
+          "sha256": "c097c55e827e6371747c082579d9a04ed566aaa9f295ada1e3ee80fdc8c6ed22"
+        },
+        {
+          "key": {
+            "driver_id": "5ddc274b-57d6-45f6-b5d3-312d6e1ea429"
+          },
+          "sha256": "5132cf0feda5f8faceb6004091f74c4e1eeb7c02c51ec137b4fcb4ef8c097a11"
+        },
+        {
+          "key": {
+            "driver_id": "63cd706d-d177-48e4-b94b-a433b0889016"
+          },
+          "sha256": "eac1759268f984c34a01fa12bd009a86e4982e1206ddaac497886690a6adc051"
+        },
+        {
+          "key": {
+            "driver_id": "cf64c7d7-6bb8-4f1d-81f4-35387159279d"
+          },
+          "sha256": "b8b1c55f3e5a3a9f36e2f89a2ff7db348fb2f562487d5ce0d30cffad27138e45"
+        },
+        {
+          "key": {
+            "driver_id": "4b4d4b74-af7a-42e6-be99-cf75dadc5516"
+          },
+          "sha256": "313944b14e89bb22a0d8366e387a09a425be9ca6c7b2476af1f54b766c592e0a"
+        },
+        {
+          "key": {
+            "driver_id": "584cde39-1c40-40c7-a514-978fac0e0372"
+          },
+          "sha256": "20322474d59e6f6cdbb9c5870aea2ea3b1ceaee657d931e8b4b7d7d57e0725b1"
+        },
+        {
+          "key": {
+            "driver_id": "5ea6637a-3eef-4bb0-90bf-4869921767a5"
+          },
+          "sha256": "286109d51ecce553f3889e9d464ba434ec52c0338c1c7c2e4f100febffa62029"
+        },
+        {
+          "key": {
+            "driver_id": "ef4ab419-fdc5-426a-927f-77d073562b06"
+          },
+          "sha256": "bccbe393f18e6b0ecab16fe6188985d731f1e70da08cedc357dcc5c69f4c7224"
+        },
+        {
+          "key": {
+            "driver_id": "185c952b-4cb8-4504-9944-1a8d8aa43ffc"
+          },
+          "sha256": "62175f129ea97eb6e41907b4ac7b0e2c4c9d901991bb35515c7ba7c7821828a2"
+        },
+        {
+          "key": {
+            "driver_id": "db7f1091-4e4c-4c55-a7e6-c1f5353d4e15"
+          },
+          "sha256": "84e8ba6852289b43553259556c8bff4e845001545c59ec04d16956495120ff3a"
+        },
+        {
+          "key": {
+            "driver_id": "4f0b5ec6-9ed0-4c31-9043-561eb68e78bb"
+          },
+          "sha256": "86df265adf403958eb00d54937e9192ca79a6190b541a0afbb31a53d06ddb5b8"
+        },
+        {
+          "key": {
+            "driver_id": "bfce8ef7-765d-449c-bb0a-c9985edde51a"
+          },
+          "sha256": "9ff0939fd47ef521830491a1755035c357873fb1a18efa149f967d53e4e9d940"
+        },
+        {
+          "key": {
+            "driver_id": "9dabc5cf-4848-4006-8ab9-9f2ebba5b44e"
+          },
+          "sha256": "e14fbcfccef87a89ca1380a056270f57877e6c75343a283e3d125a83e85fa4df"
+        },
+        {
+          "key": {
+            "driver_id": "6ca68f8b-345d-496c-9654-45d48dce93a4"
+          },
+          "sha256": "f52e114858b1fb13014ecbffc44ff90bed024a615328d9e344a2132ca23fac59"
+        },
+        {
+          "key": {
+            "driver_id": "6c5f1eba-34b5-45e2-b23c-c8c3e5d7f92c"
+          },
+          "sha256": "033f50eba516a25647f9aa27308ef70deddb111630ad392940c5d5f3c7ae9bd3"
+        },
+        {
+          "key": {
+            "driver_id": "0a78dca9-0b58-47ed-b69f-c9b612fd76c9"
+          },
+          "sha256": "18be5364dadc294c97cf663a2acdb17f442d4bed6c835b2528b8773e68bc2cff"
+        },
+        {
+          "key": {
+            "driver_id": "80383cec-6a9e-485a-ae67-be69951e8ae2"
+          },
+          "sha256": "30f8c393257eb6e52e49839252d0241c5e8eeac43c745e5bfbd942e72985acee"
+        },
+        {
+          "key": {
+            "driver_id": "25422ef2-66cd-488c-9e64-d499f5cc062b"
+          },
+          "sha256": "0f60a41fa5ab08386f944e742d63cf56951d1b44293ff56c85bb59fe15c56be8"
+        },
+        {
+          "key": {
+            "driver_id": "61aff1f9-0281-4044-835d-8191897963e3"
+          },
+          "sha256": "66e45dcb123c54c1cc3382ce8f67cfc7b3e21d875018f7abd0a9e1f13e698107"
+        },
+        {
+          "key": {
+            "driver_id": "2312404f-4964-4f14-9208-820656668abf"
+          },
+          "sha256": "c63fbd07dc7f770f1fe59f54f7109a5216149778a8adf03e300cfc551b625ad9"
+        },
+        {
+          "key": {
+            "driver_id": "e73e4455-10f8-4efe-894a-f27a5be02c58"
+          },
+          "sha256": "4fbae906397a8c2c7c3398661f6803afd57a63205ae2c1d8cda5fdef3897894f"
+        },
+        {
+          "key": {
+            "driver_id": "bfbdb6e5-f0fe-46a1-923a-b1b085ab646d"
+          },
+          "sha256": "abf871f37f35bd61827db07bb51ca26c60e6c032d97367b43f7c63dbaa687345"
+        },
+        {
+          "key": {
+            "driver_id": "6c70ac51-dc52-4a7e-9b64-d30f6503a399"
+          },
+          "sha256": "b24decff99b0a20f125456ffd9382c6b0e5f71ee6ed7bfd43680cd995e825c5e"
+        },
+        {
+          "key": {
+            "driver_id": "0b415918-98cc-42ee-8ed5-4ba5356eac38"
+          },
+          "sha256": "7927bce912446243ba69c93d08751582257e11cdc77952a200018e3bf22f6b33"
+        },
+        {
+          "key": {
+            "driver_id": "fb333b6d-ae05-4a37-9d55-6c6510a5b8bd"
+          },
+          "sha256": "d23d860333aaa6e1fe6f9fd1cc262ce12ca4274d9727445e4a839e3e0fbcca84"
+        },
+        {
+          "key": {
+            "driver_id": "7d43181a-ab98-41d3-8d23-33442f2c7eac"
+          },
+          "sha256": "5f311d072bb1913beb1f757bc8afe7226d0ccde6702e2d1ba545d90bcffdd88b"
+        },
+        {
+          "key": {
+            "driver_id": "4f5ef226-042d-4ea3-bfc5-0e68e6c32b63"
+          },
+          "sha256": "19b3188c91f2bcc0c218891489dc1bea9a24304284cdbd39f81334ec89196cc3"
+        },
+        {
+          "key": {
+            "driver_id": "ee6c31ba-b878-4c5c-b799-f4efcf61e73d"
+          },
+          "sha256": "8fc3fee7c494c3025dc48c3c477e6392da9e470519aeab84d94bc36be2b3007a"
+        },
+        {
+          "key": {
+            "driver_id": "f4463b31-037b-4703-92d5-aabf57205a9b"
+          },
+          "sha256": "a61bb77eae9f60d7679137bd3ac93d34926593c223ad721b0d87d351eed25628"
+        },
+        {
+          "key": {
+            "driver_id": "fc3b984f-4242-4450-aac3-350b2216d540"
+          },
+          "sha256": "e38208269bcd4fe40b9eee1d82deddeac275307a1882efe1cb663fba3f0925ad"
+        },
+        {
+          "key": {
+            "driver_id": "fdc380fe-6d96-4a3b-a727-cfc2864cd144"
+          },
+          "sha256": "5f9f2d817bd9046e93fcd6910469a37d1a9ab81bfb94237c9997c030433d643a"
+        },
+        {
+          "key": {
+            "driver_id": "f0c61b84-f9e6-479c-bce0-1802ac59d8b9"
+          },
+          "sha256": "989abbbc5afc3c7ed452e9d65f8e37a151ccf77131fe7da98c90ff71902258f3"
+        },
+        {
+          "key": {
+            "driver_id": "6c8d58d7-b231-40d4-87a6-413ef7bfba32"
+          },
+          "sha256": "4053754933c37bdf0e81357152391c89bdaeadfc922b09ecbb75de7ab27027c9"
+        },
+        {
+          "key": {
+            "driver_id": "1ef6b4e9-5a5f-4708-983b-a960d929dba0"
+          },
+          "sha256": "608ef922e430b9235fdca3a0094273483bd5514cd262b0918716ee544c3f7797"
+        },
+        {
+          "key": {
+            "driver_id": "69386a1e-7a6e-4fe0-ba20-301c690bb618"
+          },
+          "sha256": "0451369ef566ce7583c79f1aa96cac76eb7a30cc2c0f46218b75b98a79a3e465"
+        },
+        {
+          "key": {
+            "driver_id": "a3e64af3-d243-426a-a3c1-405441d5a6fc"
+          },
+          "sha256": "5e1cc9c66d6b1ff06a40dbab8d5c41764ed49838fb1919f2901b12a2c6b00bd2"
+        },
+        {
+          "key": {
+            "driver_id": "54d6b450-93c4-4435-94e9-b4e76db0d518"
+          },
+          "sha256": "087fbbe07afbef0399f96b8eded516428deb6cdb2765a5a39ca586fb94e444ec"
+        },
+        {
+          "key": {
+            "driver_id": "abfa2828-38bb-44f8-974b-6f3ebb0ffbf4"
+          },
+          "sha256": "cda231b6c295ffe6e5979fcfb554e22aa85b9fbde539c11886f38ac7c0a79faa"
+        },
+        {
+          "key": {
+            "driver_id": "706f14c2-6938-41c4-850d-1b61db8ea2ae"
+          },
+          "sha256": "fc628b157c2961239c1b4905ed085d61dbc2e923864ccac26546d627bbce524b"
+        },
+        {
+          "key": {
+            "driver_id": "e7b852f7-0230-4946-9443-b9f83c401c21"
+          },
+          "sha256": "555a90fdbcf8c875894504c54e329baf4345cbddff606568645a6e08177d4faf"
+        }
+      ]
+    },
+    "notifications_by_user": {
+      "keys": [
+        "created_at",
+        "notification_id",
+        "user_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "created_at": "2026-11-02T12:45:09.832Z",
+            "notification_id": "e7da7614-e686-53a7-ab8e-91642980cbc0",
+            "user_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+          },
+          "sha256": "41f1ecaeee7f7cc808b2e1c914f30039d4e72bb90598b3b095d3d3cfcd6ea319"
+        }
+      ]
+    },
+    "payments_by_customer": {
+      "keys": [
+        "paid_at",
+        "payment_id",
+        "customer_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "paid_at": "2026-11-02T12:48:22.991Z",
+            "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f"
+          },
+          "sha256": "70ce0d0c515018635f0131f22d68cc817e257e2b0f9f3c74603e6cf24288668a"
+        }
+      ]
+    },
+    "payments_by_trip": {
+      "keys": [
+        "payment_id",
+        "trip_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "70ce0d0c515018635f0131f22d68cc817e257e2b0f9f3c74603e6cf24288668a"
+        }
+      ]
+    },
+    "reviews_by_driver": {
+      "keys": [
+        "created_at",
+        "review_id",
+        "driver_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "created_at": "2026-11-02T12:48:54.758Z",
+            "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391",
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+          },
+          "sha256": "f7c04a9b511e3ec37b02efb348268fc37c807f1193b55af7d44949dc0b04498e"
+        }
+      ]
+    },
+    "reviews_by_trip": {
+      "keys": [
+        "trip_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "f7c04a9b511e3ec37b02efb348268fc37c807f1193b55af7d44949dc0b04498e"
+        }
+      ]
+    },
+    "service_types": {
+      "keys": [
+        "service_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db"
+          },
+          "sha256": "6314c33d44db2bbb32f3f85597344d083d3a7cf7f98683beb23070b35495cea5"
+        }
+      ]
+    },
+    "trip_status_history": {
+      "keys": [
+        "changed_at",
+        "trip_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "changed_at": "2026-11-02T12:47:48.573Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "9c7a5fbfe99a57a3431133a449f73275611d9b19969a34f39c7b6125a0d75ca4"
+        },
+        {
+          "key": {
+            "changed_at": "2026-11-02T12:47:34.443Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "5c4a15d3374c416db78ad4e83a6f16ee4aefb934ffcc934705241f4b6d0a7ab8"
+        },
+        {
+          "key": {
+            "changed_at": "2026-11-02T12:47:21.810Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "e748ab5c8bfaf7c0e58b3403fdce5d21c6a9be86fe344e5c4d0acd06a1cc16e9"
+        },
+        {
+          "key": {
+            "changed_at": "2026-11-02T12:46:06.166Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "3c1d5ed070181d47cd359491d15652d604498b3a1dc6cfae7229631b82af47de"
+        },
+        {
+          "key": {
+            "changed_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "126930623016b0b42240bb971eaf624992cc1ccd6a08e181d946d60cc9564af9"
+        }
+      ]
+    },
+    "trips_by_customer": {
+      "keys": [
+        "booked_at",
+        "trip_id",
+        "customer_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f"
+          },
+          "sha256": "fc02c1a9f05337b81b6ee9963dc64391c594d8cba79fd5e7d77963d46126a075"
+        }
+      ]
+    },
+    "trips_by_driver": {
+      "keys": [
+        "booked_at",
+        "trip_id",
+        "driver_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+          },
+          "sha256": "fc02c1a9f05337b81b6ee9963dc64391c594d8cba79fd5e7d77963d46126a075"
+        }
+      ]
+    },
+    "trips_by_id": {
+      "keys": [
+        "trip_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          },
+          "sha256": "b9ade1824d8cab91c8ae0fb9ce44073b48c46480044e92ab93b0515a2f08b7fc"
+        }
+      ]
+    },
+    "trips_by_status": {
+      "keys": [
+        "booked_at",
+        "trip_id",
+        "status",
+        "trip_date"
+      ],
+      "rows": [
+        {
+          "key": {
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "status": "COMPLETED",
+            "trip_date": "2026-11-02"
+          },
+          "sha256": "a031b733e4cf6b5291bfb1f482490b85d37f6d0f270bdde7aee2009c0c060b0d"
+        }
+      ]
+    },
+    "vehicles": {
+      "keys": [
+        "vehicle_id"
+      ],
+      "rows": [
+        {
+          "key": {
+            "vehicle_id": "a3686f15-18fe-4fde-895e-2e24be93e363"
+          },
+          "sha256": "7455bd369d2d2a92426c8ae963c2a045e9b886c4cce44026594e78d728cab3c5"
+        },
+        {
+          "key": {
+            "vehicle_id": "078d6c33-b29e-4e0a-8824-c584e935b500"
+          },
+          "sha256": "903ecd69257a6bd9c616c528f836c8e0964575e951881dfb608b557ca31bf778"
+        },
+        {
+          "key": {
+            "vehicle_id": "b5a1bc84-f75d-4749-8162-39dde33debc5"
+          },
+          "sha256": "f390212fae3175cae2c1bf41721ecffe6f522689c19ab49889bac6a0f2f1f22b"
+        },
+        {
+          "key": {
+            "vehicle_id": "51f40e7b-d710-4002-a5bd-91698119996b"
+          },
+          "sha256": "8c31b13ebba376366e40f491bfea0171f5d999e8e9d0b0759d6632c5828d07d1"
+        },
+        {
+          "key": {
+            "vehicle_id": "231934a9-a5a5-4108-9232-9cad66864a86"
+          },
+          "sha256": "6550cc6361a8211b982ba6f70870fefdcbfd1e35e2cf4e12c5934cfa2214f556"
+        },
+        {
+          "key": {
+            "vehicle_id": "a3c08f46-5ba1-4451-93fc-70a56ba5ca10"
+          },
+          "sha256": "6d02e08e4c8eb377929de01a0079734fa86d5ea0d9a99f24b02de032d057ad14"
+        },
+        {
+          "key": {
+            "vehicle_id": "f0d3018f-e58d-42a1-a936-70ff7f244224"
+          },
+          "sha256": "11056d4145a4078b27646d5e11d0dc0fcc534e5f61ff3e0c22605e06d058a399"
+        },
+        {
+          "key": {
+            "vehicle_id": "3c547abf-cc70-4af3-86e4-d1d44390ebfe"
+          },
+          "sha256": "65ead403a90f87c3c33a67227ff6b96d82298248b87ede689edd398eff22f5b8"
+        },
+        {
+          "key": {
+            "vehicle_id": "c8344fc2-713b-4398-bb77-dfd33fe6f5b6"
+          },
+          "sha256": "105aed75236f0b9861f3fffdc701b2b31452da27c889e09f1f5582525f917e08"
+        },
+        {
+          "key": {
+            "vehicle_id": "5692d7e2-adca-4c1a-9257-e0840cc257aa"
+          },
+          "sha256": "e4df181cff7206668d04788238ee500f1aa91abeaa19ca953e9ef3c01b52ae7e"
+        },
+        {
+          "key": {
+            "vehicle_id": "93e4e2a7-dfb6-4345-b7cd-90f25852a9d5"
+          },
+          "sha256": "93706732d33c7b79ff21bd06e2eda0413c3e838f25fdd27a6f257c00f2307720"
+        },
+        {
+          "key": {
+            "vehicle_id": "999120ed-d8c4-4310-ac87-02dc8a4ca279"
+          },
+          "sha256": "d3d45c5597a3b7784817cc641fed6e4bbdd89c225b37dae93f2127d8fb4da4e5"
+        },
+        {
+          "key": {
+            "vehicle_id": "989d0cf9-bc28-46c9-b7d4-9c0c04cf2464"
+          },
+          "sha256": "66e658141e2de5c8f76512e6067a495d4f9fb9412cc9808a8be7c67885777f08"
+        },
+        {
+          "key": {
+            "vehicle_id": "1feba6cb-cb6d-4bab-908b-cd2c20fa590b"
+          },
+          "sha256": "2ea531e3c21159b6079209b4f2dad23dbd65d6d021234d0075e2bc89fa1761dd"
+        },
+        {
+          "key": {
+            "vehicle_id": "82cad856-4635-4062-8e26-5077a7dbb907"
+          },
+          "sha256": "f060db60d24776ff91bea0a76004dcb4e11f37cdef985983d62a10d8cc880314"
+        },
+        {
+          "key": {
+            "vehicle_id": "9622b14c-247b-45ee-aa4b-d5ffd04a535f"
+          },
+          "sha256": "5f079b859cd4e312eca6100318e8c3222c055d7608184f063ed32f0b814dec9c"
+        },
+        {
+          "key": {
+            "vehicle_id": "2b6ba239-7e30-422d-8a2f-8998a5ca1378"
+          },
+          "sha256": "9ef412b52eac2f848e95fe0e8b3dec87744496a1a52a8787941914588f44dcc9"
+        },
+        {
+          "key": {
+            "vehicle_id": "8b7a1c28-176f-4fe4-bf6c-5cc80420b3a3"
+          },
+          "sha256": "3e215ae5c8f16257f029339a98bb12d22f25020999b25191e1a4da8656ee7194"
+        },
+        {
+          "key": {
+            "vehicle_id": "97d4bac7-0e16-405e-8d06-ef9cf4c1a07c"
+          },
+          "sha256": "a829341769942535d1f38fdb764a289e61f8a62b0d3e29b3397116e89c89f80e"
+        },
+        {
+          "key": {
+            "vehicle_id": "eb9682e1-7bdd-461a-8bf9-6558ad7a9d06"
+          },
+          "sha256": "b153f2e8af933098416439ac60cdd431aeb5ba938a43b6bb03773050b04b0bb1"
+        },
+        {
+          "key": {
+            "vehicle_id": "055a6beb-f4d9-46e4-87f2-56445d55fe32"
+          },
+          "sha256": "cec6a3b79a295d550d5b72af48ab90e854b0c70037d81a16626200987c606341"
+        },
+        {
+          "key": {
+            "vehicle_id": "d5eefb13-b5ed-4e41-81f4-3d40f3ee53ce"
+          },
+          "sha256": "c6a97ba33244723f9db95483c99b5138ef578e00f63752edcbc95980dbcd005e"
+        },
+        {
+          "key": {
+            "vehicle_id": "7b724ef9-575b-41a9-8af6-06a64bc226bd"
+          },
+          "sha256": "9caa0a1dde577374721848b81d62db72aa099530a9198c0f6431ccffa5e5142c"
+        },
+        {
+          "key": {
+            "vehicle_id": "b663907a-03f1-4ee7-9049-c5b9e1b6f688"
+          },
+          "sha256": "eef44e6603691a79f037343c2f5ce8a1e6333d73e6efb71efa5b7899222b325a"
+        },
+        {
+          "key": {
+            "vehicle_id": "161631bc-133b-4b28-ab06-b0704483d594"
+          },
+          "sha256": "e1e78ba516b1c14dc65c5ea34974faddbb915a9cce0baeeb5ad6471cc2e5781d"
+        },
+        {
+          "key": {
+            "vehicle_id": "233eed85-d4ee-4976-86ca-1b8f730a1ebf"
+          },
+          "sha256": "5f938656034c9311f0b23cb9889e4f5b935b80e17984e81f332378666e8c2260"
+        },
+        {
+          "key": {
+            "vehicle_id": "c0417a85-84ff-4388-97d7-1921d349c252"
+          },
+          "sha256": "bcc964af6fffbfb9f838b9736cc2c60aa77b90f21d0e1178e0cfae532d3133b2"
+        },
+        {
+          "key": {
+            "vehicle_id": "e9567edc-4a20-4ca3-bc54-4a3b37782497"
+          },
+          "sha256": "0348b2c15233e23fff8e4af49d2b1322745b39a1432c428e1cdecad04e5232f8"
+        },
+        {
+          "key": {
+            "vehicle_id": "76b31937-f941-4678-9cf0-a1867270ad55"
+          },
+          "sha256": "4e1b747f36ce3b1c386203f23fb806a8922bdd260547398af6dcf569cd678f1d"
+        },
+        {
+          "key": {
+            "vehicle_id": "fb527b37-27d8-4596-b229-8de93f47e2a9"
+          },
+          "sha256": "79a994d6f61fd87d46df387c372fd305af08edf2184d2a84a20c30769be6cc88"
+        },
+        {
+          "key": {
+            "vehicle_id": "62affdef-2a44-43c9-91df-5164473d3605"
+          },
+          "sha256": "1af701b400ec8a801f3d44b3db1c65fce0f184f94671692bd9cc7a6a8d0f618f"
+        },
+        {
+          "key": {
+            "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5"
+          },
+          "sha256": "98fc8fc6d4475a3fcd659c102411bfa1209b0a4f3cca63fa567de7b7e6810fdc"
+        },
+        {
+          "key": {
+            "vehicle_id": "0e28e090-bf5d-47b2-9c59-a903be23cd8e"
+          },
+          "sha256": "7fb9f8f53b59f0c5b9451abc6e78c5909c25f05984f37a510e81a890309cdb5b"
+        },
+        {
+          "key": {
+            "vehicle_id": "6a739afd-2764-4532-8f72-70e443699383"
+          },
+          "sha256": "5cd8c1d9f35df2b28ae52972a4c6b47080507f1caac8d0a883dc24794ec500aa"
+        },
+        {
+          "key": {
+            "vehicle_id": "ef2676d3-e5ef-40c5-882a-7de651f156de"
+          },
+          "sha256": "c06b5c44b1e5b63ba94b1241fe8b2db624aa0e9d8245463d672d164c28c20ee2"
+        },
+        {
+          "key": {
+            "vehicle_id": "fc2a4ace-58fd-4346-88c8-9c38778529a4"
+          },
+          "sha256": "cacf4d7daec4ab439a49edfb6bd1f969bb6e00a6acd92b6e3a897a83f412fef5"
+        },
+        {
+          "key": {
+            "vehicle_id": "a7eb5091-aff6-438e-b07f-86f833599200"
+          },
+          "sha256": "a2bb83aa725a2623d2589a6bb6a5341a09d3c3440e39610e47536ae8163bda7a"
+        },
+        {
+          "key": {
+            "vehicle_id": "ebbf53be-9697-42e8-8dac-89961d656a21"
+          },
+          "sha256": "b08492f696711345beb7be01d65f76cb3f376b3bd0d59478f519cc4a876ab705"
+        },
+        {
+          "key": {
+            "vehicle_id": "d5874ac1-398b-439b-8dec-5bea4f4015cf"
+          },
+          "sha256": "34c70a4bf8049b4cfb09aac81ad9a0fc0d35ca22e6f6f0477550ce32296f82a5"
+        },
+        {
+          "key": {
+            "vehicle_id": "bfc32a3a-30ad-491b-a87a-88e679c30387"
+          },
+          "sha256": "2c8b688cffb1619822785b5a802be6b837a3e290961ad1f0e13b2d1ccab0593e"
+        },
+        {
+          "key": {
+            "vehicle_id": "8c90d4d5-9755-4f9a-b107-f2090ca4d000"
+          },
+          "sha256": "b6807336fa9c6b71ff6469ad3fdc40826b79ac667b4ded6400695f46b7971c74"
+        },
+        {
+          "key": {
+            "vehicle_id": "eb390fd9-b1f3-414f-b60d-eb940186562a"
+          },
+          "sha256": "40fa614cd62be67b32667f1e6d0f1109568fd4b39c49d4514a9cb7f240d7679c"
+        },
+        {
+          "key": {
+            "vehicle_id": "0e0d8df8-d245-416f-9529-06732fb89e02"
+          },
+          "sha256": "0f9f236c6aba237cf8c7384ba9b0f66a4d8916631d158e7befc06db335dc8788"
+        },
+        {
+          "key": {
+            "vehicle_id": "0aef53b0-1087-4bdd-bedb-8ec0b76b01b3"
+          },
+          "sha256": "acbfc4d33d114398320fa8b64f4bd29e44283e875f55de5f45fc7c3901fcfcbc"
+        },
+        {
+          "key": {
+            "vehicle_id": "105bda03-c8c9-4f9c-8471-0fee0e2e85fe"
+          },
+          "sha256": "614157698c4ac2def60f7014b1637c5f263f0535413f5b331770cddc5c7c531c"
+        },
+        {
+          "key": {
+            "vehicle_id": "73066b74-caba-41f0-8569-cd8fd80898a8"
+          },
+          "sha256": "b6080068da715ec1418031a97839aac2dccd821697f1a6432cbcbdd1b638e169"
+        },
+        {
+          "key": {
+            "vehicle_id": "c36f6726-66bc-417f-bf6b-724ea7f9b413"
+          },
+          "sha256": "59ff21277e2fe3c3951716329e958e531abc6fa78129aa2675cacdf45e2bcc39"
+        },
+        {
+          "key": {
+            "vehicle_id": "2af5df19-35a9-4351-a9e8-2784664c1c61"
+          },
+          "sha256": "17567b19c2b901ba47d914db76cec8cece3764b4fa53c2cf0970b5f0ce41d921"
+        },
+        {
+          "key": {
+            "vehicle_id": "2ee1bfb5-0dd9-44e5-b413-5bbaff3c2446"
+          },
+          "sha256": "4eeac5f009c94ec507269af8b1cac05711416eda10d86b1b8966f29c1ec11c96"
+        },
+        {
+          "key": {
+            "vehicle_id": "0de708b5-7d49-4fd2-8d3c-d2a1ff0a5a14"
+          },
+          "sha256": "ed2cd7aa04145881958762f98c1b545c27b86846ecfd761a8baf272a9893e379"
+        },
+        {
+          "key": {
+            "vehicle_id": "20189642-fe35-4fc2-9533-4ac489d03842"
+          },
+          "sha256": "98d2dfd797f7c2e5e15f1c17d8864b6e73abcec641de7ee6752f9d14c6537acd"
+        },
+        {
+          "key": {
+            "vehicle_id": "27b7f208-c36a-453b-8dc4-7449f8019eb3"
+          },
+          "sha256": "379ddbee0110de8037a8e54e24a9034f515551e69a0f84cbb5fd528ccfa2ff28"
+        },
+        {
+          "key": {
+            "vehicle_id": "5977d650-f720-48e1-9e6c-9603e77f6713"
+          },
+          "sha256": "7dda2c81251a8ee566ae008f0c89acd3359b87319c74c2e3f00a2b92ec0c8d26"
+        },
+        {
+          "key": {
+            "vehicle_id": "68c4bafc-f111-4c2e-ad8f-efc491483dd8"
+          },
+          "sha256": "e3024fffebcb5b956e22e41ab95e03913351b7e6964aa41ae499a9ee97cdc9ce"
+        },
+        {
+          "key": {
+            "vehicle_id": "63046867-1391-484a-8931-d8020cf6ea27"
+          },
+          "sha256": "c43095cdef76f698ec5419366fc439c4a4dad79bfb4610a3cac9093d23f988a9"
+        },
+        {
+          "key": {
+            "vehicle_id": "0f86b59a-c11d-4f4a-b518-caa20cdc5c2f"
+          },
+          "sha256": "7afc3bad7d87b4d90196b2826c7df3b3dc6823dc5290925f553b8754ccaa7750"
+        },
+        {
+          "key": {
+            "vehicle_id": "8916ed38-2871-4688-b484-00a3b4f871a4"
+          },
+          "sha256": "736ebd0a31358f961f726d2b32d9b2aee456445dd7a1ca29a1220dec1207dafd"
+        },
+        {
+          "key": {
+            "vehicle_id": "ac871338-c73a-4cf5-8865-51e62af02ff5"
+          },
+          "sha256": "46f1b6393f89bdd80597a8d7422bc2814839e26a7436fd498ad537b83c69d331"
+        },
+        {
+          "key": {
+            "vehicle_id": "58f0492a-da88-4938-8cca-12d16c06400f"
+          },
+          "sha256": "f609786614c803afec6abc8409cf45e98b0e2e8e614eb15123a225e55e6149e0"
+        },
+        {
+          "key": {
+            "vehicle_id": "1c852de8-218c-4f15-a127-b26ccffc7f97"
+          },
+          "sha256": "033188f1f078619832b41b111cd2c4e121b5c6069b930e82458ed0088da59cb8"
+        },
+        {
+          "key": {
+            "vehicle_id": "9e1458f5-b15a-4844-bf06-f79217bef3af"
+          },
+          "sha256": "ca0b3bdd307b09f1d748578a42a95fd92437aee9ec4af7db1ddb2bac4bd2b6ac"
+        },
+        {
+          "key": {
+            "vehicle_id": "c7249798-8d0b-445a-a192-4a79c8084d97"
+          },
+          "sha256": "cd45cd61a1cdd0a7ffde0e415114862838ff46ea52b9aec6b0345b145ccf0c77"
+        },
+        {
+          "key": {
+            "vehicle_id": "d5a53f51-4424-429a-96a2-345b31c5e3e2"
+          },
+          "sha256": "90d54744fb4143024d3cb9262b3f2a4ab7ba76b3ba23d4c471214a412549070b"
+        },
+        {
+          "key": {
+            "vehicle_id": "572ac6b0-8528-4430-97a4-cd2cf98b5352"
+          },
+          "sha256": "0b4d089481f2831e16002e2fd828848ee50479de93413bd936f4774c52f09179"
+        },
+        {
+          "key": {
+            "vehicle_id": "73ba8602-2075-43f6-ba55-77bad848984b"
+          },
+          "sha256": "cb5490768a72381aec49384cbcb7950292fca68098b715e03708c74f396f00c0"
+        },
+        {
+          "key": {
+            "vehicle_id": "c89efb8c-bbdd-4830-9dfb-7bb6d83ff7cd"
+          },
+          "sha256": "bc6c09560dd4e2d8cf2292e9d07c29361311fec88bd62928dcca623ece2e776b"
+        },
+        {
+          "key": {
+            "vehicle_id": "16af979c-e4da-4d5f-a338-5acf442edbd1"
+          },
+          "sha256": "9ad683dc4dc6ba750178d456fc587b4ee7347d8ebacda6ac1fd753b593364332"
+        },
+        {
+          "key": {
+            "vehicle_id": "d0e86f8f-a0aa-4b15-9f80-0fe81443b55e"
+          },
+          "sha256": "c0f2e5f2b15f57b54160b8aa0b7ba0fb1a91aff0183d5e2f771b1e7c0fb001ec"
+        },
+        {
+          "key": {
+            "vehicle_id": "55a4de0b-59e9-4c43-8346-423d3a7572d6"
+          },
+          "sha256": "b5b961b8a7d2c92165a61499ebd63d28a8221c53caf54d10a9f10a9aa3be2190"
+        },
+        {
+          "key": {
+            "vehicle_id": "bc654bea-3cac-46a5-abf3-46802aafc2ee"
+          },
+          "sha256": "d8bdfa1241d6c640bc6af23b4bdc077753cc064c3326f0f8ea58a4ecc463f58a"
+        },
+        {
+          "key": {
+            "vehicle_id": "02ba7be3-0fa4-4ccb-8bb2-8aea95d466d3"
+          },
+          "sha256": "2bc32fdf746ab8f3fd1895db0df7af9cca6ef2514a81157cb29df31331f8dc7b"
+        },
+        {
+          "key": {
+            "vehicle_id": "b12f506b-194e-43dd-b47c-011385c96f89"
+          },
+          "sha256": "9838d0c468ad95bcaf9a6760bea8c3c741625d4f96e6f8ddfae8f48b3449feb6"
+        },
+        {
+          "key": {
+            "vehicle_id": "115f476c-3e61-47d9-82e6-5593af829d81"
+          },
+          "sha256": "a35b5efae1fc9ea6b6e58e85aa6a9d76a534f280901a6a132d3b0647858f8bfa"
+        },
+        {
+          "key": {
+            "vehicle_id": "5ecee82f-8322-4051-aae3-afe27be6558a"
+          },
+          "sha256": "b71229786b67fb44e7721c82597f6a62d69aec643066572d78b23ca2696b624c"
+        },
+        {
+          "key": {
+            "vehicle_id": "856b7b0e-d523-4e9e-9ab9-d77b9b83e872"
+          },
+          "sha256": "1001f8d56c674097b7c709bf46c09abd2b49f8f21e085093f16e583a56b09eba"
+        },
+        {
+          "key": {
+            "vehicle_id": "84274661-53f4-4f6a-94b4-490cd82b8f1b"
+          },
+          "sha256": "da0b9aa088a0e2de6aa657e145ee0975639d96706b8a54a4bbd54614e551ecd9"
+        },
+        {
+          "key": {
+            "vehicle_id": "1cfb9d7b-4031-46ca-87b2-0aec94a0fa19"
+          },
+          "sha256": "0ab58f8eb6c3184a8856e45935ce9a075c72b18b3d164bea2d92070918c6afb6"
+        },
+        {
+          "key": {
+            "vehicle_id": "bb8332a6-d50f-472f-b56f-710f6c0aedb6"
+          },
+          "sha256": "3cb0e6b50a0b7e61c5f31457008f30e5a58d048448fa98e4be6e4c5a51750c84"
+        },
+        {
+          "key": {
+            "vehicle_id": "9c17ebd8-5a6c-4f1a-be7d-aabe6e3d0b1d"
+          },
+          "sha256": "159cf38f3382a8a5385e534a08af66e7b525add1a568060ebc840a7b6d144477"
+        },
+        {
+          "key": {
+            "vehicle_id": "da7a0ae7-f70b-41bd-a9b8-a0224d458aeb"
+          },
+          "sha256": "084958abb6d710139cf588d06a0338ba5ed62595468132a103fa8114a0cf619c"
+        },
+        {
+          "key": {
+            "vehicle_id": "467d61b5-a14c-4a16-9755-ac059aca23a3"
+          },
+          "sha256": "45156b5f1a0baa429d7e38faaa5f24dc7d6426167b358d17ad6aea985610f185"
+        },
+        {
+          "key": {
+            "vehicle_id": "fdedb82c-8c10-4121-b4d6-ba7596789a01"
+          },
+          "sha256": "728db3fb4ff4c51d95a2aabf436786a851b7aca0b5047e5b5783624ebf27f57d"
+        },
+        {
+          "key": {
+            "vehicle_id": "05b57cc1-da29-4f36-be0c-4b5dd0419e91"
+          },
+          "sha256": "39c57a2df35f4aabb440ad06177dde6f0aa9e28577818e57c8a1317493762599"
+        },
+        {
+          "key": {
+            "vehicle_id": "94d57d93-b82b-4c03-9079-a341acf0ed47"
+          },
+          "sha256": "dd899fa78be67c7e2e34b5bbd266293b2edebfdee3820e84faff5ffd5103364d"
+        },
+        {
+          "key": {
+            "vehicle_id": "8e80576a-b7e1-469e-973d-332840d215cb"
+          },
+          "sha256": "fcdc188050471e243ead0b8a5a4e45693eb9174fc3783bc14e5988bb570836c5"
+        },
+        {
+          "key": {
+            "vehicle_id": "c9e994e9-821f-41a3-88a0-5218410cbc8d"
+          },
+          "sha256": "699450be2c424e234752912c24a5df368ed8f5ad351ae980c49ca6e78d8cc920"
+        },
+        {
+          "key": {
+            "vehicle_id": "2667d3a2-8573-4f5d-aaf3-f18dd9f16b2b"
+          },
+          "sha256": "fbbc2626f8bcc431a159cff377a5523d6fe3a98e2259c6044df97324adbfae74"
+        },
+        {
+          "key": {
+            "vehicle_id": "a57fb48f-04d0-447f-be7d-1bfc972505c1"
+          },
+          "sha256": "874bf52b4f88c899245b3ffd39c088118d5d73c5544137a629d4bd6b00709076"
+        },
+        {
+          "key": {
+            "vehicle_id": "511910a0-78e4-4f20-a87f-0acf35b89ebe"
+          },
+          "sha256": "2669d9b53c188b18b64f9f53a39ee7040698f8f52288ffe43b3535b42fc9084a"
+        },
+        {
+          "key": {
+            "vehicle_id": "1b21851e-c09e-4f3e-8314-db03b9c98c45"
+          },
+          "sha256": "d615cef238982379bf64e9e7ad5bae739215e752dbce4927c0551f83ba5a2faf"
+        },
+        {
+          "key": {
+            "vehicle_id": "fd1b1a32-7f45-4586-b8ac-37b14c1efa80"
+          },
+          "sha256": "1e2618e882cf0a763d67ca151a88de0c700dec257a7a90abb8a10207ef873bf1"
+        },
+        {
+          "key": {
+            "vehicle_id": "9492aac0-60e7-4e4e-8b00-294cf182a518"
+          },
+          "sha256": "9eea62e97edd3758f053dea051fc834507db0b5f95ef8e495a07eadd6a7ceac8"
+        },
+        {
+          "key": {
+            "vehicle_id": "349bfa57-d751-4d61-a20a-770f368da4dd"
+          },
+          "sha256": "e821208d41f05ccea5541cf61a210fc34d87557afa4cfcd5c4f2314e55e8a77d"
+        },
+        {
+          "key": {
+            "vehicle_id": "15b7b0cb-cd01-4903-84d4-0024e0cdc0bc"
+          },
+          "sha256": "1486e67978625515768781de5173107ae46636633f6ffbf10506808e865816e4"
+        },
+        {
+          "key": {
+            "vehicle_id": "701aa3f5-a70f-4c05-a643-38e8d05d9a7b"
+          },
+          "sha256": "8271a89f2b2158d30607caaa7b9474c563624f36a59949101b80a48136dab487"
+        },
+        {
+          "key": {
+            "vehicle_id": "0d11ac79-026f-4ee4-9823-8d7b70e55e03"
+          },
+          "sha256": "22354fde2d995b6ca71dc65b859c29a5fa99937d9e12f236f260f8a614d797df"
+        },
+        {
+          "key": {
+            "vehicle_id": "e7c7a14d-8312-4a2e-a2fb-a6fe2917004e"
+          },
+          "sha256": "73a0615edb302931fffe04a85f93d9fcec65ca98b0066d123aaee1588841012e"
+        },
+        {
+          "key": {
+            "vehicle_id": "5dc20ab4-7669-4cda-9eeb-0cf22aef413b"
+          },
+          "sha256": "afcb03c7325dfd4b00e60a34a9132614b335113eebab2f69ca60e8954b0110fe"
+        },
+        {
+          "key": {
+            "vehicle_id": "1e23db1d-bb87-4341-a964-eaa3550121ee"
+          },
+          "sha256": "03d88d47e1fda3ba580f57b936dbc1912bb8e8cc2222f838e53d383daf521581"
+        },
+        {
+          "key": {
+            "vehicle_id": "c00d874c-da73-4ec6-98a0-ff06e6ad55cb"
+          },
+          "sha256": "753ab9510e1fb97f1470bad7c657323e12a2a54b9eafad1e8329ccab908f5c55"
+        },
+        {
+          "key": {
+            "vehicle_id": "7fd62701-428c-4a45-aa63-e12628310b0d"
+          },
+          "sha256": "f404714453e4f593a6f8fb645d3aeb82756b88eb813ffa1737a7d7a1406e3968"
+        },
+        {
+          "key": {
+            "vehicle_id": "330bd72d-8057-439c-be5b-eea236a8e708"
+          },
+          "sha256": "2b548d0e55797c202620b55fc88425fca1a6d1b767439b8d8efb31b8526b4c78"
+        },
+        {
+          "key": {
+            "vehicle_id": "de0a53a9-af77-4b1c-93a2-0ffc139eaa35"
+          },
+          "sha256": "63855c82f57a66071165cd9b00d0f5ce0ded21c6551b0590d6d44b5a21f8c4d5"
+        },
+        {
+          "key": {
+            "vehicle_id": "ba53fc6c-8b6a-4f12-94cb-dddcbe052b81"
+          },
+          "sha256": "abc8a5231f3734086912abdd24a6244cb6bd396739355ffcec7e0cf3086a21fd"
+        },
+        {
+          "key": {
+            "vehicle_id": "39ded33a-27ae-4a27-a90f-b09d76e3efef"
+          },
+          "sha256": "5d3b7a462f073e278409ff45a8334e68b44772c1fb8476fd001ede7e9384f47a"
+        },
+        {
+          "key": {
+            "vehicle_id": "fe26b4c5-e43b-496c-91e7-d873a1bb24b4"
+          },
+          "sha256": "260e03ad8aeb082f55e8292758e82988ead124ab5c55ec273b92ea493c09f021"
+        }
+      ]
+    },
+    "vouchers": {
+      "keys": [
+        "voucher_code"
+      ],
+      "rows": []
+    }
+  }
+}

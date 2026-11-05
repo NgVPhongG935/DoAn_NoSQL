@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T12:13:58.078Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3100/api/auth/register",
+      "status": 201,
+      "body": {
+        "success": true,
+        "data": {
+          "user": {
+            "id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+            "name": "QA_TEST_20261102121343_CUSTOMER",
+            "email": "qa_test_20261102121343_customer@example.invalid"
+          },
+          "redirectTo": "/login"
+        }
+      }
+    }
+  ]
+}

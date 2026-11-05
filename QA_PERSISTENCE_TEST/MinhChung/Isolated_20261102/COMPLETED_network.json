@@ -1,0 +1,215 @@
+{
+  "at": "2026-11-02T12:47:49.437Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/392d085f-b7b4-4aa7-8377-61dd3b6a1754/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/392d085f-b7b4-4aa7-8377-61dd3b6a1754?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "role": "DRIVER",
+          "name": "QA_TEST_ISO_20261102124130_DRIVER",
+          "email": "qa_test_iso_20261102124130_d@example.invalid",
+          "accountStatus": "ACTIVE"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "role": "DRIVER",
+          "name": "QA_TEST_ISO_20261102124130_DRIVER",
+          "email": "qa_test_iso_20261102124130_d@example.invalid",
+          "accountStatus": "ACTIVE"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/392d085f-b7b4-4aa7-8377-61dd3b6a1754/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "user_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "created_at": "2026-11-02T12:45:09.832Z",
+            "notification_id": "e7da7614-e686-53a7-ab8e-91642980cbc0",
+            "content": "Chuyến #3AAF340F · Mã chuyến: 3aaf340f-cdd0-4cf1-b323-084d54951754 · Đón: Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam → Đến: Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam · Giá chuyến: 18.000 ₫. Mở mục Chuyến đi để kiểm tra và nhận chuyến.",
+            "is_read": false,
+            "notification_type": "TRIP_ASSIGNED",
+            "title": "Bạn có chuyến mới được phân công"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/392d085f-b7b4-4aa7-8377-61dd3b6a1754?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754/trips",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+            "final_fare": "18000",
+            "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "status": "IN_PROGRESS",
+            "customer_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+            "customer_phone": "0900000001"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/392d085f-b7b4-4aa7-8377-61dd3b6a1754/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "user_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "created_at": "2026-11-02T12:45:09.832Z",
+            "notification_id": "e7da7614-e686-53a7-ab8e-91642980cbc0",
+            "content": "Chuyến #3AAF340F · Mã chuyến: 3aaf340f-cdd0-4cf1-b323-084d54951754 · Đón: Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam → Đến: Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam · Giá chuyến: 18.000 ₫. Mở mục Chuyến đi để kiểm tra và nhận chuyến.",
+            "is_read": false,
+            "notification_type": "TRIP_ASSIGNED",
+            "title": "Bạn có chuyến mới được phân công"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/status",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "completed_at": "2026-11-02T12:47:48.573Z",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "distance_km": 1.6,
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "estimated_fare": "18000",
+          "final_fare": "18000",
+          "payment_method": "BANK_TRANSFER",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+          "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+          "started_at": "2026-11-02T12:47:34.443Z",
+          "status": "COMPLETED",
+          "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+          "history": [
+            {
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "changed_at": "2026-11-02T12:47:34.443Z",
+              "note": "Cập nhật trạng thái: IN_PROGRESS",
+              "status": "IN_PROGRESS"
+            },
+            {
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "changed_at": "2026-11-02T12:47:21.810Z",
+              "note": "Cập nhật trạng thái: ARRIVING",
+              "status": "ARRIVING"
+            },
+            {
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "changed_at": "2026-11-02T12:46:06.166Z",
+              "note": "Cập nhật trạng thái: ACCEPTED",
+              "status": "ACCEPTED"
+            },
+            {
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "changed_at": "2026-11-02T12:45:09.832Z",
+              "note": "RideFlow tự động phân chuyến cho tài xế QA_TEST_ISO_20261102124130_DRIVER",
+              "status": "BOOKED"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "role": "DRIVER",
+          "name": "QA_TEST_ISO_20261102124130_DRIVER",
+          "email": "qa_test_iso_20261102124130_d@example.invalid",
+          "accountStatus": "ACTIVE"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754/trips",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+            "final_fare": "18000",
+            "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "status": "COMPLETED",
+            "customer_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+            "customer_phone": "0900000001"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-02T12:13:43.163Z",
+  "run": "QA_TEST_20261102121343",
+  "allowedWrites": [
+    "new customer UUID",
+    "new driver UUID PENDING/OFFLINE",
+    "new vehicle UUID linked only to QA driver",
+    "profile UPDATE QA customer only"
+  ],
+  "blockedWrites": [
+    "booking: existing drivers eligible for all services",
+    "availability until approved",
+    "existing rows, seed, schema, DB config, Cassandra restart"
+  ],
+  "counts": {
+    "complaints_by_customer": 0,
+    "customer_spending_by_month": 43,
+    "customer_vouchers": 53,
+    "customers": 27,
+    "driver_revenue_by_month": 43,
+    "drivers": 12,
+    "notifications_by_user": 38,
+    "payments_by_customer": 43,
+    "payments_by_trip": 43,
+    "reviews_by_driver": 43,
+    "reviews_by_trip": 43,
+    "service_types": 3,
+    "trip_status_history": 249,
+    "trips_by_customer": 59,
+    "trips_by_driver": 59,
+    "trips_by_id": 59,
+    "trips_by_status": 59,
+    "vehicles": 12,
+    "vouchers": 10
+  },
+  "passwords": "Private/qa-run.json only, never evidence"
+}

@@ -1,0 +1,37 @@
+﻿[
+    {
+        "LocalAddress":  "127.0.0.2",
+        "LocalPort":  9142,
+        "OwningProcess":  11800
+    },
+    {
+        "LocalAddress":  "127.0.0.1",
+        "LocalPort":  9042,
+        "OwningProcess":  11220
+    },
+    {
+        "LocalAddress":  "127.0.0.1",
+        "LocalPort":  7299,
+        "OwningProcess":  11800
+    },
+    {
+        "LocalAddress":  "127.0.0.1",
+        "LocalPort":  7199,
+        "OwningProcess":  11220
+    },
+    {
+        "LocalAddress":  "127.0.0.2",
+        "LocalPort":  7100,
+        "OwningProcess":  11800
+    },
+    {
+        "LocalAddress":  "127.0.0.1",
+        "LocalPort":  3200,
+        "OwningProcess":  10688
+    },
+    {
+        "LocalAddress":  "127.0.0.1",
+        "LocalPort":  3100,
+        "OwningProcess":  14900
+    }
+]

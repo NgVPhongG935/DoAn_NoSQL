@@ -1,0 +1,2345 @@
+{
+  "startedAt": "2026-11-02T12:01:36.834Z",
+  "mode": "READ_ONLY_NO_RESTART",
+  "queries": [
+    {
+      "at": "2026-11-02T12:01:36.964Z",
+      "cql": "SELECT cluster_name,release_version,data_center,host_id FROM system.local",
+      "params": [],
+      "rows": [
+        {
+          "cluster_name": "Test Cluster",
+          "release_version": "3.11.17",
+          "data_center": "datacenter1",
+          "host_id": "b72fbe90-ea48-43da-a8ee-35c0ca3ffd7b"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:36.996Z",
+      "cql": "SELECT keyspace_name,durable_writes,replication FROM system_schema.keyspaces WHERE keyspace_name = ?",
+      "params": [
+        "dat_xe_cong_nghe"
+      ],
+      "rows": [
+        {
+          "keyspace_name": "dat_xe_cong_nghe",
+          "durable_writes": false,
+          "replication": {
+            "class": "org.apache.cassandra.locator.SimpleStrategy",
+            "replication_factor": "3"
+          }
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.033Z",
+      "cql": "SELECT table_name,column_name,kind,position,type FROM system_schema.columns WHERE keyspace_name = ?",
+      "params": [
+        "dat_xe_cong_nghe"
+      ],
+      "rows": [
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "complaint_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "content",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "created_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "customer_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "resolved_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "subject",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "complaints_by_customer",
+          "column_name": "trip_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "customer_spending_by_month",
+          "column_name": "amount",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "customer_spending_by_month",
+          "column_name": "customer_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "customer_spending_by_month",
+          "column_name": "trip_date",
+          "kind": "clustering",
+          "position": 0,
+          "type": "date"
+        },
+        {
+          "table_name": "customer_spending_by_month",
+          "column_name": "trip_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "customer_spending_by_month",
+          "column_name": "year_month",
+          "kind": "partition_key",
+          "position": 1,
+          "type": "text"
+        },
+        {
+          "table_name": "customer_vouchers",
+          "column_name": "customer_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "customer_vouchers",
+          "column_name": "received_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "customer_vouchers",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "customer_vouchers",
+          "column_name": "used_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "customer_vouchers",
+          "column_name": "voucher_code",
+          "kind": "clustering",
+          "position": 0,
+          "type": "text"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "created_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "customer_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "email",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "full_name",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "password",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "phone",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "customers",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "driver_revenue_by_month",
+          "column_name": "driver_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "driver_revenue_by_month",
+          "column_name": "fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "driver_revenue_by_month",
+          "column_name": "trip_date",
+          "kind": "clustering",
+          "position": 0,
+          "type": "date"
+        },
+        {
+          "table_name": "driver_revenue_by_month",
+          "column_name": "trip_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "driver_revenue_by_month",
+          "column_name": "year_month",
+          "kind": "partition_key",
+          "position": 1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "account_status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "created_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "driver_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "driver_status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "email",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "full_name",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "license_number",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "password",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "phone",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "drivers",
+          "column_name": "rating",
+          "kind": "regular",
+          "position": -1,
+          "type": "double"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "content",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "created_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "is_read",
+          "kind": "regular",
+          "position": -1,
+          "type": "boolean"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "notification_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "notification_type",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "title",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "notifications_by_user",
+          "column_name": "user_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "amount",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "customer_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "paid_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "payment_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "payment_method",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "payment_status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "payments_by_customer",
+          "column_name": "trip_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "amount",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "customer_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "paid_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "payment_id",
+          "kind": "clustering",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "payment_method",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "payment_status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "payments_by_trip",
+          "column_name": "trip_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "comment",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "created_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "customer_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "driver_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "rating",
+          "kind": "regular",
+          "position": -1,
+          "type": "int"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "review_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "column_name": "trip_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "comment",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "created_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "customer_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "driver_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "rating",
+          "kind": "regular",
+          "position": -1,
+          "type": "int"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "review_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "column_name": "trip_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "service_types",
+          "column_name": "base_fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "service_types",
+          "column_name": "description",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "service_types",
+          "column_name": "price_per_km",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "service_types",
+          "column_name": "service_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "service_types",
+          "column_name": "service_name",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "service_types",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trip_status_history",
+          "column_name": "changed_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trip_status_history",
+          "column_name": "note",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trip_status_history",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trip_status_history",
+          "column_name": "trip_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "booked_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "customer_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "destination_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "driver_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "final_fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "pickup_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_customer",
+          "column_name": "trip_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "booked_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "customer_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "destination_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "driver_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "final_fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "pickup_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_driver",
+          "column_name": "trip_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "booked_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "completed_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "customer_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "destination_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "distance_km",
+          "kind": "regular",
+          "position": -1,
+          "type": "double"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "driver_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "estimated_fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "final_fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "payment_method",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "pickup_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "service_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "started_at",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "trip_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_id",
+          "column_name": "vehicle_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "booked_at",
+          "kind": "clustering",
+          "position": 0,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "customer_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "destination_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "driver_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "final_fare",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "pickup_address",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "status",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "text"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "trip_date",
+          "kind": "partition_key",
+          "position": 1,
+          "type": "date"
+        },
+        {
+          "table_name": "trips_by_status",
+          "column_name": "trip_id",
+          "kind": "clustering",
+          "position": 1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "brand",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "color",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "driver_id",
+          "kind": "regular",
+          "position": -1,
+          "type": "uuid"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "license_plate",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "model",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "seat_count",
+          "kind": "regular",
+          "position": -1,
+          "type": "int"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "vehicle_id",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "uuid"
+        },
+        {
+          "table_name": "vehicles",
+          "column_name": "vehicle_type",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "discount_type",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "discount_value",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "end_date",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "max_discount",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "min_trip_amount",
+          "kind": "regular",
+          "position": -1,
+          "type": "decimal"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "quantity",
+          "kind": "regular",
+          "position": -1,
+          "type": "int"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "start_date",
+          "kind": "regular",
+          "position": -1,
+          "type": "timestamp"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "status",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "voucher_code",
+          "kind": "partition_key",
+          "position": 0,
+          "type": "text"
+        },
+        {
+          "table_name": "vouchers",
+          "column_name": "voucher_name",
+          "kind": "regular",
+          "position": -1,
+          "type": "text"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.061Z",
+      "cql": "SELECT table_name,default_time_to_live FROM system_schema.tables WHERE keyspace_name = ?",
+      "params": [
+        "dat_xe_cong_nghe"
+      ],
+      "rows": [
+        {
+          "table_name": "complaints_by_customer",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "customer_spending_by_month",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "customer_vouchers",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "customers",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "driver_revenue_by_month",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "drivers",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "notifications_by_user",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "payments_by_customer",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "payments_by_trip",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "reviews_by_driver",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "reviews_by_trip",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "service_types",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "trip_status_history",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "trips_by_customer",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "trips_by_driver",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "trips_by_id",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "trips_by_status",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "vehicles",
+          "default_time_to_live": 0
+        },
+        {
+          "table_name": "vouchers",
+          "default_time_to_live": 0
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.107Z",
+      "cql": "SELECT trip_id,customer_id,driver_id,vehicle_id,booked_at,status,final_fare FROM dat_xe_cong_nghe.trips_by_id LIMIT 30",
+      "params": [],
+      "rows": [
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "vehicle_id": "02c11186-abd7-5a00-a0d3-ae22f73c21ec",
+          "booked_at": "2026-09-19T13:42:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "95400"
+        },
+        {
+          "trip_id": "c98553a7-34e7-511b-a5b8-f6484428164e",
+          "customer_id": "7a778fa9-3c31-54cb-bf23-546399b8d9cf",
+          "driver_id": "1656e4a3-c25a-5175-ae82-f3498e4f13b2",
+          "vehicle_id": "e113f0db-8ef1-5d23-af79-36a0c3b1769b",
+          "booked_at": "2026-09-24T18:13:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "272500"
+        },
+        {
+          "trip_id": "d2427793-4ed4-5417-b00f-5cc095e5672c",
+          "customer_id": "937708f9-da59-5042-a273-56903eca4842",
+          "driver_id": "3b0ee178-91c8-5edb-acdb-620927e4e657",
+          "vehicle_id": "44095241-529a-51ac-be59-b21d3967390f",
+          "booked_at": "2026-09-26T11:32:00.000Z",
+          "status": "IN_PROGRESS",
+          "final_fare": "198850"
+        },
+        {
+          "trip_id": "b259afcc-9f42-527f-811d-c8e0a3c52243",
+          "customer_id": "6f993cd1-03f0-565a-93d9-454bc1c1679c",
+          "driver_id": "1656e4a3-c25a-5175-ae82-f3498e4f13b2",
+          "vehicle_id": "e113f0db-8ef1-5d23-af79-36a0c3b1769b",
+          "booked_at": "2026-09-26T18:37:00.000Z",
+          "status": "BOOKED",
+          "final_fare": "272500"
+        },
+        {
+          "trip_id": "222fbfbf-40fd-5538-b508-d503306a85ee",
+          "customer_id": "13048aa5-2cb4-51e0-9cdc-3d42e2d434bd",
+          "driver_id": "3b0ee178-91c8-5edb-acdb-620927e4e657",
+          "vehicle_id": "44095241-529a-51ac-be59-b21d3967390f",
+          "booked_at": "2026-09-05T11:08:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "198850"
+        },
+        {
+          "trip_id": "88d91046-2acc-5457-ba37-efce32cf59f5",
+          "customer_id": "e2dd2bc9-e178-5273-91b2-4710fdfe4176",
+          "driver_id": "012c738d-9a61-5899-a733-96de8265b294",
+          "vehicle_id": "ee7f6cea-4965-56fe-9ff5-5f3d4082593e",
+          "booked_at": "2026-09-01T07:00:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "29100"
+        },
+        {
+          "trip_id": "83ed29d6-62b8-5edd-9852-07c727921e0f",
+          "customer_id": "e2dd2bc9-e178-5273-91b2-4710fdfe4176",
+          "driver_id": "dde73e75-5100-4169-8593-9cf8b9c7df83",
+          "vehicle_id": "12289a5f-aad9-5ac2-a560-4c9dc0dbd641",
+          "booked_at": "2026-09-26T09:10:00.000Z",
+          "status": "ARRIVING",
+          "final_fare": "40800"
+        },
+        {
+          "trip_id": "ec3eec19-b553-5faa-9527-10ba562b4e1f",
+          "customer_id": "a1f4011b-47ee-5971-9b28-cb479d1ddc53",
+          "driver_id": "3b0ee178-91c8-5edb-acdb-620927e4e657",
+          "vehicle_id": "44095241-529a-51ac-be59-b21d3967390f",
+          "booked_at": "2026-09-17T11:20:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "90100"
+        },
+        {
+          "trip_id": "eb8be1eb-5809-5655-b75e-11085c547660",
+          "customer_id": "991e49c2-06b2-5c3a-949d-887db09239fd",
+          "driver_id": "1656e4a3-c25a-5175-ae82-f3498e4f13b2",
+          "vehicle_id": "e113f0db-8ef1-5d23-af79-36a0c3b1769b",
+          "booked_at": "2026-09-12T18:25:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "114100"
+        },
+        {
+          "trip_id": "4283a06c-5ce0-52aa-aa11-5cf8b1933b81",
+          "customer_id": "ad9ffb7a-8471-59c2-bbaa-f30081ab9749",
+          "driver_id": "1656e4a3-c25a-5175-ae82-f3498e4f13b2",
+          "vehicle_id": "e113f0db-8ef1-5d23-af79-36a0c3b1769b",
+          "booked_at": "2026-09-12T18:01:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "114100"
+        },
+        {
+          "trip_id": "81474e79-019f-596c-8b2c-4c4cd83d33b1",
+          "customer_id": "9d21d176-3ab7-54ea-a403-98c98021260f",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "vehicle_id": "02c11186-abd7-5a00-a0d3-ae22f73c21ec",
+          "booked_at": "2026-09-07T13:06:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "225200"
+        },
+        {
+          "trip_id": "34f7b418-b375-5eb4-8ded-b525e9e428cd",
+          "customer_id": "b75207e5-44d0-52bd-a069-9f9a8ef8f9fe",
+          "driver_id": "dde73e75-5100-4169-8593-9cf8b9c7df83",
+          "vehicle_id": "12289a5f-aad9-5ac2-a560-4c9dc0dbd641",
+          "booked_at": "2026-09-15T09:34:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "93900"
+        },
+        {
+          "trip_id": "c443e04b-c573-534f-a7ed-de20f57cc732",
+          "customer_id": "ab2cc623-19d8-571b-ad1d-9b6f3d923693",
+          "driver_id": "dde73e75-5100-4169-8593-9cf8b9c7df83",
+          "vehicle_id": "12289a5f-aad9-5ac2-a560-4c9dc0dbd641",
+          "booked_at": "2026-09-15T09:58:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "93900"
+        },
+        {
+          "trip_id": "70e0b8e3-c49b-4370-bc85-512197afe7a4",
+          "customer_id": "4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef",
+          "driver_id": "e6b783ad-61bf-5812-bd8d-c40db34cf4cd",
+          "vehicle_id": "00f48306-e7bb-5973-a98a-461d14b15cdc",
+          "booked_at": "2026-09-27T07:24:06.047Z",
+          "status": "CANCELLED",
+          "final_fare": "154800"
+        },
+        {
+          "trip_id": "9b883491-665c-5416-8aec-9a4857120201",
+          "customer_id": "73c272d9-9b64-5c21-861f-bbe85538055e",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "vehicle_id": "02c11186-abd7-5a00-a0d3-ae22f73c21ec",
+          "booked_at": "2026-09-19T13:18:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "95400"
+        },
+        {
+          "trip_id": "44c9ba4e-1c6c-4edd-a068-10f6e1db19c8",
+          "customer_id": "4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef",
+          "driver_id": "3139bb5d-e51b-5db2-81fb-834420ca0807",
+          "vehicle_id": "90911934-c5f6-5ff2-b640-09921b257c59",
+          "booked_at": "2026-09-27T07:28:44.702Z",
+          "status": "BOOKED",
+          "final_fare": "40800"
+        },
+        {
+          "trip_id": "6b406ca8-1b8e-5f86-ae6d-910c8b49f7f9",
+          "customer_id": "fe534a2a-5951-5c28-bd9f-c3b4c20f9275",
+          "driver_id": "e6b783ad-61bf-5812-bd8d-c40db34cf4cd",
+          "vehicle_id": "00f48306-e7bb-5973-a98a-461d14b15cdc",
+          "booked_at": "2026-09-09T15:28:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "66800"
+        },
+        {
+          "trip_id": "adc46a0d-1963-571f-9bd5-b1171f20827b",
+          "customer_id": "17db3c55-7edc-565b-83c1-24a03a0b03bf",
+          "driver_id": "e6b783ad-61bf-5812-bd8d-c40db34cf4cd",
+          "vehicle_id": "00f48306-e7bb-5973-a98a-461d14b15cdc",
+          "booked_at": "2026-09-21T15:40:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "149300"
+        },
+        {
+          "trip_id": "688b67af-c577-5e16-808c-49c4c60ffb60",
+          "customer_id": "ad34dc66-3c47-51e7-bf41-82a0799de30c",
+          "driver_id": "012c738d-9a61-5899-a733-96de8265b294",
+          "vehicle_id": "ee7f6cea-4965-56fe-9ff5-5f3d4082593e",
+          "booked_at": "2026-09-13T07:12:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "62850"
+        },
+        {
+          "trip_id": "ce6b80d1-f950-5069-bc3f-74f1557bc0f5",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "driver_id": "c88cff8a-75ea-557b-b9fb-b92b9def5b35",
+          "vehicle_id": "445060ef-1aad-53d1-abe0-c9b154b6833f",
+          "booked_at": "2026-09-18T12:07:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "35400"
+        },
+        {
+          "trip_id": "902b5ec8-1020-5e35-b38d-f9dab9123930",
+          "customer_id": "4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef",
+          "driver_id": "3139bb5d-e51b-5db2-81fb-834420ca0807",
+          "vehicle_id": "90911934-c5f6-5ff2-b640-09921b257c59",
+          "booked_at": "2026-09-26T17:26:00.000Z",
+          "status": "BOOKED",
+          "final_fare": "93900"
+        },
+        {
+          "trip_id": "cd9a8b9a-95ec-5d0a-b83e-e0be038b70fa",
+          "customer_id": "937708f9-da59-5042-a273-56903eca4842",
+          "driver_id": "dde73e75-5100-4169-8593-9cf8b9c7df83",
+          "vehicle_id": "12289a5f-aad9-5ac2-a560-4c9dc0dbd641",
+          "booked_at": "2026-09-03T09:22:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "40800"
+        },
+        {
+          "trip_id": "e91cdc09-9c85-5e2b-bd01-97f41418584a",
+          "customer_id": "4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef",
+          "driver_id": "312a7e98-1e58-5612-8875-4738c9963bdf",
+          "vehicle_id": "c0817c22-3b64-55e9-9177-0287b0fefce2",
+          "booked_at": "2026-09-22T16:51:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "246700"
+        },
+        {
+          "trip_id": "62927d07-700f-4eda-b502-9b80baaed2d7",
+          "customer_id": "4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef",
+          "driver_id": "e6b783ad-61bf-5812-bd8d-c40db34cf4cd",
+          "vehicle_id": "00f48306-e7bb-5973-a98a-461d14b15cdc",
+          "booked_at": "2026-09-27T07:38:02.514Z",
+          "status": "CANCELLED",
+          "final_fare": "154800"
+        },
+        {
+          "trip_id": "e725945e-1618-5deb-99d7-8e52f7f5dd1b",
+          "customer_id": "7a778fa9-3c31-54cb-bf23-546399b8d9cf",
+          "driver_id": "012c738d-9a61-5899-a733-96de8265b294",
+          "vehicle_id": "ee7f6cea-4965-56fe-9ff5-5f3d4082593e",
+          "booked_at": "2026-09-26T07:48:00.000Z",
+          "status": "ACCEPTED",
+          "final_fare": "29100"
+        },
+        {
+          "trip_id": "8bad9f4e-9c82-50d8-8142-be3469f15e54",
+          "customer_id": "6f4f8a3d-2081-5697-b85c-cd98fdac0dda",
+          "driver_id": "82671d74-a018-5192-9610-6291474ae2ba",
+          "vehicle_id": "96dcc1e6-5f95-58a7-ae8c-d1f4ee0aeb31",
+          "booked_at": "2026-09-20T14:29:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "48450"
+        },
+        {
+          "trip_id": "49b5073a-df83-552e-a033-0ee9d663a0ee",
+          "customer_id": "34c2e7ff-ed96-52e1-b18d-15ce3284866a",
+          "driver_id": "c88cff8a-75ea-557b-b9fb-b92b9def5b35",
+          "vehicle_id": "445060ef-1aad-53d1-abe0-c9b154b6833f",
+          "booked_at": "2026-09-06T12:19:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "77700"
+        },
+        {
+          "trip_id": "962bbc26-1107-59f2-a57b-6dad5e4eb390",
+          "customer_id": "73c272d9-9b64-5c21-861f-bbe85538055e",
+          "driver_id": "82671d74-a018-5192-9610-6291474ae2ba",
+          "vehicle_id": "96dcc1e6-5f95-58a7-ae8c-d1f4ee0aeb31",
+          "booked_at": "2026-09-26T14:53:00.000Z",
+          "status": "CANCELLED",
+          "final_fare": "48450"
+        },
+        {
+          "trip_id": "0c9166dc-5a3e-5198-a9a9-eeceedc62bb3",
+          "customer_id": "7f35f82d-63e3-5eb5-9d59-0c2c8cbc4787",
+          "driver_id": "03156885-d46b-5eda-932c-78b2cc9bdabf",
+          "vehicle_id": "08ba5aec-e9e2-5f18-ac92-45f1a7bbf343",
+          "booked_at": "2026-09-26T08:59:00.000Z",
+          "status": "ACCEPTED",
+          "final_fare": "82200"
+        },
+        {
+          "trip_id": "648a7640-32af-5120-ab1e-b7df8047a473",
+          "customer_id": "33cbdabe-ad70-567b-aa59-4e3eb218902e",
+          "driver_id": "82671d74-a018-5192-9610-6291474ae2ba",
+          "vehicle_id": "96dcc1e6-5f95-58a7-ae8c-d1f4ee0aeb31",
+          "booked_at": "2026-09-08T14:17:00.000Z",
+          "status": "COMPLETED",
+          "final_fare": "113250"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.122Z",
+      "cql": "SELECT customer_id,status FROM dat_xe_cong_nghe.customers WHERE customer_id = ?",
+      "params": [
+        "902b9b2e-45be-54ee-8248-465613351c5c"
+      ],
+      "rows": [
+        {
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "status": "ACTIVE"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.154Z",
+      "cql": "SELECT driver_id,account_status,driver_status FROM dat_xe_cong_nghe.drivers WHERE driver_id = ?",
+      "params": [
+        "884dc18e-b40c-5575-bcbf-ca24aa59334f"
+      ],
+      "rows": [
+        {
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "account_status": "ACTIVE",
+          "driver_status": "AVAILABLE"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.185Z",
+      "cql": "SELECT vehicle_id,driver_id,status FROM dat_xe_cong_nghe.vehicles WHERE vehicle_id = ?",
+      "params": [
+        "02c11186-abd7-5a00-a0d3-ae22f73c21ec"
+      ],
+      "rows": [
+        {
+          "vehicle_id": "02c11186-abd7-5a00-a0d3-ae22f73c21ec",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "status": "ACTIVE"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.219Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.trips_by_customer WHERE customer_id = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "902b9b2e-45be-54ee-8248-465613351c5c",
+        "2026-09-19T13:42:00.000Z",
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "booked_at": "2026-09-19T13:42:00.000Z",
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "destination_address": "Nhà văn hóa Thanh Niên, Quận 1",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "final_fare": "95400",
+          "pickup_address": "Công viên Tao Đàn, Quận 1",
+          "status": "COMPLETED"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.250Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.trips_by_driver WHERE driver_id = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+        "2026-09-19T13:42:00.000Z",
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "booked_at": "2026-09-19T13:42:00.000Z",
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "destination_address": "Nhà văn hóa Thanh Niên, Quận 1",
+          "final_fare": "95400",
+          "pickup_address": "Công viên Tao Đàn, Quận 1",
+          "status": "COMPLETED"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.283Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "COMPLETED",
+        "2026-09-19",
+        "2026-09-19T13:42:00.000Z",
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "status": "COMPLETED",
+          "trip_date": "2026-09-19",
+          "booked_at": "2026-09-19T13:42:00.000Z",
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "destination_address": "Nhà văn hóa Thanh Niên, Quận 1",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "final_fare": "95400",
+          "pickup_address": "Công viên Tao Đàn, Quận 1"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.302Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.payments_by_trip WHERE trip_id = ?",
+      "params": [
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "payment_id": "a7e44ca3-91b7-5afd-922d-7f31f6dac20f",
+          "amount": "95400",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "paid_at": "2026-09-19T14:06:00.000Z",
+          "payment_method": "CASH",
+          "payment_status": "PAID"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.309Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.payments_by_customer WHERE customer_id = ? AND paid_at = ? AND payment_id = ?",
+      "params": [
+        "902b9b2e-45be-54ee-8248-465613351c5c",
+        "2026-09-19T14:06:00.000Z",
+        "a7e44ca3-91b7-5afd-922d-7f31f6dac20f"
+      ],
+      "rows": [
+        {
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "paid_at": "2026-09-19T14:06:00.000Z",
+          "payment_id": "a7e44ca3-91b7-5afd-922d-7f31f6dac20f",
+          "amount": "95400",
+          "payment_method": "CASH",
+          "payment_status": "PAID",
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.363Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.driver_revenue_by_month WHERE driver_id = ? AND year_month = ? AND trip_date = ? AND trip_id = ?",
+      "params": [
+        "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+        "2026-09",
+        "2026-09-19",
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "year_month": "2026-09",
+          "trip_date": "2026-09-19",
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "fare": "95400"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.394Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.customer_spending_by_month WHERE customer_id = ? AND year_month = ? AND trip_date = ? AND trip_id = ?",
+      "params": [
+        "902b9b2e-45be-54ee-8248-465613351c5c",
+        "2026-09",
+        "2026-09-19",
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "year_month": "2026-09",
+          "trip_date": "2026-09-19",
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "amount": "95400"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.426Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.reviews_by_trip WHERE trip_id = ?",
+      "params": [
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "comment": "Tài xế thân thiện, chuyến đi rất thoải mái.",
+          "created_at": "2026-09-19T14:15:00.000Z",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "rating": 5,
+          "review_id": "8a6b3ab4-0176-5760-8e0e-7c421a0c2f7c"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.457Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.reviews_by_driver WHERE driver_id = ? AND created_at = ? AND review_id = ?",
+      "params": [
+        "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+        "2026-09-19T14:15:00.000Z",
+        "8a6b3ab4-0176-5760-8e0e-7c421a0c2f7c"
+      ],
+      "rows": [
+        {
+          "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+          "created_at": "2026-09-19T14:15:00.000Z",
+          "review_id": "8a6b3ab4-0176-5760-8e0e-7c421a0c2f7c",
+          "comment": "Tài xế thân thiện, chuyến đi rất thoải mái.",
+          "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+          "rating": 5,
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+        }
+      ],
+      "hasMorePages": false
+    },
+    {
+      "at": "2026-11-02T12:01:37.490Z",
+      "cql": "SELECT * FROM dat_xe_cong_nghe.trip_status_history WHERE trip_id = ?",
+      "params": [
+        "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      ],
+      "rows": [
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "changed_at": "2026-09-19T14:02:00.000Z",
+          "note": "Chuyến đi hoàn thành",
+          "status": "COMPLETED"
+        },
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "changed_at": "2026-09-19T13:57:00.000Z",
+          "note": "Chuyến đi đã bắt đầu",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "changed_at": "2026-09-19T13:52:00.000Z",
+          "note": "Tài xế đang đến điểm đón",
+          "status": "ARRIVING"
+        },
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "changed_at": "2026-09-19T13:47:00.000Z",
+          "note": "Tài xế đã nhận chuyến",
+          "status": "ACCEPTED"
+        },
+        {
+          "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+          "changed_at": "2026-09-19T13:42:00.000Z",
+          "note": "Khách hàng tạo yêu cầu chuyến đi",
+          "status": "BOOKED"
+        }
+      ],
+      "hasMorePages": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "Durable writes enabled",
+      "result": "FAIL",
+      "details": {
+        "keyspace_name": "dat_xe_cong_nghe",
+        "durable_writes": false,
+        "replication": {
+          "class": "org.apache.cassandra.locator.SimpleStrategy",
+          "replication_factor": "3"
+        }
+      }
+    },
+    {
+      "name": "Live schema readable",
+      "result": "PASS",
+      "details": {
+        "tables": 19,
+        "columns": 144
+      }
+    },
+    {
+      "name": "Existing trip links",
+      "result": "PASS",
+      "details": {
+        "tripId": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      }
+    },
+    {
+      "name": "Existing trips_by_customer status/fare",
+      "result": "PASS",
+      "details": {
+        "tripId": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      }
+    },
+    {
+      "name": "Existing trips_by_driver status/fare",
+      "result": "PASS",
+      "details": {
+        "tripId": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      }
+    },
+    {
+      "name": "Existing status projection",
+      "result": "PASS",
+      "details": {
+        "tripId": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c"
+      }
+    },
+    {
+      "name": "Existing payment projection",
+      "result": "PASS",
+      "details": {
+        "paymentId": "a7e44ca3-91b7-5afd-922d-7f31f6dac20f"
+      }
+    },
+    {
+      "name": "Existing driver_revenue_by_month",
+      "result": "PASS",
+      "details": {
+        "tripId": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+        "month": "2026-09"
+      }
+    },
+    {
+      "name": "Existing customer_spending_by_month",
+      "result": "PASS",
+      "details": {
+        "tripId": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+        "month": "2026-09"
+      }
+    },
+    {
+      "name": "Existing review projection",
+      "result": "PASS",
+      "details": {
+        "reviewId": "8a6b3ab4-0176-5760-8e0e-7c421a0c2f7c"
+      }
+    }
+  ],
+  "existingSampleIds": {
+    "trip_id": "e9b5de17-94ee-530b-99a6-61d8e6bcba9c",
+    "customer_id": "902b9b2e-45be-54ee-8248-465613351c5c",
+    "driver_id": "884dc18e-b40c-5575-bcbf-ca24aa59334f",
+    "vehicle_id": "02c11186-abd7-5a00-a0d3-ae22f73c21ec",
+    "booked_at": "2026-09-19T13:42:00.000Z",
+    "status": "COMPLETED",
+    "final_fare": "95400",
+    "purpose": "EXISTING_DATA_BASELINE_NOT_QA_CREATED"
+  },
+  "sourceInventory": [
+    {
+      "file": "src\\app\\account-management.css",
+      "bytes": 4557,
+      "sha256": "53e65b41e486d2f6b81f6966ed53d8b8a65dac76b39af949222862da6c24689d"
+    },
+    {
+      "file": "src\\app\\admin\\dashboard\\page.tsx",
+      "bytes": 283,
+      "sha256": "b77ff2c460b83aad9feed4dd87779d9bc70f15103e7636b2071150bdea0ef711"
+    },
+    {
+      "file": "src\\app\\admin\\layout.tsx",
+      "bytes": 543,
+      "sha256": "17f9201985831839f277a2a43bcaac70a351ff305fed6bbae70f7cf513d0114e"
+    },
+    {
+      "file": "src\\app\\admin\\[section]\\page.tsx",
+      "bytes": 1028,
+      "sha256": "08b3034b496371996447b8383fd7ebb012df4fc44de17a74672a9623ec2f7641"
+    },
+    {
+      "file": "src\\app\\admin-support.css",
+      "bytes": 1998,
+      "sha256": "d45762bbdeca7cd1c9c8de6b906981eafe2c7f10f071cbb8221ac046ac346d20"
+    },
+    {
+      "file": "src\\app\\api\\admin\\complaints\\[customerId]\\[createdAt]\\[complaintId]\\route.ts",
+      "bytes": 2067,
+      "sha256": "ef0ec64b85391f110f2073856a899755ad627f45159a19b00b0dd5d62c461def"
+    },
+    {
+      "file": "src\\app\\api\\admin\\notifications\\[userId]\\[createdAt]\\[notificationId]\\route.ts",
+      "bytes": 643,
+      "sha256": "335decca56863f2c6f3f92db9d415c3d1d30aabfebba674c4d97394774b5175c"
+    },
+    {
+      "file": "src\\app\\api\\admin\\[resource]\\route.ts",
+      "bytes": 6575,
+      "sha256": "36f63df6576eecfc85f4f99330d186cecd94bf346cd7f72305385cf42a4d8982"
+    },
+    {
+      "file": "src\\app\\api\\admin\\[resource]\\[id]\\route.ts",
+      "bytes": 2989,
+      "sha256": "571c5386cee4204caf7f390f59a858d341d84a3961952394ff721008d935525e"
+    },
+    {
+      "file": "src\\app\\api\\auth\\demo\\route.ts",
+      "bytes": 249,
+      "sha256": "d6297d3ff07716605d880eb831bf77c87c4420eddca3d9fbfcd960063c76fa75"
+    },
+    {
+      "file": "src\\app\\api\\auth\\login\\route.ts",
+      "bytes": 1953,
+      "sha256": "7ffa6f69504a12a9deb20e9443419cb194203c667c963cc094495bfe86798092"
+    },
+    {
+      "file": "src\\app\\api\\auth\\logout\\route.ts",
+      "bytes": 177,
+      "sha256": "be4dbc1a58003b685b96119a14a5b193330428029b9754b83fe7267497cee91b"
+    },
+    {
+      "file": "src\\app\\api\\auth\\me\\route.ts",
+      "bytes": 289,
+      "sha256": "3b77bb5aacd6d98dc092b50ff49b91d58080cd6153e120077c55d5b4d02a1529"
+    },
+    {
+      "file": "src\\app\\api\\auth\\register\\route.ts",
+      "bytes": 655,
+      "sha256": "0e85e4ef2b04ff3866ca372015807758e7d1faa4ab5927e9e157396409ea3d87"
+    },
+    {
+      "file": "src\\app\\api\\avatars\\[role]\\[id]\\route.ts",
+      "bytes": 2612,
+      "sha256": "2202425fc3b4df3b41148c0f47fd0191e663afd8a19fdbb28f0444983375d965"
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\complaints\\route.ts",
+      "bytes": 2007,
+      "sha256": "a21403293bf6734b572a6de3aa7a239bfc7c34f4ccd2b9f245a69961800a9df8"
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\payments\\route.ts",
+      "bytes": 682,
+      "sha256": "7e716f4eadee4fe2dc659c2bf615b1d1f52925128a658d258a49c03b148baab6"
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\reviews\\route.ts",
+      "bytes": 679,
+      "sha256": "751a7251f1af3a2ffd35e9fd04719037ec944f7f741ddfcf6c081bffefa18c07"
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\route.ts",
+      "bytes": 1374,
+      "sha256": "cf09cc31ce82790e0eb2d2a5b960b4e3d39cf78d052f09f6cf46ec2082e0268c"
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\trips\\route.ts",
+      "bytes": 1207,
+      "sha256": "d56307a03d4671b92a394cedb535545bb25e7d4d18aa2f085c6babadae287be4"
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\vouchers\\route.ts",
+      "bytes": 947,
+      "sha256": "f79d0e612c234c98123c5cdc998d8f9bcbad04851273e47606bb0edfdc5a7c3a"
+    },
+    {
+      "file": "src\\app\\api\\dashboard\\route.ts",
+      "bytes": 959,
+      "sha256": "f6738982ad33bcb5cad5c84b0683e38a88f13ac26dd14c98ecaceddafe891526"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\route.ts",
+      "bytes": 2090,
+      "sha256": "0785118be3392250b0359aad54d664aa777b13a50b372f3b2e7af0a4171bcac4"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\revenue\\[month]\\route.ts",
+      "bytes": 822,
+      "sha256": "be217cae399435f90079de043c11bd2be833590f96e04fa3eb5dbfd9270b5e5d"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\reviews\\route.ts",
+      "bytes": 673,
+      "sha256": "0221811feab9af966a99360fea8ceab49e3ed86119c35371cd3a9c6fbf46866c"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\route.ts",
+      "bytes": 1765,
+      "sha256": "0839961ccdd7a1af6142d7bdab7ea9be461b1cb92af6c6beda3c51d229e0e3cf"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\status\\route.ts",
+      "bytes": 914,
+      "sha256": "d429252edf8803ea7bd985cbfe176f617604510fae9c6e2b042c88ce7520faa3"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\trips\\route.ts",
+      "bytes": 1378,
+      "sha256": "bb9564021e56db9cb063a2e10e65b466b2e2992d4e48ca80626eeac7bfbb26b3"
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\vehicle\\route.ts",
+      "bytes": 675,
+      "sha256": "8042a796cc1da6aa09ebe8c85376613e18730cbf2f6efe196b3e85533c95b458"
+    },
+    {
+      "file": "src\\app\\api\\health\\route.ts",
+      "bytes": 341,
+      "sha256": "dcb849053ae076a4ecfce52341b62f0206c4fd0b2e0e2447b0f0071bd7cf9609"
+    },
+    {
+      "file": "src\\app\\api\\maps\\geocode\\route.ts",
+      "bytes": 527,
+      "sha256": "e3cc3271159190344277afe58df1459d6800612746561048cd9e7ad44b425350"
+    },
+    {
+      "file": "src\\app\\api\\maps\\reverse-geocode\\route.ts",
+      "bytes": 653,
+      "sha256": "9cf8d4fc5d014d663da896520d33f61c337791bdfeceec430d2bbe5b2814c402"
+    },
+    {
+      "file": "src\\app\\api\\maps\\route\\route.ts",
+      "bytes": 684,
+      "sha256": "d671deb2b66e52fc945fea7624229fd17646654aca50e4ca1bd04be1f7c1384b"
+    },
+    {
+      "file": "src\\app\\api\\services\\route.ts",
+      "bytes": 344,
+      "sha256": "47d90a0665ebe45df007e0c14b30ff89bb9291b98517563c3f66de355cf7db6a"
+    },
+    {
+      "file": "src\\app\\api\\trips\\route.ts",
+      "bytes": 1256,
+      "sha256": "302c90ea6a646f63afd9b3eb581ede2eb79b2855ee7ecf2920f764bf4683dedf"
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\payment\\route.ts",
+      "bytes": 1578,
+      "sha256": "bd16091758b1cf0d0c1172b911ccd2daf3cede35875524efe4b646e6754f106e"
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\review\\route.ts",
+      "bytes": 3251,
+      "sha256": "d7ca8a45a2ce5874ead1524ca795b223056c7432307141ae4dec77bb6cabfbd0"
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\route.ts",
+      "bytes": 2903,
+      "sha256": "a212550685cea0e1fa29b5c8cffb9288abdd19f52b0a7c5a3c49dd464718a29d"
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\status\\route.ts",
+      "bytes": 3368,
+      "sha256": "19da1b0732d1d2a7907b427a0566e16118c6ea50e962f76ed90f3125e2bb4fa1"
+    },
+    {
+      "file": "src\\app\\api\\users\\[id]\\notifications\\route.ts",
+      "bytes": 603,
+      "sha256": "7ea54b1b7e18277e9c72da0d814f9464daf4e560e23a8cf986a82d8825fbd046"
+    },
+    {
+      "file": "src\\app\\api\\users\\[id]\\notifications\\[createdAt]\\[notificationId]\\route.ts",
+      "bytes": 1487,
+      "sha256": "7c431aee1c2c2093e30fe474ab77d9fb833d5ae60c16c5517b93c502a0a50c38"
+    },
+    {
+      "file": "src\\app\\booking-fix.css",
+      "bytes": 10612,
+      "sha256": "ac900e56d48317751abb12c191aaa9feadbc635672d37b21a69463de90e267b6"
+    },
+    {
+      "file": "src\\app\\booking-layout.css",
+      "bytes": 7405,
+      "sha256": "948995ae50a00cd1f8d0061bbbcb427b14f0f224cadb4e7e4095d9af8bd74a6e"
+    },
+    {
+      "file": "src\\app\\customer\\booking\\page.tsx",
+      "bytes": 132,
+      "sha256": "a0ce05f05adfa425c6f662092fb500f96d64e5f1533ef5c909890c6a6e116672"
+    },
+    {
+      "file": "src\\app\\customer\\dashboard\\page.tsx",
+      "bytes": 283,
+      "sha256": "4955a7219520c58912e1c1ebb10b9f26dad0bf46aafd9e0d114485002e76611a"
+    },
+    {
+      "file": "src\\app\\customer\\layout.tsx",
+      "bytes": 549,
+      "sha256": "4f5304e5b929cb898d3225662941ed47674e02ca3dbd3d6c0c88715a910a01a6"
+    },
+    {
+      "file": "src\\app\\customer\\trips\\[id]\\page.tsx",
+      "bytes": 230,
+      "sha256": "8d3fcbfaff7afe6b931336eeff0444f7fb67ddfd144f15cbf5ac992b72d072c7"
+    },
+    {
+      "file": "src\\app\\customer\\[section]\\page.tsx",
+      "bytes": 474,
+      "sha256": "0f57d3bacd75880ea08f1a614e61c63a55632a2bc8582adc7448ac034bdde26f"
+    },
+    {
+      "file": "src\\app\\driver\\dashboard\\page.tsx",
+      "bytes": 276,
+      "sha256": "5ce9fe623fc018c6c4e27d69dff14be17dc09d6b9a7e90a2c0a4528ce86bcbd0"
+    },
+    {
+      "file": "src\\app\\driver\\layout.tsx",
+      "bytes": 1589,
+      "sha256": "7962d086c29b13f63e35f411b9498f2f885aab8717118e5b5998077df03b8769"
+    },
+    {
+      "file": "src\\app\\driver\\[section]\\page.tsx",
+      "bytes": 781,
+      "sha256": "1e5c8ab4d0ab458b87a71b8ae187c3db6d9a65fcdaaef3fba0f554b4fb1043d6"
+    },
+    {
+      "file": "src\\app\\driver-registration.css",
+      "bytes": 1104,
+      "sha256": "4dd5532c34005e5434da38a94aa797385956385af5c97335a4ee66db04251ffa"
+    },
+    {
+      "file": "src\\app\\globals.css",
+      "bytes": 48203,
+      "sha256": "a754ccf5969ce2cbdaca665705087edf2a35f5aa63a8fa25ba9f04ac157a28ac"
+    },
+    {
+      "file": "src\\app\\layout.tsx",
+      "bytes": 824,
+      "sha256": "b94f404dc1fae8d09a423321a2aff92fe2c9cba6df16d49588d9631aee5ed2cf"
+    },
+    {
+      "file": "src\\app\\loading.tsx",
+      "bytes": 180,
+      "sha256": "e3345893ef5ec685e44960b11f2b52d3a45b3e2f0f65e1a859f31ccd560dda7c"
+    },
+    {
+      "file": "src\\app\\login\\page.tsx",
+      "bytes": 121,
+      "sha256": "5be6511f9717cc6b663272585a26d43f797c4c9db3dcf078839b31d0fc2c4a58"
+    },
+    {
+      "file": "src\\app\\page.tsx",
+      "bytes": 131,
+      "sha256": "919c7ca35e290a12f4eb927f360344b3cccad815aca531f9814524a1e3ec0f60"
+    },
+    {
+      "file": "src\\app\\pink-theme.css",
+      "bytes": 13171,
+      "sha256": "36b6c8d9b791a9e32187a9d687a86e7bf8d499905d59c2fa91d0b5c39a442dba"
+    },
+    {
+      "file": "src\\app\\register\\page.tsx",
+      "bytes": 135,
+      "sha256": "7b15ac146061d6453e39afbcd47ffcc70eed779b69bf06ff97cd68acd6821f46"
+    },
+    {
+      "file": "src\\app\\ride-loader.css",
+      "bytes": 9316,
+      "sha256": "199f09de4d2903428ba5cf1169b79f3d37e788d7b1ff2d160e5b45f8f56675f5"
+    },
+    {
+      "file": "src\\app\\trip-notifications.css",
+      "bytes": 1367,
+      "sha256": "f512a888d87b40a219892d16fc1e4e351a3479bd6bbff5e30559a26fc61d9d8b"
+    },
+    {
+      "file": "src\\app\\trip-payments.css",
+      "bytes": 1726,
+      "sha256": "ff68b483aa695a529ed0094a097ee18754242b508c0d52e39c1f74b94a532f84"
+    },
+    {
+      "file": "src\\components\\auth\\LoginForm.tsx",
+      "bytes": 6752,
+      "sha256": "61dbb692948d1df9f522dc24a0bb3efdee4f77be5957a80d340ce309f5a05abb"
+    },
+    {
+      "file": "src\\components\\auth\\RegisterForm.tsx",
+      "bytes": 9347,
+      "sha256": "47868f6cfa8bd81752ad68c5822d14d68a0a0c174d0b15cfa68d5165e8185d84"
+    },
+    {
+      "file": "src\\components\\booking\\AddressSearch.tsx",
+      "bytes": 4133,
+      "sha256": "c0f4eabaecb963ed59f5eb70bbe288a9e509b8cc26b4388b5364b86a1557cb1e"
+    },
+    {
+      "file": "src\\components\\booking\\BookingForm.tsx",
+      "bytes": 18168,
+      "sha256": "b6a6e816cbe39aad8f780617160f45ddd4c57387a305445bd8a9e710c41843ab"
+    },
+    {
+      "file": "src\\components\\booking\\RideMap.tsx",
+      "bytes": 4272,
+      "sha256": "d2f3b7c857267087d7c0a993055e85d7b9c73c7f66316bd621387e0d1877aab3"
+    },
+    {
+      "file": "src\\components\\marketing\\LandingPage.tsx",
+      "bytes": 7320,
+      "sha256": "390ef1d63368d0ac49e4bc68e8e1913ae1ad7861da62e1e084d22f3ef796b6cf"
+    },
+    {
+      "file": "src\\components\\portal\\AccountAvatar.tsx",
+      "bytes": 3564,
+      "sha256": "7d411d0713a989a71a3a59178a0199eb5920ff079157a8e7372b0e60b7e6c911"
+    },
+    {
+      "file": "src\\components\\portal\\AdminAccountManager.tsx",
+      "bytes": 16479,
+      "sha256": "a023fed0769fc29b1c3cbf6a3fb2d6fd62f5763a9d26d4254d673429e6a60353"
+    },
+    {
+      "file": "src\\components\\portal\\AdminSupportSection.tsx",
+      "bytes": 13011,
+      "sha256": "8bf2f56894b4068041de5c90917d7455a58b0cc92b6dcc08709a2e5f87b3a87f"
+    },
+    {
+      "file": "src\\components\\portal\\ConnectionIndicator.tsx",
+      "bytes": 735,
+      "sha256": "354f396c313f14de01e7e4d35fc0943ae3ff7a24bf661102d85575c18948b672"
+    },
+    {
+      "file": "src\\components\\portal\\DriverAvailability.tsx",
+      "bytes": 2073,
+      "sha256": "933b30d5c3bc06689a0dd112bb1ce758a7dc2f8e45ae5a0579d8779496eb1d36"
+    },
+    {
+      "file": "src\\components\\portal\\NotificationBell.tsx",
+      "bytes": 4986,
+      "sha256": "708d8cce867c86ad83ca9104789902440a314d2e3d1ec1657af36ee92785223b"
+    },
+    {
+      "file": "src\\components\\portal\\PortalSection.tsx",
+      "bytes": 42463,
+      "sha256": "95ebc458448b3b356ae05311a3a9a23c65a38eec9efb71f28116e93e4ed5b82e"
+    },
+    {
+      "file": "src\\components\\portal\\PortalShell.tsx",
+      "bytes": 7144,
+      "sha256": "047d03d460eb2e25f8b2bc9c3c12704c217379b3cde1d9474be55bbab8cecb8d"
+    },
+    {
+      "file": "src\\components\\portal\\RoleDashboard.tsx",
+      "bytes": 15782,
+      "sha256": "31b8577f2b7093cb177e09423b2b7e5d25064fa1c7b00a0b8c2481ebf6c3ed94"
+    },
+    {
+      "file": "src\\components\\trips\\TripDetail.tsx",
+      "bytes": 11380,
+      "sha256": "414ce24166d2ea2b4ec63e189db4d04c0a78192e855f2d31c643394cb22c367b"
+    },
+    {
+      "file": "src\\components\\trips\\TripPaymentPanel.tsx",
+      "bytes": 5999,
+      "sha256": "df48a767ad50827fa7919e9d1b6fe8e09620812c19d62802b63c451dda6e6760"
+    },
+    {
+      "file": "src\\components\\ui\\RideLoader.tsx",
+      "bytes": 1105,
+      "sha256": "a7b795dc5d337327101975f1662899018789baef6f40ca6eaac88be6f5676ded"
+    },
+    {
+      "file": "src\\instrumentation.ts",
+      "bytes": 121,
+      "sha256": "c27b5f454cba858f2edf28aa46b33d8d5617232413d5d0ac68939dcba7ed3517"
+    },
+    {
+      "file": "src\\lib\\account-avatars.ts",
+      "bytes": 2670,
+      "sha256": "cc2e1a50b85707fef4651ebcda5afadde6ae43e9fa373b2e12aa150d503d3f5d"
+    },
+    {
+      "file": "src\\lib\\auth.ts",
+      "bytes": 3113,
+      "sha256": "77f75712b1dfc563badf837c5dd97cfa02f7b9366237b58de3c465ae404f77a9"
+    },
+    {
+      "file": "src\\lib\\authorization.ts",
+      "bytes": 2639,
+      "sha256": "3ed78f826667ad857d2f31298ba96426d15846ddc4fd8137963d8492997fe70c"
+    },
+    {
+      "file": "src\\lib\\business-journal.ts",
+      "bytes": 10456,
+      "sha256": "12fc996170a26c3168363feb47b6e91f6827ab631847596f5a43206baa949111"
+    },
+    {
+      "file": "src\\lib\\business-values.ts",
+      "bytes": 1512,
+      "sha256": "5685f7d1913708de9dce17c63ec19a5fee47ef2dcce8fd97cf0ed7defee65f75"
+    },
+    {
+      "file": "src\\lib\\cassandra.ts",
+      "bytes": 2647,
+      "sha256": "12a54ed68604968a25746404d43af120b7f68c8db99829feb148cb02fd111bb9"
+    },
+    {
+      "file": "src\\lib\\demo-auth.ts",
+      "bytes": 1421,
+      "sha256": "6a30d14cd86a015d7d851ebb5cfbb7f07b393e8c1e065d3fe8fc7eb1814e61e6"
+    },
+    {
+      "file": "src\\lib\\demo-mutation.ts",
+      "bytes": 2682,
+      "sha256": "f6d1c6efb927112fd1acec8e87af2bb97125de19d5370ae9b84e1a0884d1a566"
+    },
+    {
+      "file": "src\\lib\\demo-users.ts",
+      "bytes": 548,
+      "sha256": "8de9b8c0a98352f380cc7debf1be14564bfd830261b75d3e3a7a04be17fd5991"
+    },
+    {
+      "file": "src\\lib\\driver-assignment-lock.ts",
+      "bytes": 1251,
+      "sha256": "d044fe789762e119fe58797928c19f35d8b734f773fd44870044eacbdee28412"
+    },
+    {
+      "file": "src\\lib\\http.ts",
+      "bytes": 1869,
+      "sha256": "0bba9cdef7d3485064035ddaa377fd614d91ac119466710e942be762634cdaa4"
+    },
+    {
+      "file": "src\\lib\\idempotency.ts",
+      "bytes": 451,
+      "sha256": "3c4ff90aa0aa633ad0a612f61ed64f70bdf3d1c0a14233398d838c68fd5d5c69"
+    },
+    {
+      "file": "src\\lib\\map-types.ts",
+      "bytes": 238,
+      "sha256": "36819da6afb3f319c1cf11b2bfe2b6d4e618efda24369c4335b2d6c0a276aaf8"
+    },
+    {
+      "file": "src\\lib\\mutation-request.ts",
+      "bytes": 1619,
+      "sha256": "33e72f9ba6c2062177c7eacb3b70a13bb2e83f3794d03aa9711c055ef27df66b"
+    },
+    {
+      "file": "src\\lib\\payment-values.ts",
+      "bytes": 558,
+      "sha256": "328ef7c9643eaed28b46df970ef0cc9392d384f2384e0a88e099b86c36d7f94a"
+    },
+    {
+      "file": "src\\lib\\registration-schema.ts",
+      "bytes": 2271,
+      "sha256": "ca3bcd16cb8b478325688c622e8260ada674f5e46da056312d44ea943fc481d0"
+    },
+    {
+      "file": "src\\lib\\security-config.ts",
+      "bytes": 975,
+      "sha256": "13c2308e648a0d6ad5fb25adb3b88fb8e757ee941c45ee2ae1ba28370a81f5f6"
+    },
+    {
+      "file": "src\\lib\\trip-notifications.ts",
+      "bytes": 966,
+      "sha256": "4c23bdb55888a48442157537662a6e59ae9db48abdc7225953121cb723225296"
+    },
+    {
+      "file": "src\\repositories\\accounts.ts",
+      "bytes": 3071,
+      "sha256": "d539716335afbd1ee3034cf6376ec07d87a650ad49874578eac08f2630e30b7f"
+    },
+    {
+      "file": "src\\repositories\\admin-support.ts",
+      "bytes": 1095,
+      "sha256": "86dc03c3e9ef0d28b670300934c803de52d3be920689cb29d1014f270d7cb5b8"
+    },
+    {
+      "file": "src\\repositories\\ride-data.ts",
+      "bytes": 5847,
+      "sha256": "934adb0d8fd467fa3684df749356f7b0ee4bd6ce8fd56b6b69f8da7c9434902b"
+    },
+    {
+      "file": "src\\services\\admin-accounts.ts",
+      "bytes": 7428,
+      "sha256": "81bf6a135dcdc342649f27873eb16b165c9c7485968898d8da136e0f01dfc39c"
+    },
+    {
+      "file": "src\\services\\admin-support.ts",
+      "bytes": 2385,
+      "sha256": "81fbbdc5c03b29e93debbfe5b89f56041036ea7ad9b7c7b753dc99ae7a33b3ae"
+    },
+    {
+      "file": "src\\services\\business-resources.ts",
+      "bytes": 8794,
+      "sha256": "a1219df68fd1b1bd120b892da049d937a2a90937e75d629a001757d01f2a1aac"
+    },
+    {
+      "file": "src\\services\\dashboard.ts",
+      "bytes": 6856,
+      "sha256": "01d1dc08da62ebbaf5523b86bb1df4a8bf818c937efa53522b0ee16a2f50cd6c"
+    },
+    {
+      "file": "src\\services\\demo-trip-status.ts",
+      "bytes": 6181,
+      "sha256": "e5ea5fc1fa66e1a13375536f740285de7b07089c05f72095c8ad57ac949f4361"
+    },
+    {
+      "file": "src\\services\\maps.ts",
+      "bytes": 5499,
+      "sha256": "6d24e6edb2cc96a3ce94f7f145502c5f402ee11ec46e852fda032bac93812d25"
+    },
+    {
+      "file": "src\\services\\payments.ts",
+      "bytes": 7462,
+      "sha256": "e61ed90207c2b5e810f9a9a432cb7e104dcd4a7568c039bb0ecabc037300c20e"
+    },
+    {
+      "file": "src\\services\\registration.ts",
+      "bytes": 4121,
+      "sha256": "7a0d9f249d36f0a7c5ea2164b62fc6e3a7d2c400ae0f30a6172010a3c75eaf6e"
+    },
+    {
+      "file": "src\\services\\trip-plans.ts",
+      "bytes": 19975,
+      "sha256": "e5390afd91e69e511ed47afe00a171bc3e3105ffb110737aced04a1098f3790a"
+    },
+    {
+      "file": "src\\services\\trips.ts",
+      "bytes": 13953,
+      "sha256": "1c7333d7e421df3e2d26b39af25d33aa28d5a7ba96485b826a2787803879cfbb"
+    }
+  ],
+  "finishedAt": "2026-11-02T12:01:38.509Z"
+}

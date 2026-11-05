@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-02T12:17:06.359Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3100/api/auth/register",
+      "status": 201,
+      "body": {
+        "success": true,
+        "data": {
+          "user": {
+            "id": "91857c4a-2cdc-4d43-8401-28c4cb00dc44",
+            "name": "QA_TEST_20261102121343_DRIVER",
+            "email": "qa_test_20261102121343_driver@example.invalid",
+            "accountStatus": "PENDING"
+          },
+          "redirectTo": "/login"
+        }
+      }
+    }
+  ]
+}

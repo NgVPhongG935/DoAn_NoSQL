@@ -1,0 +1,124 @@
+/* Shared admin list layout. Keep tables inside their own scroll container. */
+.driver-account-management,.admin-payments-page,.admin-trips-page { min-width: 0; gap: 20px; }
+.admin-overview { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.admin-overview-card { min-width: 0; padding: 20px; border: 1px solid #f0e3e9; border-radius: 14px; background: #fff; }
+.admin-overview-card>span { display: flex; align-items: center; gap: 9px; color: #79818b; font-size: 12px; font-weight: 600; }
+.admin-overview-card>span svg { color: #b6547d; }
+.admin-overview-card>strong { display: block; margin: 14px 0 8px; color: #422038; font-size: clamp(20px,1.7vw,29px); line-height: 1.2; font-weight: 750; letter-spacing: -.5px; overflow-wrap: anywhere; }
+.admin-overview-card>small { color: #8a919a; font-size: 11px; line-height: 1.5; }
+.admin-overview-card.overview-success>strong,.admin-overview-card.overview-success>span svg { color: #288269; }
+.admin-overview-card.overview-waiting>strong,.admin-overview-card.overview-waiting>span svg { color: #b17a2a; }
+.driver-account-management .data-panel,.payment-history-panel,.trip-history-panel { min-width: 0; padding-top: 20px; border-radius: 14px; }
+.driver-account-management .data-panel>.panel-heading,.payment-history-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 0 22px 18px; }
+.driver-account-management .panel-heading h2,.payment-history-heading h2 { margin: 7px 0 0; color: #3d3440; font-size: 16px; font-weight: 700; }
+.payment-history-heading h2>span { color: #92909a; font-size: 12px; font-weight: 400; }
+.driver-account-management .table-search,.admin-payments-page .table-search { width: min(100%,310px); height: 38px; border-radius: 8px; }
+.driver-account-management .table-search input,.admin-payments-page .table-search input { min-width: 0; font-size: 11px; background: transparent; }
+.admin-list-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding: 0 22px 18px; }
+.admin-filter-tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 9px; background: #f8f4f6; }
+.admin-filter-tabs>button { padding: 8px 11px; border: 0; border-radius: 6px; color: #8a7f88; background: transparent; font: inherit; font-size: 11px; font-weight: 600; cursor: pointer; }
+.admin-filter-tabs>button.active { color: #b02e69; background: #fff; box-shadow: 0 1px 5px #56233f12; }
+.admin-filter-tabs>button:hover { color: #ae2c65; }
+.admin-select-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-select-filters select { min-height: 36px; max-width: 100%; padding: 0 28px 0 10px; border: 1px solid #e9e1e6; border-radius: 7px; background: #fff; color: #635363; font: inherit; font-size: 11px; }
+.admin-list-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 15px 22px; border-top: 1px solid #f0e9ed; color: #8e8590; font-size: 11px; }
+.driver-account-management .table-scroll { max-width: 100%; }
+.driver-account-management .driver-management-table { width: 100%; min-width: 1040px; table-layout: fixed; white-space: normal; }
+.driver-management-table th:nth-child(1) { width: 26%; }
+.driver-management-table th:nth-child(2) { width: 20%; }
+.driver-management-table th:nth-child(3) { width: 12%; }
+.driver-management-table th:nth-child(4) { width: 13%; }
+.driver-management-table th:nth-child(5) { width: 11%; }
+.driver-management-table th:nth-child(6) { width: 220px; }
+.driver-account-management .driver-management-table th { height: 44px; padding-top: 8px; padding-bottom: 8px; font-size: 10px; letter-spacing: .4px; }
+.driver-account-management .driver-management-table td { height: auto; padding: 17px 12px; vertical-align: middle; font-size: 12px; }
+.driver-account-management .driver-management-table td:first-child { padding-left: 22px; }
+.driver-management-table .account-person { min-width: 0; gap: 11px; }
+.driver-management-table .account-person>.account-avatar { display: grid; flex: none; width: 40px; height: 40px; gap: 0; }
+.driver-management-table .account-person>span:not(.account-avatar) { min-width: 0; gap: 5px; }
+.driver-management-table .account-person strong { font-size: 13px; line-height: 1.4; overflow-wrap: anywhere; }
+.driver-management-table .account-person small { font-size: 11px; line-height: 1.4; }
+.driver-management-table .driver-email { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.driver-vehicle-cell { display: grid; gap: 5px; line-height: 1.4; }
+.driver-vehicle-cell strong { width: fit-content; padding: 3px 7px; border: 1px solid #e7dce3; border-radius: 4px; color: #554052; background: #fbf8fa; font-size: 12px; letter-spacing: .5px; }
+.driver-vehicle-cell span { color: #5e626c; font-size: 12px; overflow-wrap: anywhere; }
+.driver-vehicle-cell small { color: #9a919b; font-size: 11px; }
+.driver-license { color: #7f7480; font-size: 11px; overflow-wrap: anywhere; }
+.driver-management-table .status-pill { font-size: 10px; line-height: 1.4; white-space: nowrap; border-radius: 6px; }
+.driver-management-table .account-actions { flex-wrap: nowrap; gap: 5px; }
+.driver-management-table .account-actions .table-action { min-height: 32px; padding: 6px 8px; border-color: #eedce6; border-radius: 6px; background: #fff8fb; color: #ad4374; font-size: 11px; white-space: nowrap; }
+.driver-management-table .account-actions .driver-icon-action { width: 30px; min-width: 30px; padding: 0; }
+.driver-management-table .account-actions .account-delete { border-color: #f0dcdc; color: #bd5a60; background: #fff9f9; }
+.driver-management-table .account-actions .table-action:hover { background: #fce9f2; }
+.driver-management-table button:focus-visible,.admin-filter-tabs button:focus-visible,.admin-select-filters select:focus-visible { outline: 2px solid #da5b95; outline-offset: 3px; }
+.status-busy { background: #edf2fc; color: #6275a4; }
+.admin-payments-page .payment-refresh { min-height: 38px; padding: 0 15px; border: 1px solid #e9d9e3; border-radius: 8px; background: #fff; color: #985175; font-size: 12px; }
+.payment-history-panel { overflow: hidden; }
+.admin-payment-table { min-width: 1050px; }
+.admin-payment-table th { height: 44px; font-size: 10px; }
+.admin-payment-table td { height: 78px; padding-top: 16px; padding-bottom: 16px; font-size: 12px; }
+.admin-payment-table .cell-subline { margin-top: 6px; font-size: 10px; }
+.payment-code { color: #a74976; font-size: 12px; letter-spacing: .3px; }
+.payment-customer { display: block; max-width: 210px; overflow: hidden; text-overflow: ellipsis; font-size: 12px; color: #55505c; font-weight: 600; }
+.admin-payment-table .payment-amount { color: #382b38; font-size: 13px; font-weight: 700; }
+.payment-method { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; }
+.payment-method svg { color: #9e8e9b; }
+.admin-payment-table .status-pill { font-size: 10px; padding: 6px 8px; border-radius: 6px; }
+.payment-status-paid { color: #2d866b; background: #edf8f2; }
+.payment-status-pending { color: #ad7d27; background: #fff7e5; }
+.payment-status-failed { color: #b25360; background: #fff0f1; }
+.payment-status-unknown { color: #7d7883; background: #f4f2f6; }
+.admin-payment-table .table-action { border-color: #eedce6; border-radius: 6px; color: #a54573; background: #fff8fb; font-size: 11px; }
+.admin-payments-page .empty-state { min-height: 240px; gap: 12px; }
+.admin-payments-page .empty-state h2 { font-size: 15px; }
+.admin-payments-page .empty-state p { font-size: 12px; }
+.trip-history-panel { overflow: hidden; }
+.trip-history-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 0 22px 18px; }
+.trip-history-heading h2 { margin: 7px 0 0; color: #3d3440; font-size: 16px; font-weight: 700; }
+.trip-history-heading h2>span { color: #92909a; font-size: 12px; font-weight: 400; }
+.admin-trips-page .table-search { width: min(100%,330px); height: 38px; border-radius: 8px; }
+.admin-trips-page .table-search input { min-width: 0; background: transparent; font-size: 11px; }
+.admin-trips-page .trip-refresh { min-height: 38px; padding: 0 15px; border: 1px solid #e9d9e3; border-radius: 8px; background: #fff; color: #985175; font-size: 12px; }
+.admin-trip-table { min-width: 1120px; table-layout: fixed; white-space: normal; }
+.admin-trip-table th { height: 44px; font-size: 10px; }
+.admin-trip-table th:nth-child(1) { width: 11%; }
+.admin-trip-table th:nth-child(2),.admin-trip-table th:nth-child(3) { width: 14%; }
+.admin-trip-table th:nth-child(4) { width: 25%; }
+.admin-trip-table th:nth-child(5) { width: 14%; }
+.admin-trip-table th:nth-child(6),.admin-trip-table th:nth-child(7) { width: 11%; }
+.admin-trip-table td { height: 92px; padding-top: 15px; padding-bottom: 15px; font-size: 11px; vertical-align: middle; }
+.admin-trip-table .trip-code { color: #a74976; font-size: 12px; }
+.admin-trip-table .cell-subline { font-size: 10px; margin-top: 6px; }
+.trip-person { color: #55505c; font-size: 12px; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; }
+.admin-trip-route { display: grid; gap: 9px; line-height: 1.6; }
+.admin-trip-route>span { display: flex; align-items: flex-start; gap: 8px; color: #64606b; overflow-wrap: anywhere; }
+.admin-trip-route>span>i { flex: none; width: 7px; height: 7px; margin: 5px 2px 0; border: 2px solid #d974a0; border-radius: 50%; }
+.admin-trip-route svg { flex: none; margin-top: 3px; color: #ac4777; }
+.admin-trip-table .status-pill { padding: 6px 8px; border-radius: 6px; font-size: 10px; white-space: nowrap; }
+.admin-trip-table .trip-amount { color: #493348; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.admin-trip-table .trip-amount small { color: #a08d9a; font-weight: 400; }
+.admin-trips-page .empty-state { min-height: 240px; gap: 12px; }
+.admin-trips-page .empty-state h2 { font-size: 15px; }
+.admin-trips-page .empty-state p { font-size: 12px; }
+@media(max-width:1100px) {
+  .admin-overview { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:650px) {
+  .admin-overview { gap: 10px; }
+  .admin-overview-card { padding: 15px; }
+  .admin-overview-card>span { align-items: flex-start; font-size: 11px; }
+  .admin-overview-card>strong { margin-top: 12px; font-size: 21px; }
+  .admin-overview-card>small { font-size: 10px; }
+  .driver-account-management .data-panel>.panel-heading,.payment-history-heading { align-items: stretch; padding: 0 15px 16px; }
+  .driver-account-management .table-search,.admin-payments-page .table-search { width: 100%; }
+  .admin-list-toolbar { padding: 0 15px 15px; }
+  .admin-filter-tabs { width: 100%; }
+  .admin-filter-tabs>button { padding: 8px 9px; font-size: 10px; }
+  .admin-select-filters { width: 100%; }
+  .admin-select-filters select { flex: 1; min-width: 0; font-size: 10px; }
+  .admin-list-footer { padding: 14px 15px; font-size: 10px; }
+  .admin-payments-page .page-heading { align-items: flex-start; flex-direction: column; }
+  .admin-trips-page .page-heading { align-items: flex-start; flex-direction: column; }
+  .trip-history-heading { align-items: stretch; padding: 0 15px 16px; }
+  .admin-trips-page .table-search { width: 100%; }
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-02T12:56:46.658Z",
+  "stage": "after-cassandra",
+  "sameHostId": true,
+  "sameKeyspaceConfig": true,
+  "rowsBefore": 335,
+  "rowsAfter": 335,
+  "changes": [],
+  "pass": true
+}

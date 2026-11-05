@@ -1,0 +1,22 @@
+
+customer_id,booked_at,trip_id,destination_address,driver_id,final_fare,pickup_address,status
+937708f9-da59-5042-a273-56903eca4842,2026-09-26 18:32:00.0,d2427793-4ed4-5417-b00f-5cc095e5672c,"Nhà văn hóa Thanh Niên, Quận 1",3b0ee178-91c8-5edb-acdb-620927e4e657,198850,"Công viên Tao Đàn, Quận 1",IN_PROGRESS
+937708f9-da59-5042-a273-56903eca4842,2026-09-04 17:57:00.0,bfb58ddd-4a86-533f-9766-38cce6107b82,"Bến xe Miền Đông mới, TP. Thủ Đức",a0989e23-5227-58fb-8e38-71b2c1f6ee2d,48450,"Phố đi bộ Nguyễn Huệ, Quận 1",COMPLETED
+937708f9-da59-5042-a273-56903eca4842,2026-09-03 16:22:00.0,cd9a8b9a-95ec-5d0a-b83e-e0be038b70fa,"Nhà văn hóa Thanh Niên, Quận 1",dde73e75-5100-4169-8593-9cf8b9c7df83,40800,"Công viên Tao Đàn, Quận 1",COMPLETED
+6f4f8a3d-2081-5697-b85c-cd98fdac0dda,2026-09-26 22:04:00.0,2df2a13a-74b8-52aa-94f0-043f0054a051,"Dinh Độc Lập, Quận 1",e6b783ad-61bf-5812-bd8d-c40db34cf4cd,149300,"Đại học Bách Khoa, Quận 10",CANCELLED
+6f4f8a3d-2081-5697-b85c-cd98fdac0dda,2026-09-20 21:29:00.0,8bad9f4e-9c82-50d8-8142-be3469f15e54,"Sân bay Tân Sơn Nhất, Tân Bình",82671d74-a018-5192-9610-6291474ae2ba,48450,"Khu đô thị Phú Mỹ Hưng, Quận 7",COMPLETED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 14:39:36.063,c0b60bad-66fc-4f16-abe4-8461186dd5f6,"Landmark 81, B�nh Th?nh, TP. H? Ch� Minh",e6b783ad-61bf-5812-bd8d-c40db34cf4cd,154800,"HUIT, T�n Ph�, TP. H? Ch� Minh",CANCELLED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 14:38:02.514,62927d07-700f-4eda-b502-9b80baaed2d7,"Landmark 81, B�nh Th?nh, TP. H? Ch� Minh",e6b783ad-61bf-5812-bd8d-c40db34cf4cd,154800,"HUIT, T�n Ph�, TP. H? Ch� Minh",CANCELLED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 14:28:44.702,44c9ba4e-1c6c-4edd-a068-10f6e1db19c8,"Sân bay quốc tế Tân Sơn Nhất, Lối vào Tầng hầm, Tân Sơn, Thành phố Hồ Chí Minh, Việt Nam",3139bb5d-e51b-5db2-81fb-834420ca0807,40800,"Hẻm 2 Lê Thúc Hoạch, Phú Thọ Hòa, Thành phố Hồ Chí Minh, Việt Nam",BOOKED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 14:24:33.748,1d380d4e-8bed-467b-a346-8083bd949774,"Landmark 81, B�nh Th?nh, TP. H? Ch� Minh",03156885-d46b-5eda-932c-78b2cc9bdabf,154800,"HUIT, T�n Ph�, TP. H? Ch� Minh",CANCELLED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 14:24:33.721,a7e5ac72-c2ac-470f-954e-7196c4fb2d8c,"Landmark 81, B�nh Th?nh, TP. H? Ch� Minh",884dc18e-b40c-5575-bcbf-ca24aa59334f,154800,"HUIT, T�n Ph�, TP. H? Ch� Minh",CANCELLED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 14:24:06.047,70e0b8e3-c49b-4370-bc85-512197afe7a4,"Landmark 81, B�nh Th?nh, TP. H? Ch� Minh",e6b783ad-61bf-5812-bd8d-c40db34cf4cd,154800,"HUIT, T�n Ph�, TP. H? Ch� Minh",CANCELLED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-27 00:26:00.0,902b5ec8-1020-5e35-b38d-f9dab9123930,"Landmark 81, Bình Thạnh",3139bb5d-e51b-5db2-81fb-834420ca0807,93900,"Ga Sài Gòn, Quận 3",BOOKED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-26 23:15:00.0,a51dfea1-00fc-59a7-ad12-9ec7dbf7cb34,"Đại học Quốc gia, TP. Thủ Đức",dde73e75-5100-4169-8593-9cf8b9c7df83,77700,"Bệnh viện Chợ Rẫy, Quận 5",BOOKED
+4bae3c1f-2dce-4210-bd2d-829f0bf4a7ef,2026-09-22 23:51:00.0,e91cdc09-9c85-5e2b-bd01-97f41418584a,"Chợ Bến Thành, Quận 1",312a7e98-1e58-5612-8875-4738c9963bdf,246700,"Thảo Điền, TP. Thủ Đức",COMPLETED
+ab2cc623-19d8-571b-ad1d-9b6f3d923693,2026-09-15 16:58:00.0,c443e04b-c573-534f-a7ed-de20f57cc732,"Bưu điện Thành phố, Quận 1",dde73e75-5100-4169-8593-9cf8b9c7df83,93900,"Crescent Mall, Quận 7",COMPLETED
+ab2cc623-19d8-571b-ad1d-9b6f3d923693,2026-09-14 15:23:00.0,680ff248-1154-58b7-b23b-69a2d6dffda9,"Nhà thờ Đức Bà, Quận 1",03156885-d46b-5eda-932c-78b2cc9bdabf,185600,"Chợ Bến Thành, Quận 1",COMPLETED
+ea671bdb-3102-5402-9b75-72ef09fdb443,2026-09-12 00:14:00.0,2f1cbff7-0308-5af6-af89-e0f2f0af26e8,"Dinh Độc Lập, Quận 1",3139bb5d-e51b-5db2-81fb-834420ca0807,40800,"Đại học Bách Khoa, Quận 10",COMPLETED
+ea671bdb-3102-5402-9b75-72ef09fdb443,2026-09-10 23:39:00.0,08ab219d-bd0e-585b-b595-7358520aa488,"Sân bay Tân Sơn Nhất, Tân Bình",312a7e98-1e58-5612-8875-4738c9963bdf,110400,"Khu đô thị Phú Mỹ Hưng, Quận 7",COMPLETED
+17db3c55-7edc-565b-83c1-24a03a0b03bf,2026-09-21 22:40:00.0,adc46a0d-1963-571f-9bd5-b1171f20827b,"Landmark 81, Bình Thạnh",e6b783ad-61bf-5812-bd8d-c40db34cf4cd,149300,"Sân bay Tân Sơn Nhất, Tân Bình",COMPLETED
+73c272d9-9b64-5c21-861f-bbe85538055e,2026-09-26 21:53:00.0,962bbc26-1107-59f2-a57b-6dad5e4eb390,"Nhà thờ Đức Bà, Quận 1",82671d74-a018-5192-9610-6291474ae2ba,48450,"Chợ Bến Thành, Quận 1",CANCELLED

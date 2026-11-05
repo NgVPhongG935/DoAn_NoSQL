@@ -1,0 +1,5 @@
+﻿INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 StorageService.java:1670 - DRAINING: starting drain process
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 Server.java:179 - Stop listening for CQL clients
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 Gossiper.java:1720 - Announcing shutdown
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 StorageService.java:2595 - Node /127.0.0.2 state jump to shutdown
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:47,552 StorageService.java:1670 - DRAINED

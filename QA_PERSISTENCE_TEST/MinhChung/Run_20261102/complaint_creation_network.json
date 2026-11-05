@@ -1,0 +1,155 @@
+{
+  "at": "2026-11-02T12:22:40.856Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3100/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/users/9bfe09c0-f7a2-4dfd-9170-5150e48be477/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/avatars/CUSTOMER/9bfe09c0-f7a2-4dfd-9170-5150e48be477?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_20261102121343_CUSTOMER_UPDATED",
+          "email": "qa_test_20261102121343_customer@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_20261102121343_CUSTOMER_UPDATED",
+          "email": "qa_test_20261102121343_customer@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/users/9bfe09c0-f7a2-4dfd-9170-5150e48be477/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/avatars/CUSTOMER/9bfe09c0-f7a2-4dfd-9170-5150e48be477?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/customers/9bfe09c0-f7a2-4dfd-9170-5150e48be477/complaints",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/customers/9bfe09c0-f7a2-4dfd-9170-5150e48be477/trips",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/users/9bfe09c0-f7a2-4dfd-9170-5150e48be477/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/customers/9bfe09c0-f7a2-4dfd-9170-5150e48be477/complaints",
+      "status": 201,
+      "body": {
+        "success": true,
+        "data": {
+          "complaintId": "32bcd6aa-8bf0-462c-876c-30513e2a5474",
+          "createdAt": "2026-11-02T12:22:40.390Z",
+          "status": "OPEN"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_20261102121343_CUSTOMER_UPDATED",
+          "email": "qa_test_20261102121343_customer@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/customers/9bfe09c0-f7a2-4dfd-9170-5150e48be477/complaints",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+            "created_at": "2026-11-02T12:22:40.390Z",
+            "complaint_id": "32bcd6aa-8bf0-462c-876c-30513e2a5474",
+            "content": "QA_TEST_20261102121343 Safe persistence QA, no related real trip, no refund or external payment.",
+            "resolved_at": null,
+            "status": "OPEN",
+            "subject": "QA_TEST_20261102121343_SUPPORT",
+            "trip_id": null
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/customers/9bfe09c0-f7a2-4dfd-9170-5150e48be477/trips",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    }
+  ]
+}

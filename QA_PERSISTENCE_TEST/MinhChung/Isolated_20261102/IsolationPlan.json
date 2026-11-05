@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-02T12:38:39.322Z",
+  "choice": "Separate Cassandra process + separate cluster/IP/ports/directories + new keyspace + isolated Next source copy",
+  "alternatives": {
+    "sameNodeKeyspace": "Logical data isolation only; shared daemon/commitlog/JMX; restarting it affects original node, rejected",
+    "separateInstance": "Independent daemon/storage/seeds/config; shared machine CPU/RAM only"
+  },
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo",
+    "cluster": "RideFlow_QA_20261102",
+    "jmxPort": 7299,
+    "storagePort": 7100,
+    "appPort": 3200
+  },
+  "oldConfig": [
+    {
+      "keyspace_name": "dat_xe_cong_nghe",
+      "durable_writes": false,
+      "replication": {
+        "class": "org.apache.cassandra.locator.SimpleStrategy",
+        "replication_factor": "3"
+      }
+    }
+  ],
+  "tables": [
+    "complaints_by_customer",
+    "customer_spending_by_month",
+    "customer_vouchers",
+    "customers",
+    "driver_revenue_by_month",
+    "drivers",
+    "notifications_by_user",
+    "payments_by_customer",
+    "payments_by_trip",
+    "reviews_by_driver",
+    "reviews_by_trip",
+    "service_types",
+    "trip_status_history",
+    "trips_by_customer",
+    "trips_by_driver",
+    "trips_by_id",
+    "trips_by_status",
+    "vehicles",
+    "vouchers"
+  ],
+  "copiedRows": 0,
+  "copiedPasswords": 0,
+  "admin": "New random demo-only credential, not copied",
+  "durableWrites": true,
+  "replicationFactor": 1,
+  "resources": {
+    "heapMB": 768
+  },
+  "schemaOnlyFile": "schema_only_demo.cql"
+}

@@ -1,0 +1,1173 @@
+{
+  "at": "2026-11-02T12:39:41.268Z",
+  "node": {
+    "cluster_name": "RideFlow_QA_20261102",
+    "host_id": "4ca6b4c4-33a3-4505-b9cf-aa2a92019821",
+    "release_version": "3.11.17"
+  },
+  "statements": 20,
+  "keyspace": [
+    {
+      "keyspace_name": "rideflow_qa_demo",
+      "durable_writes": true,
+      "replication": {
+        "class": "org.apache.cassandra.locator.SimpleStrategy",
+        "replication_factor": "1"
+      }
+    }
+  ],
+  "columns": [
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "complaint_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "content",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "created_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "customer_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "resolved_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "subject",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "complaints_by_customer",
+      "column_name": "trip_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_spending_by_month",
+      "column_name": "amount",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_spending_by_month",
+      "column_name": "customer_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_spending_by_month",
+      "column_name": "trip_date",
+      "kind": "clustering",
+      "position": 0,
+      "type": "date",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "customer_spending_by_month",
+      "column_name": "trip_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "customer_spending_by_month",
+      "column_name": "year_month",
+      "kind": "partition_key",
+      "position": 1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_vouchers",
+      "column_name": "customer_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_vouchers",
+      "column_name": "received_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_vouchers",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_vouchers",
+      "column_name": "used_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customer_vouchers",
+      "column_name": "voucher_code",
+      "kind": "clustering",
+      "position": 0,
+      "type": "text",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "created_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "customer_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "email",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "full_name",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "password",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "phone",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "customers",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "driver_revenue_by_month",
+      "column_name": "driver_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "driver_revenue_by_month",
+      "column_name": "fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "driver_revenue_by_month",
+      "column_name": "trip_date",
+      "kind": "clustering",
+      "position": 0,
+      "type": "date",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "driver_revenue_by_month",
+      "column_name": "trip_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "driver_revenue_by_month",
+      "column_name": "year_month",
+      "kind": "partition_key",
+      "position": 1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "account_status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "created_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "driver_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "driver_status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "email",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "full_name",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "license_number",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "password",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "phone",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "drivers",
+      "column_name": "rating",
+      "kind": "regular",
+      "position": -1,
+      "type": "double",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "content",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "created_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "is_read",
+      "kind": "regular",
+      "position": -1,
+      "type": "boolean",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "notification_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "notification_type",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "title",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "notifications_by_user",
+      "column_name": "user_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "amount",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "customer_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "paid_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "payment_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "payment_method",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "payment_status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_customer",
+      "column_name": "trip_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "amount",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "customer_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "paid_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "payment_id",
+      "kind": "clustering",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "payment_method",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "payment_status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "payments_by_trip",
+      "column_name": "trip_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "comment",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "created_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "customer_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "driver_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "rating",
+      "kind": "regular",
+      "position": -1,
+      "type": "int",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "review_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "reviews_by_driver",
+      "column_name": "trip_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "comment",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "created_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "customer_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "driver_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "rating",
+      "kind": "regular",
+      "position": -1,
+      "type": "int",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "review_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "reviews_by_trip",
+      "column_name": "trip_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "service_types",
+      "column_name": "base_fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "service_types",
+      "column_name": "description",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "service_types",
+      "column_name": "price_per_km",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "service_types",
+      "column_name": "service_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "service_types",
+      "column_name": "service_name",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "service_types",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "changed_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "note",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trip_status_history",
+      "column_name": "trip_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "booked_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "customer_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "destination_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "driver_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "final_fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "pickup_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_customer",
+      "column_name": "trip_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "booked_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "customer_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "destination_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "driver_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "final_fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "pickup_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_driver",
+      "column_name": "trip_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "booked_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "completed_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "customer_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "destination_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "distance_km",
+      "kind": "regular",
+      "position": -1,
+      "type": "double",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "driver_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "estimated_fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "final_fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "payment_method",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "pickup_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "service_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "started_at",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "trip_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_id",
+      "column_name": "vehicle_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "booked_at",
+      "kind": "clustering",
+      "position": 0,
+      "type": "timestamp",
+      "clustering_order": "desc"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "customer_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "destination_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "driver_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "final_fare",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "pickup_address",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "status",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "trip_date",
+      "kind": "partition_key",
+      "position": 1,
+      "type": "date",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "trips_by_status",
+      "column_name": "trip_id",
+      "kind": "clustering",
+      "position": 1,
+      "type": "uuid",
+      "clustering_order": "asc"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "brand",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "color",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "driver_id",
+      "kind": "regular",
+      "position": -1,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "license_plate",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "model",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "seat_count",
+      "kind": "regular",
+      "position": -1,
+      "type": "int",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "vehicle_id",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "uuid",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vehicles",
+      "column_name": "vehicle_type",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "discount_type",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "discount_value",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "end_date",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "max_discount",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "min_trip_amount",
+      "kind": "regular",
+      "position": -1,
+      "type": "decimal",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "quantity",
+      "kind": "regular",
+      "position": -1,
+      "type": "int",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "start_date",
+      "kind": "regular",
+      "position": -1,
+      "type": "timestamp",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "status",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "voucher_code",
+      "kind": "partition_key",
+      "position": 0,
+      "type": "text",
+      "clustering_order": "none"
+    },
+    {
+      "table_name": "vouchers",
+      "column_name": "voucher_name",
+      "kind": "regular",
+      "position": -1,
+      "type": "text",
+      "clustering_order": "none"
+    }
+  ]
+}

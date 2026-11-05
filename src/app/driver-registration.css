@@ -1,0 +1,12 @@
+.register-role-picker{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.register-role-picker .button{min-width:0;padding:0 10px;font-size:12px}
+.register-panel .login-input select{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);outline:none}
+.driver-approval-screen{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#f8faf8,#eef3ef)}
+.driver-approval-card{width:min(100%,560px);padding:clamp(24px,5vw,44px);border:1px solid var(--line);background:#fff;box-shadow:0 18px 55px #17243112}
+.driver-approval-card h1{margin:12px 0;color:var(--ink);font-family:var(--serif);font-size:clamp(30px,6vw,42px);font-weight:500}
+.driver-approval-card p{margin:0 0 24px;color:var(--muted);line-height:1.8}
+.driver-approval-card .button{width:100%}
+.register-panel .login-input.has-error{border-color:#c44}
+.status-pending{background:#fff4d6;color:#845d12}
+.status-rejected{background:#fde7e5;color:#a23d35}
+@media(max-width:520px){.register-role-picker{grid-template-columns:1fr}.register-panel{padding:24px 18px}}

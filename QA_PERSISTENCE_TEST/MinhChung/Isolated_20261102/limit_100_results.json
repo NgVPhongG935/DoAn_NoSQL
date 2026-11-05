@@ -1,0 +1,112 @@
+{
+  "at": "2026-11-02T12:50:42.095Z",
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo"
+  },
+  "method": "New synthetic QA_TEST_LIMIT_ fixtures inserted directly for boundary test; primary end-to-end actors registered through UI separately",
+  "checks": [
+    {
+      "name": "customers all records accessible in list",
+      "ok": false,
+      "expected": 106,
+      "actual": 100
+    },
+    {
+      "name": "drivers all records accessible in list",
+      "ok": false,
+      "expected": 106,
+      "actual": 100
+    },
+    {
+      "name": "vehicles all records accessible in list",
+      "ok": false,
+      "expected": 106,
+      "actual": 100
+    },
+    {
+      "name": "Driver own vehicle visible beyond global LIMIT 100",
+      "ok": false,
+      "actualApiRows": 0,
+      "directSelectRows": 1
+    }
+  ],
+  "actualCounts": {
+    "customers": 106,
+    "drivers": 106,
+    "vehicles": 106
+  },
+  "customers": {
+    "httpStatus": 200,
+    "apiCount": 100,
+    "realCount": 106,
+    "missingIds": [
+      "a6913e39-f10d-4af2-8fc2-bb48c39413ea",
+      "d124dd16-7a64-41a1-9300-8e9f154488be",
+      "8a8cf28e-d803-456a-8bc1-aef103e7e286",
+      "e3535ed7-284a-4bde-8154-64a2c87b9ba5",
+      "c4145a9e-1b28-42f5-ae62-42491747079c",
+      "b86c2a62-e660-474a-b9d5-cbe5d9448ab4"
+    ],
+    "uiRows": 100
+  },
+  "omittedCustomer": {
+    "customer_id": "a6913e39-f10d-4af2-8fc2-bb48c39413ea",
+    "full_name": "QA_TEST_LIMIT_099_C"
+  },
+  "omittedCustomerSearch": {
+    "renderedRows": 0,
+    "text": "ADMIN · RIDEFLOW\nDanh sách khách hàng\n\nThêm tài khoản, chỉnh sửa thông tin và quản lý trạng thái.\n\nThêm khách hàng\nKHÁCH HÀNG\n0 / 100 tài khoản đã tải\nTÀI KHOẢN\tLIÊN HỆ\tTRẠNG THÁI\tTHAO TÁC\nKhông tìm thấy tài khoản phù hợp.\n\nChỉ xóa tài khoản chưa có dữ liệu liên quan. Với tài khoản đã phát sinh dữ liệu, dùng Khóa để giữ lịch sử."
+  },
+  "drivers": {
+    "httpStatus": 200,
+    "apiCount": 100,
+    "realCount": 106,
+    "missingIds": [
+      "69386a1e-7a6e-4fe0-ba20-301c690bb618",
+      "a3e64af3-d243-426a-a3c1-405441d5a6fc",
+      "54d6b450-93c4-4435-94e9-b4e76db0d518",
+      "abfa2828-38bb-44f8-974b-6f3ebb0ffbf4",
+      "706f14c2-6938-41c4-850d-1b61db8ea2ae",
+      "e7b852f7-0230-4946-9443-b9f83c401c21"
+    ],
+    "uiRows": 100
+  },
+  "vehicles": {
+    "httpStatus": 200,
+    "apiCount": 100,
+    "realCount": 106,
+    "missingIds": [
+      "7fd62701-428c-4a45-aa63-e12628310b0d",
+      "330bd72d-8057-439c-be5b-eea236a8e708",
+      "de0a53a9-af77-4b1c-93a2-0ffc139eaa35",
+      "ba53fc6c-8b6a-4f12-94cb-dddcbe052b81",
+      "39ded33a-27ae-4a27-a90f-b09d76e3efef",
+      "fe26b4c5-e43b-496c-91e7-d873a1bb24b4"
+    ],
+    "uiRows": 100
+  },
+  "omittedVehicle": {
+    "vehicle_id": "7fd62701-428c-4a45-aa63-e12628310b0d",
+    "driver_id": "0511ee09-202f-401a-baf8-5592f2b5bfbd"
+  },
+  "driverVehicle": {
+    "driverId": "0511ee09-202f-401a-baf8-5592f2b5bfbd",
+    "vehicleId": "7fd62701-428c-4a45-aa63-e12628310b0d",
+    "cql": "SELECT vehicle_id,driver_id FROM vehicles WHERE vehicle_id = ?",
+    "directSelect": [
+      {
+        "vehicle_id": "7fd62701-428c-4a45-aa63-e12628310b0d",
+        "driver_id": "0511ee09-202f-401a-baf8-5592f2b5bfbd"
+      }
+    ],
+    "api": {
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    }
+  }
+}

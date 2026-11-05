@@ -1,0 +1,121 @@
+{
+  "at": "2026-11-02T12:59:42.407Z",
+  "results": [
+    {
+      "url": "/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "DRIVER",
+          "month": "2026-11",
+          "profile": {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "account_status": "ACTIVE",
+            "created_at": "2026-11-02T12:43:54.863Z",
+            "driver_status": "AVAILABLE",
+            "email": "qa_test_iso_20261102124130_d@example.invalid",
+            "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+            "license_number": "QA_TEST_ISO_20261102124130_LICENSE",
+            "phone": "0900000002",
+            "rating": 5
+          },
+          "trips": [
+            {
+              "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+              "booked_at": "2026-11-02T12:45:09.832Z",
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+              "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+              "final_fare": "18000",
+              "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+              "status": "COMPLETED"
+            }
+          ],
+          "revenue": [
+            {
+              "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+              "year_month": "2026-11",
+              "trip_date": "2026-11-02",
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "fare": "18000"
+            }
+          ],
+          "reviews": [
+            {
+              "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+              "created_at": "2026-11-02T12:48:54.758Z",
+              "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391",
+              "comment": "QA_TEST_ISO_20261102124130_REVIEW_5_STARS",
+              "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+              "rating": 5,
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+            }
+          ],
+          "stats": {
+            "totalTrips": 1,
+            "todayTrips": 1,
+            "completedTrips": 1,
+            "totalRevenue": 18000,
+            "averageRating": 5
+          }
+        }
+      }
+    },
+    {
+      "url": "/api/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754/trips",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+            "final_fare": "18000",
+            "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "status": "COMPLETED",
+            "customer_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+            "customer_phone": "0900000001"
+          }
+        ]
+      }
+    },
+    {
+      "url": "/api/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754/revenue/2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "year_month": "2026-11",
+            "trip_date": "2026-11-02",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "fare": "18000"
+          }
+        ]
+      }
+    },
+    {
+      "url": "/api/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754/reviews",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "created_at": "2026-11-02T12:48:54.758Z",
+            "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391",
+            "comment": "QA_TEST_ISO_20261102124130_REVIEW_5_STARS",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "rating": 5,
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          }
+        ]
+      }
+    }
+  ]
+}

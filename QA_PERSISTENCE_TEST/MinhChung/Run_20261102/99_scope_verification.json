@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-02T12:26:55.693Z",
+  "existingRowsBefore": 898,
+  "tableCounts": {
+    "complaints_by_customer": 0,
+    "customer_spending_by_month": 43,
+    "customer_vouchers": 53,
+    "customers": 27,
+    "driver_revenue_by_month": 43,
+    "drivers": 12,
+    "notifications_by_user": 38,
+    "payments_by_customer": 43,
+    "payments_by_trip": 43,
+    "reviews_by_driver": 43,
+    "reviews_by_trip": 43,
+    "service_types": 3,
+    "trip_status_history": 249,
+    "trips_by_customer": 59,
+    "trips_by_driver": 59,
+    "trips_by_id": 59,
+    "trips_by_status": 59,
+    "vehicles": 12,
+    "vouchers": 10
+  },
+  "sourceFilesChecked": 112,
+  "sourceChanges": [],
+  "screenshots": 46
+}

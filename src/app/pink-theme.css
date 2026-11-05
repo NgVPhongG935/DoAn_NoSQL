@@ -1,0 +1,207 @@
+/* RideFlow Rose — visual theme overrides loaded after the base styles. */
+:root {
+  --ink: #3f2031;
+  --muted: #856c79;
+  --paper: #fff8fb;
+  --line: #f3dce7;
+  --gold: #ec4899;
+  --gold-deep: #be185d;
+  --navy: #4a1835;
+  --green: #db2777;
+}
+
+html, body { background: var(--paper); }
+body { color: var(--ink); }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline-color: #f472b6; }
+
+.brand-mark {
+  background: linear-gradient(135deg, #fb7185, #db2777);
+  color: #fff;
+  box-shadow: 0 8px 22px #db277735;
+}
+.brand-period, .section-kicker { color: var(--gold-deep); }
+.button { border-radius: 12px; }
+.button-gold { background: linear-gradient(135deg, #f472b6, #db2777); color: #fff; box-shadow: 0 10px 24px #db277728; }
+.button-gold:hover { background: linear-gradient(135deg, #ec4899, #be185d); box-shadow: 0 14px 30px #be185d30; }
+.button-dark { background: linear-gradient(135deg, #5b2143, #3f172f); }
+.button-dark:hover { background: linear-gradient(135deg, #70254e, #4a1835); }
+.text-link:hover { color: var(--gold-deep); }
+
+/* Landing */
+.landing { background: linear-gradient(180deg, #fff 0%, #fff8fb 46%, #fff 100%); }
+.site-nav { position: relative; z-index: 5; }
+.hero-section:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 430px;
+  height: 430px;
+  top: 30px;
+  left: -180px;
+  border-radius: 50%;
+  background: #fce7f355;
+  filter: blur(2px);
+  pointer-events: none;
+}
+.hero-copy h1, .login-message h1 { color: #421b32; }
+.hero-copy h1 em, .section-heading h2 em, .benefit-title h2 em, .cta-section h2 em, .login-message h1 em { color: #db2777; }
+.eyebrow-dot, .live-dot { background: #ec4899; box-shadow: 0 0 0 4px #ec489921; }
+.hero-visual, .map-preview { border-color: #f3cfdf; border-radius: 24px; background: #fce7f3; box-shadow: 0 24px 65px #9d174d18; }
+.map-grid { background-image: linear-gradient(31deg,transparent 46%,#fff 47%,#fff 49%,transparent 50%),linear-gradient(117deg,transparent 40%,#fff 41%,#fff 43%,transparent 44%),linear-gradient(0deg,transparent 48%,#fff8fb 49%,#fff8fb 51%,transparent 52%); }
+.map-river { background: #fbcfe8; border-left-color: #fce7f3; border-right-color: #f9d9e9; }
+.map-route:before, .booking-route-line:before { background: repeating-linear-gradient(90deg,#db2777 0 9px,transparent 9px 15px); }
+.route-start, .booking-route-line>span:first-child { background: #f472b6; box-shadow: 0 0 0 4px #ec489933; }
+.route-end, .booking-route-line>span:last-child { background: #db2777; color: #fff; }
+.map-route>i, .booking-route-line>i { background: #ec4899; }
+.map-car { background: #4a1835; }
+.booking-peek { border-color: #f4dce7; border-radius: 16px; box-shadow: 0 22px 50px #8318431c; }
+.peek-icon, .service-icon { background: #fce7f3; color: #db2777; }
+.service-card { border-color: #f4e1ea; border-radius: 16px; box-shadow: 0 10px 35px #83184308; }
+.service-card:hover { border-color: #f9a8d4; box-shadow: 0 18px 42px #be185d12; }
+.service-card-2 .service-icon { background: #fff1f2; color: #e11d48; }
+.service-card-3 .service-icon { background: #fdf2f8; color: #a21caf; }
+.benefit-section, .cta-section { background: linear-gradient(135deg, #fff1f2, #fdf2f8); }
+.benefit-stamp, .benefit-list>div { color: #db2777; }
+.cta-orbit { border-color: #f5c9dd; }
+
+/* Authentication */
+.login-screen { grid-template-columns: 1.08fr .92fr; background: #fff; }
+.login-left {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 76% 23%, #ffffff32 0 8%, transparent 9%),
+    linear-gradient(145deg, #4a1835 0%, #831843 48%, #db2777 100%);
+  color: #fff;
+}
+.login-left:before { width: 620px; height: 620px; right: -280px; top: -220px; border-color: #ffffff1c; }
+.login-left:after { width: 440px; height: 440px; right: -160px; top: auto; bottom: -220px; border-color: #ffffff18; }
+.login-back { position: relative; z-index: 3; color: #ffe4ef; }
+.login-brand { margin-top: 44px; color: #fff; }
+.login-brand .brand-mark { background: #fff; color: #db2777; box-shadow: 0 10px 30px #3f0c251f; }
+.login-brand .brand-period { color: #f9a8d4; }
+.login-message { max-width: 560px; }
+.login-message .section-kicker { display: flex; align-items: center; gap: 7px; color: #fbcfe8; }
+.login-message h1 { color: #fff; font-size: clamp(48px, 5vw, 72px); line-height: 1.02; }
+.login-message h1 em { color: #fbcfe8; }
+.login-message>p { max-width: 455px; color: #fce7f3cc; font-size: 14px; }
+.login-benefits { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; }
+.login-benefits span { display: flex; align-items: center; gap: 7px; color: #fff1f2; font-size: 11px; font-weight: 650; }
+.login-coordinate { color: #fbcfe899; }
+.login-art { position: absolute; z-index: -1; inset: 0; pointer-events: none; }
+.login-art-orbit { position: absolute; border: 1px solid #ffffff1c; border-radius: 50%; }
+.login-art .orbit-one { width: 310px; height: 310px; right: 7%; top: 27%; }
+.login-art .orbit-two { width: 190px; height: 190px; right: 15%; top: 35%; }
+.login-art-pin { position: absolute; top: 41%; right: 22%; width: 70px; height: 70px; display: grid; place-items: center; border: 1px solid #ffffff32; border-radius: 25px 25px 25px 5px; background: #ffffff17; color: #fff; box-shadow: 0 20px 45px #3f0c2530; backdrop-filter: blur(10px); transform: rotate(8deg); }
+.login-art-route { position: absolute; width: 230px; top: 55%; right: 8%; border-top: 2px dashed #fbcfe855; transform: rotate(-24deg); }
+.login-art-dot { position: absolute; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%; background: #fb7185; box-shadow: 0 0 0 6px #ffffff16; }
+.login-art .dot-one { top: 59%; right: 35%; }
+.login-art .dot-two { top: 48%; right: 8%; }
+
+.login-right { position: relative; background: radial-gradient(circle at 90% 8%, #fce7f380, transparent 24%), #fff; }
+.login-panel { width: min(100%, 430px); padding: 36px; border: 1px solid #f4dce7; border-radius: 24px; background: #ffffffdf; box-shadow: 0 28px 80px #83184312; backdrop-filter: blur(16px); }
+.login-panel-badge { width: max-content; display: flex; align-items: center; gap: 7px; padding: 7px 10px; border-radius: 99px; background: #fdf2f8; color: #be185d; font-size: 8px; font-weight: 800; letter-spacing: .8px; }
+.login-panel h2 { margin-top: 18px; color: #421b32; font-size: 40px; }
+.login-panel-intro { margin-bottom: 28px; color: #8c7180; font-size: 12px; line-height: 1.6; }
+.login-form { display: grid; gap: 17px; }
+.login-field { display: grid; gap: 8px; color: #5e3b4e; font-size: 10px; font-weight: 750; }
+.login-input { height: 50px; display: flex; align-items: center; gap: 11px; padding: 0 13px; border: 1px solid #efd9e4; border-radius: 12px; background: #fffafd; color: #c15a88; transition: border-color .18s, box-shadow .18s, background .18s; }
+.login-input:focus-within { border-color: #ec4899; background: #fff; box-shadow: 0 0 0 4px #ec489912; }
+.login-input.has-error { border-color: #ef8c9d; background: #fff7f8; }
+.login-input input { min-width: 0; height: 100%; flex: 1; border: 0; outline: 0; background: transparent; color: #4a2639; font-size: 12px; }
+.login-input input::placeholder { color: #b9a2ae; }
+.password-toggle { width: 32px; height: 32px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 8px; background: transparent; color: #a98898; cursor: pointer; }
+.password-toggle:hover { background: #fce7f3; color: #be185d; }
+.field-error { color: #c2415d; font-size: 9px; font-weight: 600; }
+.login-form-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #846b78; font-size: 9px; }
+.remember-check { display: flex; align-items: center; gap: 7px; cursor: pointer; }
+.remember-check input { position: absolute; opacity: 0; pointer-events: none; }
+.remember-check span { width: 16px; height: 16px; display: grid; place-items: center; border: 1px solid #e6cbd8; border-radius: 5px; background: #fff; }
+.remember-check input:checked+span { border-color: #db2777; background: #db2777; box-shadow: inset 0 0 0 3px #fff; }
+.login-help { color: #b18b9e; }
+.login-submit { width: 100%; min-height: 50px; margin-top: 2px; }
+.form-alert { margin: 0; border-color: #fecdd3; border-radius: 10px; background: #fff1f2; color: #be123c; font-size: 10px; }
+.login-divider { color: #ba9caa; }
+.login-divider span { background: #f0dee7; }
+.login-footnote { display: flex; align-items: flex-start; gap: 7px; margin: 0; color: #a08492; }
+.login-footnote svg { flex: none; color: #db2777; }
+.login-bottom { color: #b697a6; }
+
+/* Portals */
+.portal-app { background: linear-gradient(135deg, #fff8fb, #fff 42%, #fff5f9); }
+.portal-sidebar { background: linear-gradient(180deg, #4a1835 0%, #681d46 55%, #831843 100%); box-shadow: 8px 0 32px #4a18351f; }
+.portal-brand .brand-period { color: #f9a8d4; }
+.workspace-label, .sidebar-caption { color: #d8a9c0; }
+.workspace-switch { border-color: #ffffff24; border-radius: 12px; background: #ffffff0c; }
+.workspace-avatar { border-radius: 9px; background: linear-gradient(135deg, #fb7185, #ec4899); color: #fff; }
+.workspace-switch small, .workspace-switch>svg { color: #d3aabe; }
+.sidebar-link { border-radius: 10px; color: #e6c6d6; }
+.sidebar-link:hover { background: #ffffff10; }
+.sidebar-link.active { background: #ffffff18; color: #fff; }
+.sidebar-link.active>i { background: #f9a8d4; }
+.sidebar-help { border-color: #ffffff20; border-radius: 12px; background: #ffffff0b; }
+.sidebar-help>span { border-radius: 9px; background: #ffffff14; color: #f9a8d4; }
+.sidebar-help a { color: #fbcfe8; }
+.portal-topbar { border-color: #f3e1e9; background: #fffafce8; }
+.topbar-icon, .icon-button { border-color: #f0dce6; border-radius: 10px; }
+.topbar-icon:hover, .icon-button:hover { border-color: #f9a8d4; color: #db2777; }
+.profile-avatar { background: #fce7f3; color: #be185d; }
+.profile-dropdown, .panel, .stat-card { border-color: #f3e1e9; border-radius: 14px; box-shadow: 0 8px 30px #83184308; }
+.dashboard-heading h1, .page-heading h1, .detail-heading h1 { color: #4a2037; }
+.stat-card-top i, .stat-card-2 .stat-card-top i, .stat-card-3 .stat-card-top i, .stat-card-4 .stat-card-top i { border-radius: 10px; background: #fdf2f8; color: #db2777; }
+.panel-heading>.text-link, .trip-code { color: #be185d; }
+.chart-period i { background: #ec4899; }
+.recharts-bar-rectangle path { fill: #db2777; }
+.shortcut>i { border-radius: 9px; background: #fce7f3 !important; color: #db2777 !important; }
+.shortcut:hover strong { color: #be185d; }
+.journey-note { background: #fff1f7; }
+.journey-note>span { color: #ec4899; }
+.data-table thead { background: #fff8fb; }
+.data-table tbody tr:hover { background: #fffafd; }
+.route-cell i { border-color: #ec4899; }
+.route-cell i:nth-of-type(2) { border-color: #be185d; }
+.status-booked, .status-open, .status-processing { background: #fdf2f8; color: #be185d; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: #f472b6; box-shadow: 0 0 0 3px #ec48991a; }
+.large-avatar, .demo-badge { background: #fce7f3; color: #be185d; }
+.secure-chip { border-color: #f2d4e2; background: #fff5f9; color: #be185d; }
+.secure-chip svg { color: #db2777; }
+.booking-form-heading>span, .service-choice-icon, .fare-route-icon { background: #fce7f3; color: #be185d; }
+.service-choice { border-radius: 11px; }
+.service-choice:hover { border-color: #f9a8d4; }
+.service-choice.selected { border-color: #ec4899; background: #fff7fb; box-shadow: inset 3px 0 #db2777; }
+.selected .choice-radio { border-color: #db2777; }
+.address-fields .input-icon, .address-fields .destination-icon { color: #db2777; }
+.pickup-dot { border-color: #ec4899; }
+.drop-dot { border-color: #be185d; }
+.booking-trust { border-color: #f1dbe5; border-radius: 11px; background: #fff7fb; }
+.booking-trust>span { background: #fce7f3; color: #db2777; }
+.notification-bell>i { background: #db2777; }
+.activity-dot.unread, .rating-distribution>div>i>b { background: #ec4899; box-shadow: 0 0 0 3px #ec489924; }
+.activity-star { background: #fce7f3; color: #db2777; }
+.vehicle-card-graphic { background: linear-gradient(145deg, #4a1835, #831843); color: #f9a8d4; }
+.vehicle-card-graphic>span { border-color: #f9a8d470; }
+
+/* Loader */
+.ride-loader-page { background: #fff8fb; }
+.ride-loader-lane, .ride-loader-page-content .ride-loader-lane { background: repeating-linear-gradient(90deg,#ec4899 0 10px,transparent 10px 17px); }
+.ride-loader-car { background: #4a1835; color: #f9a8d4; }
+.ride-loader-destination { border-color: #ec4899; }
+
+@media (max-width: 850px) {
+  .login-screen { grid-template-columns: .9fr 1.1fr; }
+  .login-panel { padding: 28px; }
+  .login-art { opacity: .55; }
+}
+
+@media (max-width: 650px) {
+  .login-left { padding-bottom: 34px; }
+  .login-message { margin-top: 42px; }
+  .login-message h1 { font-size: 41px; }
+  .login-message>p { font-size: 11px; }
+  .login-art { display: none; }
+  .login-right { padding-top: 24px; }
+  .login-panel { padding: 24px 20px; border-radius: 20px; }
+  .login-panel h2 { font-size: 32px; }
+  .login-form-meta { align-items: flex-start; flex-direction: column; }
+  .login-bottom { position: static; width: 100%; margin-top: 22px; }
+  .hero-visual { border-radius: 18px; }
+}

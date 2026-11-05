@@ -1,0 +1,2 @@
+﻿Requested creating snapshot(s) for [rideflow_qa_demo] with snapshot name [QA_TEST_BEFORE_RESTART] and options {skipFlush=false}
+Snapshot directory: QA_TEST_BEFORE_RESTART

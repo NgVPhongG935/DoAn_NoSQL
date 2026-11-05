@@ -1,0 +1,30 @@
+{
+  "node": "v24.17.0",
+  "liveCassandraTested": false,
+  "results": [
+    {
+      "name": "Typecheck",
+      "exit": 0
+    },
+    {
+      "name": "P0 + P1 in-memory tests",
+      "exit": 0
+    },
+    {
+      "name": "P0 regression with journal enabled",
+      "exit": 0
+    },
+    {
+      "name": "Production build",
+      "exit": 0
+    },
+    {
+      "name": "Production HTTP security",
+      "exit": 0
+    },
+    {
+      "name": "Chrome UI with in-memory transport",
+      "exit": 0
+    }
+  ]
+}

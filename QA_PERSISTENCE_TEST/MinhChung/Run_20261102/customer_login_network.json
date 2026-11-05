@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-02T12:14:01.832Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3100/api/auth/register",
+      "status": 201,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/auth/login",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "CUSTOMER",
+          "redirectTo": "/customer/dashboard"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "CUSTOMER",
+          "month": "2026-11",
+          "profile": {
+            "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+            "created_at": "2026-11-02T12:13:57.731Z",
+            "email": "qa_test_20261102121343_customer@example.invalid",
+            "full_name": "QA_TEST_20261102121343_CUSTOMER",
+            "phone": "0948899201",
+            "status": "ACTIVE"
+          },
+          "trips": [],
+          "payments": [],
+          "spending": [],
+          "vouchers": [],
+          "notifications": [],
+          "stats": {
+            "totalTrips": 0,
+            "completedTrips": 0,
+            "totalSpent": 0,
+            "voucherCount": 0
+          }
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/users/9bfe09c0-f7a2-4dfd-9170-5150e48be477/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3100/api/avatars/CUSTOMER/9bfe09c0-f7a2-4dfd-9170-5150e48be477?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    }
+  ]
+}

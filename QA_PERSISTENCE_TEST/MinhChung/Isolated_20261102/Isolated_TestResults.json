@@ -1,0 +1,363 @@
+{
+  "at": "2026-11-02T13:06:31.993Z",
+  "run": "QA_TEST_ISO_20261102124130",
+  "counts": {
+    "PASS": 29,
+    "FAIL": 4,
+    "BLOCKED": 0,
+    "NOT TESTED": 6
+  },
+  "tests": [
+    {
+      "id": "ISO-01",
+      "feature": "Cassandra độc lập",
+      "data": "127.0.0.2:9142 / JMX7299 / cluster riêng",
+      "before": "Node mới, không peer",
+      "after": "PID mới sau restart, host ID giữ nguyên",
+      "cql": "system.local + system.peers + status",
+      "result": "PASS"
+    },
+    {
+      "id": "ISO-02",
+      "feature": "Schema tương thích",
+      "data": "19 bảng / 144 cột",
+      "before": "Lấy metadata, không copy row",
+      "after": "Khóa/cột/clustering khớp",
+      "cql": "system_schema.columns",
+      "result": "PASS"
+    },
+    {
+      "id": "ISO-03",
+      "feature": "Cấu hình demo",
+      "data": "RF1 / durable_writes=true",
+      "before": "Đọc metadata thật",
+      "after": "Giữ nguyên sau restart",
+      "cql": "system_schema.keyspaces",
+      "result": "PASS"
+    },
+    {
+      "id": "SAFE-01",
+      "feature": "Không ảnh hưởng database gốc",
+      "data": "902 row /19 bảng",
+      "before": "Hash mọi row và schema",
+      "after": "Không thay đổi, node11220 vẫn chạy",
+      "cql": "original_comparison.json",
+      "result": "PASS"
+    },
+    {
+      "id": "SAFE-02",
+      "feature": "Mã nghiệp vụ nguyên bản",
+      "data": "112 tệp src",
+      "before": "Copy không .env/credentials",
+      "after": "Gốc/copy cùng hash",
+      "cql": "schema_and_source_compatibility.json",
+      "result": "PASS"
+    },
+    {
+      "id": "AUTH-01",
+      "feature": "Customer đăng ký/login qua UI",
+      "data": "09265dc8-410b-4042-9e43-59c8647bde6f",
+      "before": "HTTP201 / login200",
+      "after": "Login lại sau Next/DB restart",
+      "cql": "customers WHERE customer_id=?",
+      "result": "PASS"
+    },
+    {
+      "id": "AUTH-02",
+      "feature": "Driver đăng ký cùng xe qua UI",
+      "data": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+      "before": "Driver PENDING + xe liên kết",
+      "after": "Row giữ nguyên, driver ACTIVE sau duyệt",
+      "cql": "drivers/vehicles theo UUID",
+      "result": "PASS"
+    },
+    {
+      "id": "AUTH-03",
+      "feature": "Admin demo login và duyệt Driver",
+      "data": "Credential demo mới, không JWT giả",
+      "before": "UI Duyệt thành công",
+      "after": "Driver ACTIVE",
+      "cql": "drivers theo driver_id",
+      "result": "PASS"
+    },
+    {
+      "id": "CAT-01",
+      "feature": "Tạo service qua UI Admin",
+      "data": "BIKE /10000 +5000/km",
+      "before": "Row mới trên demo",
+      "after": "Còn sau restart",
+      "cql": "service_types theo service_id",
+      "result": "PASS"
+    },
+    {
+      "id": "DRV-01",
+      "feature": "Bật nhận chuyến qua UI",
+      "data": "Driver QA AVAILABLE",
+      "before": "OFFLINE → AVAILABLE",
+      "after": "BUSY khi có chuyến, AVAILABLE sau hoàn thành",
+      "cql": "drivers WHERE driver_id=?",
+      "result": "PASS"
+    },
+    {
+      "id": "TRIP-01",
+      "feature": "Đặt chuyến qua UI",
+      "data": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "before": "BOOKED, route thật1.6km,18000đ",
+      "after": "COMPLETED sau thực hiện",
+      "cql": "canonical + customer/driver/status/history",
+      "result": "PASS"
+    },
+    {
+      "id": "TRIP-ACCEPTED",
+      "feature": "Driver cập nhật ACCEPTED",
+      "data": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "before": "UI và SELECT khớp trạng thái",
+      "after": "COMPLETED giữ nguyên sau restart",
+      "cql": "các projection/partition trạng thái, history",
+      "result": "PASS"
+    },
+    {
+      "id": "TRIP-ARRIVING",
+      "feature": "Driver cập nhật ARRIVING",
+      "data": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "before": "UI và SELECT khớp trạng thái",
+      "after": "COMPLETED giữ nguyên sau restart",
+      "cql": "các projection/partition trạng thái, history",
+      "result": "PASS"
+    },
+    {
+      "id": "TRIP-IN_PROGRESS",
+      "feature": "Driver cập nhật IN_PROGRESS",
+      "data": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "before": "UI và SELECT khớp trạng thái",
+      "after": "COMPLETED giữ nguyên sau restart",
+      "cql": "các projection/partition trạng thái, history",
+      "result": "PASS"
+    },
+    {
+      "id": "TRIP-COMPLETED",
+      "feature": "Driver cập nhật COMPLETED",
+      "data": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "before": "UI và SELECT khớp trạng thái",
+      "after": "COMPLETED giữ nguyên sau restart",
+      "cql": "các projection/partition trạng thái, history",
+      "result": "PASS"
+    },
+    {
+      "id": "PAY-01",
+      "feature": "Tạo payment khi hoàn thành",
+      "data": "BANK_TRANSFER /18000đ",
+      "before": "PENDING, chưa ghi doanh thu đã trả",
+      "after": "PAID_DEMO sau xác nhận",
+      "cql": "payments_by_trip/customer",
+      "result": "PASS"
+    },
+    {
+      "id": "PAY-02",
+      "feature": "Customer báo chuyển khoản mô phỏng",
+      "data": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+      "before": "PENDING_CONFIRMATION qua UI",
+      "after": "PAID_DEMO sau Driver xác nhận",
+      "cql": "payment theo trip/customer",
+      "result": "PASS"
+    },
+    {
+      "id": "PAY-03",
+      "feature": "Driver xác nhận đã nhận tiền mô phỏng",
+      "data": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+      "before": "PAID_DEMO, amount18000",
+      "after": "Cùng ID/status/amount sau restart",
+      "cql": "payment đủ khóa, không row provisional trùng",
+      "result": "PASS"
+    },
+    {
+      "id": "REV-01",
+      "feature": "Doanh thu/chi tiêu sau thanh toán",
+      "data": "18000đ",
+      "before": "Đúng1 row mỗi bảng tổng hợp",
+      "after": "Driver UI/API/SELECT còn18000",
+      "cql": "driver_revenue/customer_spending đủ PK",
+      "result": "PASS"
+    },
+    {
+      "id": "REVIEW-01",
+      "feature": "Đánh giá qua UI",
+      "data": "3bb62c0c-c3fa-4038-810c-5b6e42dac391",
+      "before": "5 sao, comment QA_TEST_",
+      "after": "Driver/customer đọc lại sau restart",
+      "cql": "reviews_by_trip/driver, drivers.rating",
+      "result": "PASS"
+    },
+    {
+      "id": "ADMIN-01",
+      "feature": "Admin chuyến/payment/dashboard",
+      "data": "1 completed trip,18000đ, rating5",
+      "before": "UI/API có dữ liệu mới",
+      "after": "API xác nhận đúng sau DB restart",
+      "cql": "admin_after_db_restart_API.json + SELECT",
+      "result": "PASS"
+    },
+    {
+      "id": "GUARD-01",
+      "feature": "Không đổi availability khi đang có trip",
+      "data": "Fixture AVAILABLE sai chỉ trong demo",
+      "before": "UI từ chối, HTTP409",
+      "after": "Fixture trả lại BUSY trước tiếp tục chuyến",
+      "cql": "canonical trip còn hoạt động",
+      "result": "PASS"
+    },
+    {
+      "id": "GUARD-02",
+      "feature": "Không phân trùng dù AVAILABLE sai",
+      "data": "Cùng driver/canonical trip",
+      "before": "API thực từ chối409, trip count không tăng",
+      "after": "Không có trip trùng",
+      "cql": "negative_available_active.json",
+      "result": "PASS"
+    },
+    {
+      "id": "PERSIST-01",
+      "feature": "Refresh",
+      "data": "Cùng trip/payment/review UUID",
+      "before": "Row hoàn thành/thanh toán/đánh giá",
+      "after": "UI và SELECT đầy đủ",
+      "cql": "check-refresh/check-relogin SELECT",
+      "result": "PASS"
+    },
+    {
+      "id": "PERSIST-02",
+      "feature": "Logout/login",
+      "data": "Cùng trip/payment/review UUID",
+      "before": "Row hoàn thành/thanh toán/đánh giá",
+      "after": "UI và SELECT đầy đủ",
+      "cql": "check-refresh/check-relogin SELECT",
+      "result": "PASS"
+    },
+    {
+      "id": "PERSIST-03",
+      "feature": "Restart Next demo",
+      "data": "335 row demo",
+      "before": "Ctrl+C → app dừng thật",
+      "after": "335/335 hash không đổi, UI login lại đúng",
+      "cql": "comparison_after-next.json",
+      "result": "PASS"
+    },
+    {
+      "id": "PERSIST-04",
+      "feature": "Restart Cassandra demo sạch",
+      "data": "RF1, durable_writes=true",
+      "before": "Snapshot/checksum, drain DRAINED, Ctrl+C",
+      "after": "335/335 hash không đổi; UI Customer/Driver/Admin đúng",
+      "cql": "comparison_after-cassandra + SELECT cùng PK",
+      "result": "PASS"
+    },
+    {
+      "id": "BACKUP-01",
+      "feature": "Bản sao snapshot demo",
+      "data": "166 tệp + schema-only",
+      "before": "Copy sang thư mục backup riêng",
+      "after": "Checksum166/166 khớp",
+      "cql": "demo_backup_manifest.json; chưa rehearsal restore",
+      "result": "PASS"
+    },
+    {
+      "id": "LIMIT-customers",
+      "feature": "Danh sách customers đủ bản ghi",
+      "data": "106 row trong bảng",
+      "before": "API/UI chỉ100; customer search thiếu",
+      "after": "Chưa sửa; dữ liệu vẫn trong DB",
+      "cql": "limit_100_results.json",
+      "result": "FAIL"
+    },
+    {
+      "id": "LIMIT-drivers",
+      "feature": "Danh sách drivers đủ bản ghi",
+      "data": "106 row trong bảng",
+      "before": "API/UI chỉ100; customer search thiếu",
+      "after": "Chưa sửa; dữ liệu vẫn trong DB",
+      "cql": "limit_100_results.json",
+      "result": "FAIL"
+    },
+    {
+      "id": "LIMIT-vehicles",
+      "feature": "Danh sách vehicles đủ bản ghi",
+      "data": "106 row trong bảng",
+      "before": "API/UI chỉ100; customer search thiếu",
+      "after": "Chưa sửa; dữ liệu vẫn trong DB",
+      "cql": "limit_100_results.json",
+      "result": "FAIL"
+    },
+    {
+      "id": "LIMIT-OWN-VEHICLE",
+      "feature": "Driver thấy xe thuộc mình",
+      "data": "Một QA_TEST_LIMIT_ driver",
+      "before": "API own vehicle=[]; UI báo trống",
+      "after": "SELECT exact vehicle_id trả đúng1 row",
+      "cql": "limit_100_results.json / driverVehicle",
+      "result": "FAIL"
+    },
+    {
+      "id": "NT-01",
+      "feature": "Restart Cassandra gốc",
+      "data": "Ngoài phạm vi/không thực hiện",
+      "before": "Không thực hiện",
+      "after": "Không kết luận",
+      "cql": "Không có bằng chứng test này",
+      "result": "NOT TESTED"
+    },
+    {
+      "id": "NT-02",
+      "feature": "Force kill/mất điện/crash",
+      "data": "Ngoài phạm vi/không thực hiện",
+      "before": "Không thực hiện",
+      "after": "Không kết luận",
+      "cql": "Không có bằng chứng test này",
+      "result": "NOT TESTED"
+    },
+    {
+      "id": "NT-03",
+      "feature": "Restore rehearsal từ backup",
+      "data": "Ngoài phạm vi/không thực hiện",
+      "before": "Không thực hiện",
+      "after": "Không kết luận",
+      "cql": "Không có bằng chứng test này",
+      "result": "NOT TESTED"
+    },
+    {
+      "id": "NT-04",
+      "feature": "CASH và các phương thức khác",
+      "data": "Ngoài phạm vi/không thực hiện",
+      "before": "Không thực hiện",
+      "after": "Không kết luận",
+      "cql": "Không có bằng chứng test này",
+      "result": "NOT TESTED"
+    },
+    {
+      "id": "NT-05",
+      "feature": "Retry mất response qua restart",
+      "data": "Ngoài phạm vi/không thực hiện",
+      "before": "Không thực hiện",
+      "after": "Không kết luận",
+      "cql": "Không có bằng chứng test này",
+      "result": "NOT TESTED"
+    },
+    {
+      "id": "NT-06",
+      "feature": "Sửa lỗi LIMIT và regression sau sửa",
+      "data": "Ngoài phạm vi/không thực hiện",
+      "before": "Không thực hiện",
+      "after": "Không kết luận",
+      "cql": "Không có bằng chứng test này",
+      "result": "NOT TESTED"
+    },
+    {
+      "id": "WORD-01",
+      "feature": "Chuẩn bị mục3.6 + ảnh",
+      "data": "Gói riêng, chưa sửa.docx",
+      "before": "Tạo nội dung/ảnh/chú thích",
+      "after": "Hash Word không đổi sau chuẩn bị",
+      "cql": "Word_Unchanged_Comparison.json",
+      "result": "PASS"
+    }
+  ]
+}

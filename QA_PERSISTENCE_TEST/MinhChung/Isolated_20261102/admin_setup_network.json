@@ -1,0 +1,215 @@
+{
+  "at": "2026-11-02T12:44:24.659Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/drivers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/392d085f-b7b4-4aa7-8377-61dd3b6a1754?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/drivers/392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/drivers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/services",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/services",
+      "status": 201,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/services",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/customers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/vehicles",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "ADMIN",
+          "month": "2026-11",
+          "profile": {
+            "id": "admin-demo",
+            "name": "Quản trị RideFlow",
+            "email": "qa_test_admin@example.invalid"
+          },
+          "trips": [],
+          "stats": {
+            "customerRecords": 1,
+            "driverRecords": 1,
+            "tripCount": 0,
+            "completedTrips": 0,
+            "cancelledTrips": 0,
+            "revenue": 0,
+            "averageRating": 0
+          },
+          "charts": {
+            "status": [],
+            "daily": [],
+            "revenue": []
+          },
+          "limitations": {
+            "customerRecords": "Đếm trên tối đa 100 bản ghi đọc trong trang; bảng không có partition tổng hợp toàn hệ thống.",
+            "revenue": "Đọc đủ các trang chuyến COMPLETED theo tháng đặt chuyến (UTC); đây là giá trị chuyến hoàn thành, không phải tiền thu theo tháng thanh toán."
+          }
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    }
+  ]
+}

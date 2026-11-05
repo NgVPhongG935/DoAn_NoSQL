@@ -1,0 +1,35 @@
+﻿	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+WARN  [nioEventLoopGroup-2-9] 2026-11-02 19:54:22,854 Message.java:791 - Unknown exception in client networking
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:276)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 StorageService.java:1670 - DRAINING: starting drain process
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 HintsService.java:210 - Paused hints dispatch
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 Server.java:179 - Stop listening for CQL clients
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 Gossiper.java:1720 - Announcing shutdown
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:45,328 StorageService.java:2595 - Node /127.0.0.2 state jump to shutdown
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:47,347 MessagingService.java:985 - Waiting for messaging service to quiesce
+INFO  [ACCEPT-/127.0.0.2] 2026-11-02 19:55:47,347 MessagingService.java:1346 - MessagingService has terminated the accept() thread
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:47,552 HintsService.java:210 - Paused hints dispatch
+INFO  [RMI TCP Connection(6)-127.0.0.1] 2026-11-02 19:55:47,552 StorageService.java:1670 - DRAINED

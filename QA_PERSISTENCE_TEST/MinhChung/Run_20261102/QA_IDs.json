@@ -1,0 +1,28 @@
+{
+  "run": "QA_TEST_20261102121343",
+  "customer": {
+    "id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+    "name": "QA_TEST_20261102121343_CUSTOMER_UPDATED",
+    "email": "qa_test_20261102121343_customer@example.invalid"
+  },
+  "driver": {
+    "id": "91857c4a-2cdc-4d43-8401-28c4cb00dc44",
+    "name": "QA_TEST_20261102121343_DRIVER",
+    "email": "qa_test_20261102121343_driver@example.invalid",
+    "accountStatus": "PENDING",
+    "driverStatus": "OFFLINE"
+  },
+  "vehicle": {
+    "id": "729edc21-e7c3-40e3-9495-ff8f71a32597",
+    "driverId": "91857c4a-2cdc-4d43-8401-28c4cb00dc44"
+  },
+  "complaint": {
+    "id": "32bcd6aa-8bf0-462c-876c-30513e2a5474",
+    "createdAt": "2026-11-02T12:22:40.390Z",
+    "customerId": "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+  },
+  "tripId": null,
+  "paymentId": null,
+  "reviewId": null,
+  "notCreatedReason": "Booking could select existing non-QA drivers; deliberately blocked for safety"
+}

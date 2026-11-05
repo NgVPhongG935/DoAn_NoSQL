@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-02T12:16:35.369Z",
+  "method": "Full paginated SELECT drivers + trips_by_id before QA writes",
+  "issues": [
+    {
+      "driverId": "dde73e75-5100-4169-8593-9cf8b9c7df83",
+      "driverStatus": "AVAILABLE",
+      "activeTripIds": [
+        "83ed29d6-62b8-5edd-9852-07c727921e0f",
+        "a51dfea1-00fc-59a7-ad12-9ec7dbf7cb34"
+      ],
+      "activeStatuses": [
+        "ARRIVING",
+        "BOOKED"
+      ],
+      "preExisting": true
+    },
+    {
+      "driverId": "012c738d-9a61-5899-a733-96de8265b294",
+      "driverStatus": "AVAILABLE",
+      "activeTripIds": [
+        "e725945e-1618-5deb-99d7-8e52f7f5dd1b"
+      ],
+      "activeStatuses": [
+        "ACCEPTED"
+      ],
+      "preExisting": true
+    },
+    {
+      "driverId": "3b0ee178-91c8-5edb-acdb-620927e4e657",
+      "driverStatus": "AVAILABLE",
+      "activeTripIds": [
+        "d2427793-4ed4-5417-b00f-5cc095e5672c"
+      ],
+      "activeStatuses": [
+        "IN_PROGRESS"
+      ],
+      "preExisting": true
+    },
+    {
+      "driverId": "1656e4a3-c25a-5175-ae82-f3498e4f13b2",
+      "driverStatus": "AVAILABLE",
+      "activeTripIds": [
+        "b259afcc-9f42-527f-811d-c8e0a3c52243"
+      ],
+      "activeStatuses": [
+        "BOOKED"
+      ],
+      "preExisting": true
+    },
+    {
+      "driverId": "a0989e23-5227-58fb-8e38-71b2c1f6ee2d",
+      "driverStatus": "AVAILABLE",
+      "activeTripIds": [
+        "eaad23b3-3fe5-5d64-b379-2aed3c1aca5c"
+      ],
+      "activeStatuses": [
+        "IN_PROGRESS"
+      ],
+      "preExisting": true
+    },
+    {
+      "driverId": "03156885-d46b-5eda-932c-78b2cc9bdabf",
+      "driverStatus": "AVAILABLE",
+      "activeTripIds": [
+        "0c9166dc-5a3e-5198-a9a9-eeceedc62bb3"
+      ],
+      "activeStatuses": [
+        "ACCEPTED"
+      ],
+      "preExisting": true
+    }
+  ]
+}

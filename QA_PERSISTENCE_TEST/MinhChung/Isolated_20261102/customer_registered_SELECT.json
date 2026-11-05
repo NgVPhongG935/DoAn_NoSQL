@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-02T12:43:45.022Z",
+  "label": "customer_registered",
+  "node": {
+    "cluster_name": "RideFlow_QA_20261102",
+    "host_id": "4ca6b4c4-33a3-4505-b9cf-aa2a92019821"
+  },
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo"
+  },
+  "queries": [
+    {
+      "cql": "SELECT keyspace_name,durable_writes,replication FROM system_schema.keyspaces WHERE keyspace_name = ?",
+      "params": [
+        "rideflow_qa_demo"
+      ],
+      "rows": [
+        {
+          "keyspace_name": "rideflow_qa_demo",
+          "durable_writes": true,
+          "replication": {
+            "class": "org.apache.cassandra.locator.SimpleStrategy",
+            "replication_factor": "1"
+          }
+        }
+      ]
+    },
+    {
+      "cql": "SELECT customer_id,full_name,phone,email,status FROM customers WHERE customer_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "full_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "phone": "0900000001",
+          "email": "qa_test_iso_20261102124130_c@example.invalid",
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ],
+  "checks": []
+}

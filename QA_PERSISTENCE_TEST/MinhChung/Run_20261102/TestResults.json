@@ -1,0 +1,426 @@
+{
+  "at": "2026-11-02T12:31:30.971Z",
+  "run": "QA_TEST_20261102121343",
+  "counts": {
+    "PASS": 19,
+    "FAIL": 3,
+    "BLOCKED": 23,
+    "NOT TESTED": 1
+  },
+  "tests": [
+    {
+      "id": "ENV-01",
+      "feature": "Next.js + kết nối Cassandra thật",
+      "data": "localhost:3100 → 127.0.0.1:9042",
+      "before": "Health HTTP 200",
+      "after": "Health/route hoạt động sau restart",
+      "select": "system.local và schema đọc thật",
+      "status": "PASS"
+    },
+    {
+      "id": "SAFE-01",
+      "feature": "Không sửa/xóa bản ghi cũ",
+      "data": "898 rows / 19 bảng",
+      "before": "Lưu hash theo mọi PK",
+      "after": "Mọi hash cũ giữ nguyên",
+      "select": "SELECT phân trang toàn bộ, comparison JSON",
+      "status": "PASS"
+    },
+    {
+      "id": "SAFE-02",
+      "feature": "Không sửa mã ứng dụng",
+      "data": "112 tệp src",
+      "before": "SHA256 audit ban đầu",
+      "after": "Không tệp src đổi",
+      "select": "Không áp dụng",
+      "status": "PASS"
+    },
+    {
+      "id": "A-01",
+      "feature": "Đăng ký Customer bằng form",
+      "data": "QA customer UUID trong QA_IDs.json",
+      "before": "HTTP 201, row mới",
+      "after": "Còn sau Next restart",
+      "select": "customers WHERE customer_id = ?",
+      "status": "PASS"
+    },
+    {
+      "id": "A-02",
+      "feature": "Đăng nhập Customer bằng form",
+      "data": "Email QA riêng",
+      "before": "HTTP 200 / customer dashboard",
+      "after": "Đăng nhập lại thành công",
+      "select": "Hồ sơ Cassandra cùng UUID",
+      "status": "PASS"
+    },
+    {
+      "id": "A-03",
+      "feature": "Đổi tên hồ sơ Customer bằng form",
+      "data": "Tên có hậu tố _UPDATED",
+      "before": "PATCH UI thành công + SELECT khớp",
+      "after": "Giữ nguyên tên mới",
+      "select": "customers theo PK",
+      "status": "PASS"
+    },
+    {
+      "id": "A-04",
+      "feature": "Đặt chuyến mới",
+      "data": "Chưa tạo",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Không có tripId QA",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "A-05",
+      "feature": "Lịch sử của chuyến mới",
+      "data": "Chưa có chuyến QA",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Chưa có row trip QA",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "A-05-EMPTY",
+      "feature": "Đọc danh sách chuyến đang trống",
+      "data": "Partition Customer QA",
+      "before": "UI không có chuyến, HTTP 200 []",
+      "after": "Vẫn trống đúng DB",
+      "select": "trips_by_customer WHERE customer_id = ? → []",
+      "status": "PASS"
+    },
+    {
+      "id": "A-06",
+      "feature": "Thanh toán mô phỏng",
+      "data": "Chưa có chuyến QA",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Không có paymentId QA",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "A-06-EMPTY",
+      "feature": "Đọc lịch sử payment đang trống",
+      "data": "Partition Customer QA",
+      "before": "UI/GET thành công, không có payment",
+      "after": "Vẫn trống đúng DB",
+      "select": "payments_by_customer WHERE customer_id = ? → []",
+      "status": "PASS"
+    },
+    {
+      "id": "A-07",
+      "feature": "Đánh giá chuyến hoàn thành",
+      "data": "Chưa có chuyến QA",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Không có reviewId QA",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "A-08",
+      "feature": "Gửi khiếu nại không gắn chuyến",
+      "data": "QA_TEST_..._SUPPORT",
+      "before": "UI tạo thật, HTTP 201, status OPEN",
+      "after": "Còn sau các bước thoát và Next restart",
+      "select": "complaints_by_customer đủ customer_id/created_at/complaint_id",
+      "status": "PASS"
+    },
+    {
+      "id": "A-09-EMPTY",
+      "feature": "Đọc hộp thông báo trống",
+      "data": "Partition Customer QA",
+      "before": "UI/GET không có thông báo",
+      "after": "Vẫn trống đúng DB",
+      "select": "notifications_by_user WHERE user_id = ? → []",
+      "status": "PASS"
+    },
+    {
+      "id": "A-09-CREATE",
+      "feature": "Sinh/đánh dấu thông báo mới",
+      "data": "Chưa tạo notification QA",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Không có row QA mới",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-01",
+      "feature": "Đăng ký Driver và xe bằng form",
+      "data": "Driver + vehicle UUID trong manifest",
+      "before": "HTTP 201, driver PENDING/OFFLINE",
+      "after": "Hai row vẫn còn",
+      "select": "drivers/vehicles theo PK, driver_id khớp",
+      "status": "PASS"
+    },
+    {
+      "id": "B-02",
+      "feature": "Login Driver chờ duyệt",
+      "data": "Tài khoản Driver QA",
+      "before": "HTTP 200, UI chờ duyệt",
+      "after": "Login lại sau lần restart Next thứ nhất thành công",
+      "select": "Driver PENDING/OFFLINE và xe còn nguyên",
+      "status": "PASS"
+    },
+    {
+      "id": "B-03",
+      "feature": "Duyệt tài xế thành ACTIVE",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-04",
+      "feature": "Sửa hồ sơ Driver qua portal",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-05",
+      "feature": "Cập nhật phương tiện",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-06",
+      "feature": "Bật/tắt nhận chuyến",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-07",
+      "feature": "Nhận chuyến",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-08",
+      "feature": "Chuyển trạng thái chuyến",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-09",
+      "feature": "Hoàn thành chuyến",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "B-10",
+      "feature": "Lịch sử và doanh thu chuyến mới",
+      "data": "Driver QA PENDING; thiếu phiên Admin",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Không tạo/đổi dữ liệu cho test này",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-01",
+      "feature": "Login Admin",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-02",
+      "feature": "Xem Customer QA mới",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-03",
+      "feature": "Xem Driver QA mới",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-04",
+      "feature": "Xem xe QA mới",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-05",
+      "feature": "Xem chuyến QA",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-06",
+      "feature": "Xem payment QA",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "C-07",
+      "feature": "Đối chiếu dashboard Admin tăng theo dữ liệu mới",
+      "data": "Chưa có phiên Admin đăng nhập thật",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "SELECT tài khoản QA không thay thế test màn Admin",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "R-01",
+      "feature": "Refresh website",
+      "data": "Hồ sơ Customer _UPDATED + complaint OPEN",
+      "before": "UI + SELECT có row",
+      "after": "UI + SELECT giữ nguyên",
+      "select": "Đúng UUID Customer và đủ PK complaint",
+      "status": "PASS"
+    },
+    {
+      "id": "R-02",
+      "feature": "Logout/login",
+      "data": "Hồ sơ Customer _UPDATED + complaint OPEN",
+      "before": "UI + SELECT có row",
+      "after": "UI + SELECT giữ nguyên",
+      "select": "Đúng UUID Customer và đủ PK complaint",
+      "status": "PASS"
+    },
+    {
+      "id": "R-03",
+      "feature": "Đóng/mở Edge với cùng profile QA",
+      "data": "Hồ sơ Customer _UPDATED + complaint OPEN",
+      "before": "UI + SELECT có row",
+      "after": "UI + SELECT giữ nguyên",
+      "select": "Đúng UUID Customer và đủ PK complaint",
+      "status": "PASS"
+    },
+    {
+      "id": "R-04",
+      "feature": "Dừng/chạy lại Next.js",
+      "data": "Customer, Driver, xe, complaint QA",
+      "before": "Hai lần Ctrl+C; xác nhận HTTP unreachable",
+      "after": "PID Next đổi, Cassandra PID không đổi; SELECT/UI có dữ liệu",
+      "select": "SELECT được cả lúc Next tắt, rồi sau bật",
+      "status": "PASS"
+    },
+    {
+      "id": "R-05",
+      "feature": "Restart Cassandra",
+      "data": "Chưa được cho phép",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Không có bằng chứng sau restart Cassandra",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "R-06",
+      "feature": "Restart Windows",
+      "data": "Chưa được cho phép",
+      "before": "Không thực hiện",
+      "after": "Không thực hiện",
+      "select": "Không có bằng chứng sau reboot",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "I-01",
+      "feature": "Hồ sơ/complaint không về seed",
+      "data": "Cùng UUID và tên _UPDATED, cùng complaint PK",
+      "before": "Row đã sửa/đã tạo",
+      "after": "Không mất/không quay về tên cũ trong phạm vi đã thử",
+      "select": "Row chính xác ở mọi mốc",
+      "status": "PASS"
+    },
+    {
+      "id": "I-02",
+      "feature": "Liên kết xe QA–Driver QA",
+      "data": "vehicle.driver_id = QA driver UUID",
+      "before": "Khớp khi đăng ký",
+      "after": "Khớp sau Next restart",
+      "select": "vehicles WHERE vehicle_id = ?",
+      "status": "PASS"
+    },
+    {
+      "id": "I-03",
+      "feature": "Đồng bộ các projection khi chạy chuyến QA",
+      "data": "Không có chuyến QA",
+      "before": "Chưa thực hiện",
+      "after": "Chưa thực hiện",
+      "select": "Mẫu cũ đã SELECT không thay thế test mới",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "I-04",
+      "feature": "Retry booking qua restart khi mất response",
+      "data": "Chỉ phân tích mã",
+      "before": "Chưa gây lỗi/ghi booking",
+      "after": "Chưa thực hiện",
+      "select": "Chưa có repro runtime",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "CFG-01",
+      "feature": "Tiêu chí durable_writes bật",
+      "data": "Keyspace đang dùng",
+      "before": "durable_writes=false",
+      "after": "Giữ nguyên false theo yêu cầu",
+      "select": "system_schema.keyspaces",
+      "status": "FAIL"
+    },
+    {
+      "id": "CFG-02",
+      "feature": "Xác minh RF/node/consistency",
+      "data": "SimpleStrategy RF=3 / một node UN / localOne",
+      "before": "Đã đọc metadata + nodetool",
+      "after": "Không đổi cấu hình",
+      "select": "Metadata và cluster status; không phải test failover",
+      "status": "PASS"
+    },
+    {
+      "id": "OLD-01",
+      "feature": "Trạng thái tài xế cũ nhất quán với chuyến hoạt động",
+      "data": "6 driver AVAILABLE còn chuyến hoạt động",
+      "before": "Phát hiện trước tạo QA",
+      "after": "SELECT lại theo PK vẫn có bất nhất",
+      "select": "99_live_config_and_existing_inconsistencies_SELECT.json",
+      "status": "FAIL"
+    },
+    {
+      "id": "OLD-02",
+      "feature": "Một Driver chỉ có tối đa một chuyến hoạt động",
+      "data": "Driver cũ dde73e75-5100-4169-8593-9cf8b9c7df83",
+      "before": "Hai canonical trips trạng thái hoạt động",
+      "after": "SELECT trực tiếp xác nhận, không sửa",
+      "select": "Hai trips_by_id theo trip_id và drivers theo PK",
+      "status": "FAIL"
+    }
+  ]
+}

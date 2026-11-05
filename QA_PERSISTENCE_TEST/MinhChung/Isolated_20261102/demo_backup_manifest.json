@@ -1,0 +1,1174 @@
+{
+  "at": "2026-11-02T12:54:04.039Z",
+  "snapshotTag": "QA_TEST_BEFORE_RESTART",
+  "keyspace": "rideflow_qa_demo",
+  "node": "127.0.0.2:9142",
+  "backupRoot": "D:\\mongodb\\DOAN_NOSQL\\QA_PERSISTENCE_TEST\\Private\\isolated\\backup-before-restart",
+  "files": [
+    {
+      "table": "complaints_by_customer-785dcb70d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 14,
+      "matching": true,
+      "sha256": "a8bf9b3131e6a28a3250de1fdd00722589d09f3e7da7fc16ca322a90465880b1"
+    },
+    {
+      "table": "complaints_by_customer-785dcb70d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1081,
+      "matching": true,
+      "sha256": "7a97bd15dabaa6d2f6563195bdb1090bfdb4817ec7f0767ee48316d2af135ab8"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "a4eb51ae9606662bd6b58c551b5e2d7bd3495ac39a1db739ba119ff46dd20fd3"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 5199,
+      "matching": true,
+      "sha256": "3b9f0eb8ca0cb96d1ff0ed7a9415792d1104bb62a8f2bc48c5a201829f4cbec5"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 9,
+      "matching": true,
+      "sha256": "79bb790bec005a5835b6b1fde2b1f746298d625fc0845888f6c5956bfabd94ae"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 144,
+      "matching": true,
+      "sha256": "c899fa118a59b6a294ce4236a1f6d6f20b358aa1c5d609b770467e4939bfae56"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 2275,
+      "matching": true,
+      "sha256": "bcbd1893fc64adc91579df8b6bacb930cfab9358e5912545761dc697a69652f6"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5254,
+      "matching": true,
+      "sha256": "3db8405c14eed34101d29f5f18913bb1b5928c45d7b71842e7b96eb86d201a2d"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "88615b6f0708c21d6c09abf03fae7ae2391542f48053fcd12676e6021f46d5de"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "customers-78821c50d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 935,
+      "matching": true,
+      "sha256": "e3999d8425ebec070eacd2e4ea4dd692e7290c16b2f280e53a17f1897e61ec18"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "0456172af974994d0232ac8c4a573580acbac76d0d871366998be3d686542816"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 86,
+      "matching": true,
+      "sha256": "c7241c4bced46e8e563c899a1c3c2c5c9aa562fb322b44c3e39102a4bc95c1f7"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "6a36c6fe7bde9f2ea0d21e132a73104f91b5b77c63a20e66defcce2354a0ec00"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "f08bea7f7d275abbf6af383073abfb1a2a007a80da6321bdff857a055e645b42"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 33,
+      "matching": true,
+      "sha256": "9b3508d412cdf875c784dca6c54a48d878e3822905f297ba7c40201a4d7bbd40"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 4962,
+      "matching": true,
+      "sha256": "04f5d3ccd251d982cfaba32458d086154dca466ebe65193b74218b6d8e2a9110"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 131,
+      "matching": true,
+      "sha256": "05ffc9db49665d0a2ae618ba54f11549d59f180a3036a7b671e8413ea0e01bc2"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "customer_spending_by_month-7869d960d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1028,
+      "matching": true,
+      "sha256": "2daccc3ad60b1f57b1274372077aac2ed5ba462070a5b5e4f931bbfa8e0fe6d2"
+    },
+    {
+      "table": "customer_vouchers-7875e750d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 14,
+      "matching": true,
+      "sha256": "a8bf9b3131e6a28a3250de1fdd00722589d09f3e7da7fc16ca322a90465880b1"
+    },
+    {
+      "table": "customer_vouchers-7875e750d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 999,
+      "matching": true,
+      "sha256": "f6206cde15a0200c47811f35a8a206914b16e09d2d8a6274b0e76614aeebe60c"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "8134a750d3b2444568a862d4fea28c9f6b5d3cc6d5471e0c055c06a1504f4122"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 5891,
+      "matching": true,
+      "sha256": "8733237582ac812075dbab61a567efd89096feab85fe56c2034578ee2124a3ee"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "6e8d967594faf0d49fa8c8644acf6c7a328f3f2d5714cebe723f016ff7074fbb"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 144,
+      "matching": true,
+      "sha256": "08c1c7c48edcf1a32d61bcefade7c8b1a43c6ab0ea352edd0f3af524d284cd4a"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 2282,
+      "matching": true,
+      "sha256": "c261be0f933507ebdefdeec3919dc86950698a33b96093bd1921f1edfa3b2ccd"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5425,
+      "matching": true,
+      "sha256": "144c1140232f7bd4b56cf7ca7ec69183f8428b75ac8e8733d97bc1ed1e8db7d6"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "618f56314ad8a5b5b38a45dd7fbc4fa73a5e2cf6daeff66b0e60125403d22457"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "drivers-789ecc10d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 998,
+      "matching": true,
+      "sha256": "59e1f22c5d09734ad4556308e6137b56de4d1d5c96ad286a7899033083dd3bf0"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "0456172af974994d0232ac8c4a573580acbac76d0d871366998be3d686542816"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 86,
+      "matching": true,
+      "sha256": "c4b5236312e8dff2a4db515e90353902d2e39dd5f550425e7dae5c5041dbdfac"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "082679af32e3336960c5deebfd5cd25bc552f9e4ab8a41f52513d5e7f61e2e28"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "6d95e27a10343bd3b563ca96fcac0518898a411d611f7e921e1305de7c930b0c"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 33,
+      "matching": true,
+      "sha256": "f87053ec5507a3df02929596dc973b37048747e430dc5c6d0f5e942694993d9c"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 4960,
+      "matching": true,
+      "sha256": "785da4e8c660fa9b54f8c7141a8b74d585610e3f8c5d8ebab97ef29d64d4a43a"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 131,
+      "matching": true,
+      "sha256": "03f9be376883c1f7d4efb308ea658ceb55c43a6728178fbfd704a6e32a77d1d4"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "driver_revenue_by_month-78904d20d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1019,
+      "matching": true,
+      "sha256": "f97cb6f4a6639617ff61617af97ba6bb875b13cd3db96e3ea29785f81ce20f56"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "e2e5e9e532fd383c65c91aee20974fcf3318bd9b06a42bb002bb2ebfebe1d412"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 446,
+      "matching": true,
+      "sha256": "4cfd9b8866e6b68b25e384db137957016d7bf27a0d1a2b38dd4f2a7dacd7f0c5"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "dc787a5ee234580b0a4842283ff8433a594b585163965299c8ed0ee9adce9c98"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "851827e900ddf4b0f7a15a095aa1a1b05ef3d04ac2ee7cc7f26d9647b2747081"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "47cda6ba2c5f264cfb158ff2c2d42e3c31d922d6f718b28609e9d52a4df37591"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5036,
+      "matching": true,
+      "sha256": "b202eefb5881edff766e5dcf787ea1baf12713a61589ec75d621f71afa8a48b6"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "e999f9f96fb34055fab1b862bd250695ea347075cd4a60c679ec429daacbe010"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "notifications_by_user-78ad7210d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1069,
+      "matching": true,
+      "sha256": "0676258180231c9771f519806d0c013e2dca46feb7de299a490f017ae6e6d526"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "535e4b17043a8a66c92565051b5d2b108b036d027da570b5052610cc90b8e13f"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 139,
+      "matching": true,
+      "sha256": "f8de6c301151df13a4479e4844f591d9b3cb3554034cbaf0a117e9dbfe9ae7cd"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "043cff01b9d18ce42d9eb1c01d4b166c76b686fe16d94ec0fc8bdeb3b9844ddb"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "dfd26e33452d9de5de0ca0fcce4c00140d9479f3524e38772d9cf4592aac454b"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "6c5f2bc982a5193df22567ca79fc6ca24ab53aaafa45da36c491c50600146c26"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5061,
+      "matching": true,
+      "sha256": "95c72100e41abed166d4c72b130281d0bdcf43259681d3325ed63cc6d4b50ee0"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "41f1c0cacf3d6f837789080e7ac9cf2980053996a3e741a3149520b33f72228d"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "payments_by_customer-78b98000d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1057,
+      "matching": true,
+      "sha256": "0d446b3c04923f58c7b888b06667586edffce6f819820e8a7adbbc5da2590bbf"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "6152c0f12598ea100065b929ace5bbf782655241cfbeb39a0b6e7103e4a374f3"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 123,
+      "matching": true,
+      "sha256": "61b9e2906bdf777a52f3e6fc7aad165a7bd79001e6b09b7d1e2b4ac42345c3a0"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "aece42bdbccf3d7392c8cecfe04c756150986db2c6f96465fc135e5262f50651"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "2855c6889b56752f04e36665bff152a32ff6d221cbc4ccd6fb17c5ebc3a2f017"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "b71eb107c9d09e1633a2a4933bde7170f88f0d5d982653b5f69101caf68fe45b"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 4987,
+      "matching": true,
+      "sha256": "a91907239ef59cfd1e5ab119aeb49ba81b7209c889556f40b6e8a6ee11142185"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "ffaaea5c59db2a39dd0ebabfc8d04d49eb2ee90b8ad9acfaeddb5f0901e0218e"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "payments_by_trip-78c58df0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1026,
+      "matching": true,
+      "sha256": "87de7252ff47a8b1e1004693a56875d8af5a73a8cccc665a19f8610839157549"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "c30ef11beb686eea197550c020e57fda5a11f52ef95ec644a6be903c9bdcaa3f"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 150,
+      "matching": true,
+      "sha256": "b0ec9fc88c3a0b1cc5a30b463e52ada36d764c6b86d4bb0df1a2f25bdc5a809f"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 9,
+      "matching": true,
+      "sha256": "16fe8ff34b027e43004aa9849449f628e8309b43ae9f61d982a287b39347fabb"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "851827e900ddf4b0f7a15a095aa1a1b05ef3d04ac2ee7cc7f26d9647b2747081"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "47cda6ba2c5f264cfb158ff2c2d42e3c31d922d6f718b28609e9d52a4df37591"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5029,
+      "matching": true,
+      "sha256": "34fc5694e410d2f5c86ff9a8fe5d4bcc5814e720eee8bd94aee1cba5d41f12a5"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "e999f9f96fb34055fab1b862bd250695ea347075cd4a60c679ec429daacbe010"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "reviews_by_driver-78d19be0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1042,
+      "matching": true,
+      "sha256": "e4a875baeb788a365f28e8a740fbaaaf7183012036c15a3078047930d47367e8"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "f6958b43adc1cbe4e666c5011757e68c3b20c76166aa4d090a96c678f9b5fee3"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 151,
+      "matching": true,
+      "sha256": "b8b8484610ad1cb1efac8b24f598e7b8e702b320b88d933b6b828333178954d1"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "1b8c8fc8d80b43b31ce94980c4b43f385658693101854f3a889adf8a0830304e"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "2855c6889b56752f04e36665bff152a32ff6d221cbc4ccd6fb17c5ebc3a2f017"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "b71eb107c9d09e1633a2a4933bde7170f88f0d5d982653b5f69101caf68fe45b"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 4950,
+      "matching": true,
+      "sha256": "a085e407999e47e76bca17ebda8896ec857fd083524a9f8417a796d5668a2bc5"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "ffaaea5c59db2a39dd0ebabfc8d04d49eb2ee90b8ad9acfaeddb5f0901e0218e"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "reviews_by_trip-78dda9d0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 945,
+      "matching": true,
+      "sha256": "89d204b58da2d5e5875965094dcd30a47f2bf6830b3f5c919a81c6d1faced86c"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "864c5c838d98679c7624b254ef43b697acf647579d32845f7f850c59889d31df"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 106,
+      "matching": true,
+      "sha256": "13851132f60ec869088b702c642ef9669e6833ee3478f59cb7e2ed5eb35f5923"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 9,
+      "matching": true,
+      "sha256": "bd2c9a642fdac10af85bf9a5110528ec1aa4ea0c8dcf8d57939b69be919aeae9"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "3617817d60bf14040d6e689d55435a57891463df790f3efc07468d0dc7b919fd"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "044c8eff977fd7cfe76324a776759d756d8b58a4813794e0315b963d0c36dea3"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 4906,
+      "matching": true,
+      "sha256": "955ac88ffdac12edf34929d1576c82648a199f0305bf7b070cee9812956bb9f2"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "2e0402e1afb48e7df594fc39c681c70dfa0afa562bcfcbbc1e7733fe436bbc65"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "service_types-78ec28c0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 938,
+      "matching": true,
+      "sha256": "990fb8ccccbd2d1da099a7314b188c9330e80940ab8aa861596fa241c9ba50bf"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "c38c60dd3a55aee50029a4fec2f243fccbc46aa7b3e2946c65ec8b7aae2fe20a"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 266,
+      "matching": true,
+      "sha256": "38bf3764fb6c16cc35854c01f0a0dbab48056b727534a1b28843f008e6f4491d"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "76d592ca04385cb38c358b6ec8dd77b67d2c724aca66a307c7688bc0126a19d2"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "dfd26e33452d9de5de0ca0fcce4c00140d9479f3524e38772d9cf4592aac454b"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "6c5f2bc982a5193df22567ca79fc6ca24ab53aaafa45da36c491c50600146c26"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5100,
+      "matching": true,
+      "sha256": "20d3cc0547ba7bfba54ff2a641dca1002f4c98cdc8ce62ba9b41cb4ca949d0be"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "41f1c0cacf3d6f837789080e7ac9cf2980053996a3e741a3149520b33f72228d"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "trips_by_customer-7906dcb0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1076,
+      "matching": true,
+      "sha256": "f7f002288e325bf35db6cfcfe5e86abd539e9a402e3b2df6c23ada368fcf64f8"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "c38c60dd3a55aee50029a4fec2f243fccbc46aa7b3e2946c65ec8b7aae2fe20a"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 269,
+      "matching": true,
+      "sha256": "4b879736c09f4d6cd3103cfa238eb0313c03cb08e37e358d4c1c492ae72c0052"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 8,
+      "matching": true,
+      "sha256": "b51df4abb7152c8774c5637ec51616b198e210431ec3d52b64284576cdbcb790"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "851827e900ddf4b0f7a15a095aa1a1b05ef3d04ac2ee7cc7f26d9647b2747081"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "47cda6ba2c5f264cfb158ff2c2d42e3c31d922d6f718b28609e9d52a4df37591"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5102,
+      "matching": true,
+      "sha256": "5c294af5491b6a61d988906f26b78d16aefaa0506fbde4c38ec64ccb9674cd19"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "e999f9f96fb34055fab1b862bd250695ea347075cd4a60c679ec429daacbe010"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "trips_by_driver-7912eaa0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1072,
+      "matching": true,
+      "sha256": "e61787123dc4aa1a0c6e798a101684ddf14f7dc1f64767cf32c5f9e4985b017d"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "516113a93eafa268238c2a724dacebbac298997c3ef63dbb0dcb981c375be393"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 344,
+      "matching": true,
+      "sha256": "5ca529c5c04ce8564f2ae4a2a2644c5924a6832340014e83c3e64e78263cabe6"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "cf7235ba82f63727e8153e58e11ca3cab63fae95f747ce3e68d3a97ed4ad6082"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "2855c6889b56752f04e36665bff152a32ff6d221cbc4ccd6fb17c5ebc3a2f017"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "b71eb107c9d09e1633a2a4933bde7170f88f0d5d982653b5f69101caf68fe45b"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5414,
+      "matching": true,
+      "sha256": "b0743fe3a588e452fd829202b1f261cf49985fe1b4e8fba96dfd303ab4085d24"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "ffaaea5c59db2a39dd0ebabfc8d04d49eb2ee90b8ad9acfaeddb5f0901e0218e"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "trips_by_id-791ef890d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1131,
+      "matching": true,
+      "sha256": "b31e2f08ac5cf9a72ad7b7f9b092863ffa962eaf4646b64628fcdcc076813a6f"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "f12d40a0d7fdc41e72bbeeb12ac6d5eeb256d22acd380cb7b7f70f645741f8a8"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 388,
+      "matching": true,
+      "sha256": "0379599b0f3c381c29c183ca3bb2dcd3d6808bcefc345f6c6b5246c59f449bd6"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "3338a5b57fdb783797c5817d04b9f03be7f53a62b7792a87eac4724e40ffd093"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 24,
+      "matching": true,
+      "sha256": "2b1c399b32eca6262920f4c9d83bf1f4c945ec2f65c202d0567d2e61f0865bf3"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 139,
+      "matching": true,
+      "sha256": "89cdc46f8c000860cef3c65cd785a91c643b853adbc9755221f70f5c43c0592e"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5239,
+      "matching": true,
+      "sha256": "5825d77fe079877240704c11b2de42f1e06b7c3e90fe984bae007bcc2526129e"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 99,
+      "matching": true,
+      "sha256": "71b4e9d583565ab15904fbdeeea231a2dd96c59920d3ab66457186f1f0411928"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "trips_by_status-792cb430d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1099,
+      "matching": true,
+      "sha256": "fa87be23e91481700624aa86cab209406913256305bde8ea3fdd7b52bd06cdba"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "aa1a720b76766dbe0f458ef17b42b93e29d154fbfe4a8fe64b194b20e9232601"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 294,
+      "matching": true,
+      "sha256": "c7ad3372425d1201fcd5520d1b23683a2a40fde5efb43c2c7debb94851590fd5"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 7,
+      "matching": true,
+      "sha256": "4b552d51311dbea291c36a55363b39990a2e84f1c2ea1e40eec5ea7918e5dc4e"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 16,
+      "matching": true,
+      "sha256": "2855c6889b56752f04e36665bff152a32ff6d221cbc4ccd6fb17c5ebc3a2f017"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 20,
+      "matching": true,
+      "sha256": "b71eb107c9d09e1633a2a4933bde7170f88f0d5d982653b5f69101caf68fe45b"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 4846,
+      "matching": true,
+      "sha256": "f328aaeba5d900017295ebc6d4a2d94f8134b25d2bb7a47b46cbed1b39a9707b"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "ffaaea5c59db2a39dd0ebabfc8d04d49eb2ee90b8ad9acfaeddb5f0901e0218e"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "trip_status_history-78f85dc0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 961,
+      "matching": true,
+      "sha256": "d45412671747082627c3fb735306d5844f21024b7e82c3dbc6770c43bbe0efaf"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 32,
+      "matching": true,
+      "sha256": "41b5899c547b721daf36d954780415a8ae9b564cc5037a61f3d6468aee462534"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-CompressionInfo.db",
+      "bytes": 43,
+      "matching": true,
+      "sha256": "a04013544981cf66b9e71e15e57ee49742f3cc2e781e5bd5d2cd623ee89aad56"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Data.db",
+      "bytes": 5948,
+      "matching": true,
+      "sha256": "884c395e4a2deff8dc180e6dbb246d376bfa87585d0273e5396869c3a9a19119"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Digest.crc32",
+      "bytes": 10,
+      "matching": true,
+      "sha256": "3fb3a0788c8379fc6c95d745d6e7a5ae3190014269665313445d2f3b3be1836b"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Filter.db",
+      "bytes": 144,
+      "matching": true,
+      "sha256": "b5045f1d875eed4c46fb219387183c9fbe0ff304acd43b8c2a8471ebc993a934"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Index.db",
+      "bytes": 2225,
+      "matching": true,
+      "sha256": "7bd59ad1a3890f21f725147968521b0488b81d488f6934e6480bdddbd8f063d8"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Statistics.db",
+      "bytes": 5359,
+      "matching": true,
+      "sha256": "1720a35a2f2db4082f838e3adcaeabad0e6b8ea9172b14a40d7bd1a4edaf5aa3"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-Summary.db",
+      "bytes": 92,
+      "matching": true,
+      "sha256": "d35858eb010a94865500537952a332e8bf5bcf7a1b83841a073877efe122f2d3"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "me-1-big-TOC.txt",
+      "bytes": 100,
+      "matching": true,
+      "sha256": "71fca6b973a1f141e5b47883527f9c4a87daf1a934ba2901bb88ab5f7868f665"
+    },
+    {
+      "table": "vehicles-79387400d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 965,
+      "matching": true,
+      "sha256": "d5a26baaf3115107fc59d90327694fae2fc41c41ac3428e12f3451768c71ea7a"
+    },
+    {
+      "table": "vouchers-794481f0d6ba11f1b36075f9f3485859",
+      "file": "manifest.json",
+      "bytes": 14,
+      "matching": true,
+      "sha256": "a8bf9b3131e6a28a3250de1fdd00722589d09f3e7da7fc16ca322a90465880b1"
+    },
+    {
+      "table": "vouchers-794481f0d6ba11f1b36075f9f3485859",
+      "file": "schema.cql",
+      "bytes": 1027,
+      "matching": true,
+      "sha256": "27dca902cf7e856019bc2fa5a060758727370d45036a6b24209e9aefd2f56e32"
+    }
+  ],
+  "verified": true,
+  "restoreRehearsalPerformed": false,
+  "recoveryPlan": "Independent snapshot copies + schema-only CQL retained. Restore only to new disposable instance; never import into original node."
+}

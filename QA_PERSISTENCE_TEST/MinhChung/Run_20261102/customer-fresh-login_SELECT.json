@@ -1,0 +1,140 @@
+{
+  "at": "2026-11-02T12:23:55.060Z",
+  "stage": "customer-fresh-login",
+  "checks": [
+    {
+      "cql": "SELECT customer_id,full_name,phone,email,status,created_at FROM customers WHERE customer_id = ?",
+      "params": [
+        "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      ],
+      "rows": [
+        {
+          "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+          "full_name": "QA_TEST_20261102121343_CUSTOMER_UPDATED",
+          "phone": "0948899201",
+          "email": "qa_test_20261102121343_customer@example.invalid",
+          "status": "ACTIVE",
+          "created_at": "2026-11-02T12:13:57.731Z"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT driver_id,full_name,phone,email,account_status,driver_status,license_number,created_at FROM drivers WHERE driver_id = ?",
+      "params": [
+        "91857c4a-2cdc-4d43-8401-28c4cb00dc44"
+      ],
+      "rows": [
+        {
+          "driver_id": "91857c4a-2cdc-4d43-8401-28c4cb00dc44",
+          "full_name": "QA_TEST_20261102121343_DRIVER",
+          "phone": "0991166065",
+          "email": "qa_test_20261102121343_driver@example.invalid",
+          "account_status": "PENDING",
+          "driver_status": "OFFLINE",
+          "license_number": "QA_TEST_20261102121343_LICENSE",
+          "created_at": "2026-11-02T12:17:05.930Z"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT vehicle_id,driver_id,license_plate,brand,model,color,vehicle_type,status,seat_count FROM vehicles WHERE vehicle_id = ?",
+      "params": [
+        "729edc21-e7c3-40e3-9495-ff8f71a32597"
+      ],
+      "rows": [
+        {
+          "vehicle_id": "729edc21-e7c3-40e3-9495-ff8f71a32597",
+          "driver_id": "91857c4a-2cdc-4d43-8401-28c4cb00dc44",
+          "license_plate": "99Z-87194",
+          "brand": "QA_TEST_BRAND",
+          "model": "QA_TEST_20261102121343_MODEL",
+          "color": "QA_TEST_WHITE",
+          "vehicle_type": "BIKE",
+          "status": "ACTIVE",
+          "seat_count": 2
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trips_by_customer WHERE customer_id = ?",
+      "params": [
+        "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM payments_by_customer WHERE customer_id = ?",
+      "params": [
+        "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM complaints_by_customer WHERE customer_id = ?",
+      "params": [
+        "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      ],
+      "rows": [
+        {
+          "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+          "created_at": "2026-11-02T12:22:40.390Z",
+          "complaint_id": "32bcd6aa-8bf0-462c-876c-30513e2a5474",
+          "content": "QA_TEST_20261102121343 Safe persistence QA, no related real trip, no refund or external payment.",
+          "resolved_at": null,
+          "status": "OPEN",
+          "subject": "QA_TEST_20261102121343_SUPPORT",
+          "trip_id": null
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM notifications_by_user WHERE user_id = ?",
+      "params": [
+        "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM trips_by_driver WHERE driver_id = ?",
+      "params": [
+        "91857c4a-2cdc-4d43-8401-28c4cb00dc44"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM reviews_by_driver WHERE driver_id = ?",
+      "params": [
+        "91857c4a-2cdc-4d43-8401-28c4cb00dc44"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM driver_revenue_by_month WHERE driver_id = ? AND year_month = ?",
+      "params": [
+        "91857c4a-2cdc-4d43-8401-28c4cb00dc44",
+        "2026-11"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM complaints_by_customer WHERE customer_id = ? AND created_at = ? AND complaint_id = ?",
+      "params": [
+        "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+        "2026-11-02T12:22:40.390Z",
+        "32bcd6aa-8bf0-462c-876c-30513e2a5474"
+      ],
+      "rows": [
+        {
+          "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477",
+          "created_at": "2026-11-02T12:22:40.390Z",
+          "complaint_id": "32bcd6aa-8bf0-462c-876c-30513e2a5474",
+          "content": "QA_TEST_20261102121343 Safe persistence QA, no related real trip, no refund or external payment.",
+          "resolved_at": null,
+          "status": "OPEN",
+          "subject": "QA_TEST_20261102121343_SUPPORT",
+          "trip_id": null
+        }
+      ]
+    }
+  ]
+}

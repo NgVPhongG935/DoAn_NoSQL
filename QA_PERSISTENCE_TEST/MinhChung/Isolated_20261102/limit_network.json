@@ -1,0 +1,1207 @@
+{
+  "at": "2026-11-02T12:50:58.246Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/customers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/86c37c6d-f4a1-41cb-bbba-0056e56ee61d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/f2bafd39-9ee7-4c51-a418-715fcf5b9c65?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/3ced55c8-a525-4e9e-b981-33c7a125ce83?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/b390ddab-6176-4950-99ec-4cea03e5c8d6?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/51042b87-1715-4a73-a254-095fe2b96071?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/96319de8-3698-4547-a036-2bc8651c82de?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/1ec1a053-2ea9-49c3-b4d5-fafd42442afa?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/a1076c4d-096d-4fc6-8a31-90dfade3967b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/98e9a773-2719-4543-858a-0dfac0a7db91?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/7b9dcfef-44ea-4f4f-9d17-13efa7ba6b51?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/a07d8f8a-defa-452f-9ad3-8bba0d44bcd4?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/362cdb7f-efcf-4fac-a9c6-d84bd71aa21e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/5cecb36b-5ade-4363-8da3-d928aee38e31?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/4b142c8f-fe49-466d-a818-bb3ea82ad75e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/a98cef06-7401-4073-9605-17c694d266f2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/dbb29e35-d8ec-42f5-a76d-981882a995e5?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/93e2f128-ed34-49ff-ab49-758a6b526e55?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/19f43cb3-4816-47f5-8c18-d343af8912f3?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ada2575c-c23f-406d-91cb-01db20810e9e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/e93a3a2d-e1cb-4371-ac56-d3c1571d02d8?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/7b1328b4-07e3-4b04-a022-fb6a57446f0d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/2a735f11-94b8-4075-bce1-6d8b0567c2c2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/bdfef1b0-9a74-40ff-a92e-0a221f2a0040?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/0b3286fc-fade-4b23-8775-0afdfcbcb304?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/6280223b-c5ae-4c9e-88dd-6534aa55788b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/8f8032a9-2b9f-499c-80fa-36b2295d5164?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/a28e5deb-6a38-490b-b5b4-5a7e3b8ead3b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/7d224da4-0726-41c0-92b4-2bffd3cad9ec?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/4680ac6b-d5dd-4668-b28f-bc9f649193e6?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/54970f0f-4ece-48d9-8a7f-de14ff0825d6?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/8c9ce7a0-34b5-4fe9-810a-0c8214d8cee9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/e1513f2a-f297-46a1-92d1-2fd74474d189?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/42f82871-654a-4d2a-b038-0d7050392e51?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/88cfa078-a808-46c3-a81c-e253598b6330?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/92c188b5-bf0b-4026-9aa7-59852dbe0e22?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/6cef530e-dff9-40f4-92e8-9bc2c874ac5e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/895132d8-7dbb-47fb-b8bb-ae2c9e224528?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/5ba94498-9070-456f-94a8-d0387fa432b4?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/d85e0d29-88b2-4c19-91d8-408f48f25bcc?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/3c628607-06b9-48dc-bae8-dbb2ca5aad46?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/256d33f6-2d9f-44af-b849-5032a2e2bb9c?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/1277ac9f-0cdb-4316-9a4e-81aac48f18d5?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/d85dda7e-daff-4f9e-b8b3-04ff9503dabb?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ab39e493-260d-4a64-9d4d-16344cacb1d1?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ad0b39c6-3647-4bea-9f7b-6a41fdbce429?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/0da91335-8fde-455b-a593-692cc4b58177?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/5a2c4e4c-726d-443f-ae82-80fd025b896b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/d2e051e5-0fad-4178-b416-ec81ea13230a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/cfcb630c-a0fc-43d3-98b9-3c8812614b58?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/b8b88c52-503f-480b-9daf-08457dada747?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/627aa042-27c6-4c8f-9018-584cbb363a7a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/46889328-a4a4-4595-9f9b-ac8187f20ee3?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/08baa0cb-4c49-47b7-9a2f-fdbca4983964?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/8fa5c824-3808-4418-947d-75bbf3db3c0a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/e238f579-2c9e-47a8-9ea1-c83c5c0c1e5a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/c9093c7f-efb7-4562-a28b-7bff256a9277?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/59b7994b-4295-46b9-850e-5b69ad941c14?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/d6dc74eb-3f89-47d0-a042-ecbcc59a995b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/e1f863c2-0344-4b08-9287-1efcd6135757?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/97071c58-618a-4150-8153-db5183041f7a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/d63314ad-3bab-40e8-b655-af21e60afe50?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/79f4ef1a-5e63-45c2-b97e-d47a195f5b58?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/504643e4-3a8f-43b7-94ba-f7f794a98d62?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/18b5b8df-e1f4-4804-9030-8583858518e8?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/b94dad9b-7b25-4dec-8469-b65b98fb418a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/98392af9-2b7f-43d7-9a53-d24902530b91?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/227c23ec-2883-4ccf-b3dc-f4d1587f8ec2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/4f041827-dcfe-4ef9-8964-ea7ffdfd53b9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/cde15cb3-6332-4be5-a58a-363664b089e9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/d3e0ce5e-8b02-4721-bf06-19f937c4e43b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/0ac42a21-c5ed-4190-a84a-53270537cca9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/42a42b87-6a39-4248-9bcd-3522c2f015d2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/caa53d98-7e5f-46c7-baf8-6bf14598487f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/fff45377-79c4-4a1e-af76-aaa6f699660e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/c58ef290-615d-490a-8fce-3a5a4b191b13?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/a69dabb0-a94c-45d4-8cc5-dae78f053b13?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/9ad380e7-e9ef-4d14-9cc4-8ebf80f84157?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/4fc1a951-b93f-4b24-a1f9-eb6526974714?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/26ce7c09-1e77-4847-9953-c8799fa65889?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/e54e6d71-9748-4f09-a874-a7828b288e18?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/bfb28a46-7058-430a-b619-4f57bbfb73a7?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/7c2807e6-d70e-4168-9903-b86b0d5062cc?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ac428af1-8bdd-487f-b23a-6827c5349e84?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/3bc862f3-8b26-4b9f-96ee-2e5535cec5d8?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/96d0ebb6-f9e1-48ad-ae08-ce0ec52f632e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/9600738f-99bc-470f-bbd3-00404236052a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/4e74de10-5300-4558-b87c-412019b4a2ac?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ba51bebb-0f9e-46d7-b716-7528eeb6c26a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/9dae0f06-1a23-4875-bac6-8b50a70a8b97?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/32295f02-5ef6-4b50-983e-99259579b605?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ead2b1e8-2c7d-439f-bbf7-614e4b565914?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/33245c2c-dda4-4317-b87c-5161876eaea5?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/725a12b2-3be6-4eed-8d5c-b3016edb82a4?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/ab82eaaf-0c09-459c-8793-592c2634762f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/df8260e3-cf92-4a13-90ad-2fce23a49400?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/05d532db-fe40-49f0-9841-005613ccb0bb?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/9634478b-94cc-4d11-acd7-28a7db1735a9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/40e0babd-cf0c-4606-b70b-a9408c3ba9aa?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/fffd8b99-b1f9-44ef-be24-03e736b391b8?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/customers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/drivers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/a3782de8-84c6-41bd-ae92-1714aed2a2dd?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/e2e5e7a8-4c59-4f15-a912-fa5a0d35e53d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/00c98cb3-615f-4412-af54-c2729ef51d68?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/a63bca64-f514-4964-ab4d-1cc791714473?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/4273ab30-6a7b-4d3e-97dc-2f8369aa78b9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/92c0bc1a-3d7b-4315-bfd1-f14e414066ab?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6aa936f1-6542-4e9d-b0ed-49d7ad6d11e6?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/52eccc56-426f-40a3-b671-4e556a61b27f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/a0a15141-2026-47cd-adfe-51f2ddac6efe?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/9871fc08-8e93-4060-89d0-19cee980ebc3?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/1c5332a8-2e41-4db9-9811-0b5895fc3a43?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/46cb513a-f57d-45c6-96be-9023d3337372?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/34ebaf8f-3434-4502-824f-bd29d92e64a7?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/3a44a678-a69d-4922-a508-6b6c8ff514c9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/9f500edb-ffb6-4c05-9aee-142f21c5fd53?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/29175f93-cc6d-4966-bcd9-7ba917745492?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/7fc772e1-ea3d-46fc-b44d-008f84855175?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/e8327d12-f20c-4671-a342-43093ef2b7c7?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/c2eb1709-aafe-4795-96f4-db49cf9278f5?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/b23e8a21-b8e9-4697-bfd8-4cf5b7e896d2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/8822e13e-b58f-44b6-9e31-d23621683a4f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/fa7266aa-5ce1-4c84-8472-29f68d275e44?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/610eaac1-8f78-4282-a124-78dc8756a54b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/2f57f071-3f4e-4efd-bf13-a7355e8e4e22?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/0511ee09-202f-401a-baf8-5592f2b5bfbd?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/fa56fc00-9671-4e63-bf00-3a957e60bf3d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6644e4d3-aed1-4faf-9bd5-9811b08dd322?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/caf1011e-1088-40df-8890-ec670aa71443?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/3fa24ea4-264e-462a-9f11-90826e64f455?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/eea165ee-6b4b-497d-8f90-15ff602e3247?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/e541f173-00cc-4741-b126-2c80833157ed?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/60818fe6-a31c-44c3-a9e1-903b3c59133a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/f88d6003-a55e-4b78-894d-bb21bc09fa3d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/3a4c8f40-2afd-4963-8b7e-f0e046b472db?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/c9a98372-3ada-4ef3-ab12-064add7f5ff2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/b175b908-ba24-4e90-86be-7f3c974431ad?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/f5d7b5bd-67e7-4ac0-823f-6812e5e43511?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/ff89ada7-90ad-4644-a857-68611b90d417?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/61ccb9bc-e5e6-4b43-afd4-a3ad7f9a49cf?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/ee7b6a5e-19c3-46d2-b162-30dfb7bcc780?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/025f62fc-9077-4b3d-81f2-de293488cba3?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/66740133-9e85-461e-bd24-b865c2f5db5f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/052521e2-d7e9-459e-946f-b396469afaed?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/960825d6-a510-4171-b13a-69dfc10aeb12?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6e41e242-9b8f-4fc4-9d92-5b89a5be494c?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/98499352-1e55-4a0d-b0e7-be78edccb6f0?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/27f2ef0d-6438-4358-af56-c9411a1f0d32?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/9f293a75-2927-48f4-a409-03e5ef35ce46?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/4d3caa77-cc38-4305-b336-5ca598cbede9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/e01e6392-6ea6-4c5b-bfd0-a71a00172934?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/cd96191f-e637-4714-8b8b-8d2a4635c9fe?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/392d085f-b7b4-4aa7-8377-61dd3b6a1754?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/a5abe84c-f0a3-4517-8daa-106e1d5c2029?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6d1d4c0b-38b3-438c-995b-ca3103f0e260?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/00890ff5-cd9c-489e-bb0f-6a490306f628?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/c9368a94-756d-4bee-89e1-945d2f00c3a9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/d80e95cb-d4e6-4ff6-8523-8d46436d62cf?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6058ef9e-af37-45f3-a96a-d9f5ad0b926e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/5a5f6cb0-19a4-469a-b5b8-4fdca773dbdc?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/d662c998-4663-45ef-a2e1-b895b25532d2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/309af0d4-f094-4594-94e7-1f4fe03d6bdc?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/844cb445-d705-4a9a-85e6-3cf5c4921575?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/786e8c3d-cd99-455e-bf87-8c4893b21c09?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/7e2cc4c1-cef8-4b25-8234-dd5ad35a731e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/a9b692db-5de7-4373-88b6-e0496f957f5e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/97ca224a-10e0-4231-90e4-01b497d71832?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/fb2b586b-9812-4bb0-81a5-cd45a8af7800?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/5ddc274b-57d6-45f6-b5d3-312d6e1ea429?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/4b4d4b74-af7a-42e6-be99-cf75dadc5516?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/584cde39-1c40-40c7-a514-978fac0e0372?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/cf64c7d7-6bb8-4f1d-81f4-35387159279d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/63cd706d-d177-48e4-b94b-a433b0889016?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/5ea6637a-3eef-4bb0-90bf-4869921767a5?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/ef4ab419-fdc5-426a-927f-77d073562b06?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/185c952b-4cb8-4504-9944-1a8d8aa43ffc?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/db7f1091-4e4c-4c55-a7e6-c1f5353d4e15?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/4f0b5ec6-9ed0-4c31-9043-561eb68e78bb?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/bfce8ef7-765d-449c-bb0a-c9985edde51a?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6ca68f8b-345d-496c-9654-45d48dce93a4?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/9dabc5cf-4848-4006-8ab9-9f2ebba5b44e?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/80383cec-6a9e-485a-ae67-be69951e8ae2?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/0a78dca9-0b58-47ed-b69f-c9b612fd76c9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6c5f1eba-34b5-45e2-b23c-c8c3e5d7f92c?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/25422ef2-66cd-488c-9e64-d499f5cc062b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/2312404f-4964-4f14-9208-820656668abf?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/61aff1f9-0281-4044-835d-8191897963e3?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/e73e4455-10f8-4efe-894a-f27a5be02c58?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6c70ac51-dc52-4a7e-9b64-d30f6503a399?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/bfbdb6e5-f0fe-46a1-923a-b1b085ab646d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/fb333b6d-ae05-4a37-9d55-6c6510a5b8bd?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/0b415918-98cc-42ee-8ed5-4ba5356eac38?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/7d43181a-ab98-41d3-8d23-33442f2c7eac?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/f4463b31-037b-4703-92d5-aabf57205a9b?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/ee6c31ba-b878-4c5c-b799-f4efcf61e73d?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/4f5ef226-042d-4ea3-bfc5-0e68e6c32b63?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/fdc380fe-6d96-4a3b-a727-cfc2864cd144?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/fc3b984f-4242-4450-aac3-350b2216d540?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/f0c61b84-f9e6-479c-bce0-1802ac59d8b9?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/6c8d58d7-b231-40d4-87a6-413ef7bfba32?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/1ef6b4e9-5a5f-4708-983b-a960d929dba0?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/drivers",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/ADMIN/admin-demo?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/vehicles",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/admin/vehicles",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/0511ee09-202f-401a-baf8-5592f2b5bfbd/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/0511ee09-202f-401a-baf8-5592f2b5bfbd?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "0511ee09-202f-401a-baf8-5592f2b5bfbd",
+          "role": "DRIVER",
+          "name": "QA_TEST_LIMIT_023_D",
+          "email": "qa_test_limit_d023@example.invalid",
+          "accountStatus": "ACTIVE"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "0511ee09-202f-401a-baf8-5592f2b5bfbd",
+          "role": "DRIVER",
+          "name": "QA_TEST_LIMIT_023_D",
+          "email": "qa_test_limit_d023@example.invalid",
+          "accountStatus": "ACTIVE"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/0511ee09-202f-401a-baf8-5592f2b5bfbd/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/DRIVER/0511ee09-202f-401a-baf8-5592f2b5bfbd?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/drivers/0511ee09-202f-401a-baf8-5592f2b5bfbd/vehicle",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/drivers/0511ee09-202f-401a-baf8-5592f2b5bfbd/vehicle",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    }
+  ]
+}

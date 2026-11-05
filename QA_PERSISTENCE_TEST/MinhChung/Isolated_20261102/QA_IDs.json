@@ -1,0 +1,24 @@
+{
+  "run": "QA_TEST_ISO_20261102124130",
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo",
+    "durable_writes": true,
+    "replication_factor": 1
+  },
+  "customerId": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "driverId": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "vehicleId": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+  "serviceId": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+  "tripId": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "bookedAt": "2026-11-02T12:45:09.832Z",
+  "paymentId": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+  "paidAt": "2026-11-02T12:48:22.991Z",
+  "reviewId": "3bb62c0c-c3fa-4038-810c-5b6e42dac391",
+  "reviewAt": "2026-11-02T12:48:54.758Z",
+  "fare": 18000,
+  "status": "COMPLETED",
+  "paymentStatus": "PAID_DEMO",
+  "rating": 5
+}

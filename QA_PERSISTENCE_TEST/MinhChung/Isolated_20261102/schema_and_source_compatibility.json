@@ -1,0 +1,570 @@
+{
+  "at": "2026-11-02T13:01:25.101Z",
+  "sameColumnsAndKeysAndClusteringOrder": true,
+  "originalColumnCount": 144,
+  "demoColumnCount": 144,
+  "sourceChecks": [
+    {
+      "file": "src\\app\\account-management.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\admin\\dashboard\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\admin\\layout.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\admin\\[section]\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\admin-support.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\admin\\complaints\\[customerId]\\[createdAt]\\[complaintId]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\admin\\notifications\\[userId]\\[createdAt]\\[notificationId]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\admin\\[resource]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\admin\\[resource]\\[id]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\auth\\demo\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\auth\\login\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\auth\\logout\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\auth\\me\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\auth\\register\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\avatars\\[role]\\[id]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\complaints\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\payments\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\reviews\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\trips\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\customers\\[id]\\vouchers\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\dashboard\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\revenue\\[month]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\reviews\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\status\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\trips\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\drivers\\[id]\\vehicle\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\health\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\maps\\geocode\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\maps\\reverse-geocode\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\maps\\route\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\services\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\trips\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\payment\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\review\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\trips\\[id]\\status\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\users\\[id]\\notifications\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\api\\users\\[id]\\notifications\\[createdAt]\\[notificationId]\\route.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\booking-fix.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\booking-layout.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\customer\\booking\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\customer\\dashboard\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\customer\\layout.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\customer\\trips\\[id]\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\customer\\[section]\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\driver\\dashboard\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\driver\\layout.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\driver\\[section]\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\driver-registration.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\globals.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\layout.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\loading.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\login\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\pink-theme.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\register\\page.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\ride-loader.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\trip-notifications.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\app\\trip-payments.css",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\auth\\LoginForm.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\auth\\RegisterForm.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\booking\\AddressSearch.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\booking\\BookingForm.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\booking\\RideMap.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\marketing\\LandingPage.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\AccountAvatar.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\AdminAccountManager.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\AdminSupportSection.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\ConnectionIndicator.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\DriverAvailability.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\NotificationBell.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\PortalSection.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\PortalShell.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\portal\\RoleDashboard.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\trips\\TripDetail.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\trips\\TripPaymentPanel.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\components\\ui\\RideLoader.tsx",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\instrumentation.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\account-avatars.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\auth.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\authorization.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\business-journal.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\business-values.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\cassandra.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\demo-auth.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\demo-mutation.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\demo-users.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\driver-assignment-lock.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\http.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\idempotency.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\map-types.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\mutation-request.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\payment-values.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\registration-schema.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\security-config.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\lib\\trip-notifications.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\repositories\\accounts.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\repositories\\admin-support.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\repositories\\ride-data.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\admin-accounts.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\admin-support.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\business-resources.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\dashboard.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\demo-trip-status.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\maps.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\payments.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\registration.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\trip-plans.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    },
+    {
+      "file": "src\\services\\trips.ts",
+      "originalUnchanged": true,
+      "demoCopyIdentical": true
+    }
+  ],
+  "applicationBusinessCodeUnchanged": true,
+  "copyConfigOnlyChange": "turbopack.root in isolated Next config, no business logic change"
+}

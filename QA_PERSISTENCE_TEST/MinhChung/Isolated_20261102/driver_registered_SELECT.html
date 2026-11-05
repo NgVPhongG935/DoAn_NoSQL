@@ -1,0 +1,83 @@
+<!doctype html><meta charset="utf-8"><style>body{font:16px Consolas,monospace;margin:24px}pre{white-space:pre-wrap}</style><h1>Actual Cassandra demo SELECT: driver_registered</h1><p>Evidence viewer, not cqlsh / not RideFlow UI. Target 127.0.0.2:9142.</p><pre>{
+  "at": "2026-11-02T12:43:55.281Z",
+  "label": "driver_registered",
+  "node": {
+    "cluster_name": "RideFlow_QA_20261102",
+    "host_id": "4ca6b4c4-33a3-4505-b9cf-aa2a92019821"
+  },
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo"
+  },
+  "queries": [
+    {
+      "cql": "SELECT keyspace_name,durable_writes,replication FROM system_schema.keyspaces WHERE keyspace_name = ?",
+      "params": [
+        "rideflow_qa_demo"
+      ],
+      "rows": [
+        {
+          "keyspace_name": "rideflow_qa_demo",
+          "durable_writes": true,
+          "replication": {
+            "class": "org.apache.cassandra.locator.SimpleStrategy",
+            "replication_factor": "1"
+          }
+        }
+      ]
+    },
+    {
+      "cql": "SELECT customer_id,full_name,phone,email,status FROM customers WHERE customer_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "full_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "phone": "0900000001",
+          "email": "qa_test_iso_20261102124130_c@example.invalid",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT driver_id,full_name,account_status,driver_status,rating FROM drivers WHERE driver_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+      ],
+      "rows": [
+        {
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+          "account_status": "PENDING",
+          "driver_status": "OFFLINE",
+          "rating": 0
+        }
+      ]
+    },
+    {
+      "cql": "SELECT vehicle_id,driver_id,brand,model,vehicle_type,status FROM vehicles WHERE vehicle_id = ?",
+      "params": [
+        "59b10962-9c0e-442f-aa78-e450ea4177d5"
+      ],
+      "rows": [
+        {
+          "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "brand": "QA_TEST_BIKE",
+          "model": "QA_TEST_MODEL",
+          "vehicle_type": "BIKE",
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "vehicle driver link",
+      "ok": true
+    }
+  ]
+}</pre>

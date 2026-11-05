@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-02T12:20:32.545Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3100/api/auth/login",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "DRIVER",
+          "redirectTo": "/driver/dashboard",
+          "accountStatus": "PENDING"
+        }
+      }
+    }
+  ]
+}

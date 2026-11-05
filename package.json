@@ -1,0 +1,45 @@
+{
+  "name": "rideflow-cassandra",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "verify:p1": "node scripts/verify-p1.mjs",
+    "test": "node --import ./tests/register.mjs --test tests/security.test.mjs tests/business.test.mjs tests/demo.test.mjs tests/admin-accounts.test.mjs tests/customer-password-reset.test.mjs tests/driver-registration.test.mjs tests/admin-support.test.mjs tests/admin-payments.test.mjs tests/admin-trips.test.mjs tests/text-encoding.test.mjs tests/localized-search.test.mjs tests/maps.test.mjs tests/travel-time.test.mjs tests/payments-reviews.test.mjs tests/payment-history.test.mjs tests/trip-notifications.test.mjs",
+    "test:business": "node --import ./tests/register.mjs --test tests/business.test.mjs",
+    "test:business:browser": "node --test tests/browser-business.test.mjs",
+    "test:security": "node --import ./tests/register.mjs --test tests/security.test.mjs",
+    "test:security:journal": "node scripts/test-journal-security.mjs",
+    "test:security:production": "node --test tests/production-security.test.mjs",
+    "db:inspect": "node scripts/inspect-cassandra-schema.mjs",
+    "db:repair:vietnamese": "node scripts/repair-vietnamese-text.mjs",
+    "db:migrate:customer-password": "node scripts/migrate-customer-password-version.mjs",
+    "db:business:check": "node scripts/reconcile-business.mjs",
+    "db:seed:demo": "node scripts/seed-demo-data.mjs",
+    "db:set-demo-passwords": "node scripts/set-demo-passwords.mjs"
+  },
+  "dependencies": {
+    "@types/leaflet": "^1.9.22",
+    "cassandra-driver": "^4.10.0",
+    "jose": "^6.1.3",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.468.0",
+    "next": "^16.3.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-leaflet": "^5.0.0",
+    "recharts": "^2.15.4",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}

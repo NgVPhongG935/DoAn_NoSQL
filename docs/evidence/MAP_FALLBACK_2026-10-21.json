@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "realBrowser": true,
+  "realTileProvider": "tile.openstreetmap.de",
+  "primaryBlocked": true,
+  "loadedTiles": 6,
+  "markers": 2,
+  "routeRendered": true,
+  "cassandra": "mock, no live writes",
+  "geocodingAndRoute": "fixture",
+  "exceptions": []
+}

@@ -1,0 +1,11 @@
+.driver-trip-alert { position: fixed; top: 82px; right: 24px; z-index: 950; width: min(410px, calc(100vw - 32px)); padding: 20px; border: 1px solid #eeb5ce; border-left: 5px solid #e62980; border-radius: 12px; background: #fff9fc; color: #354258; box-shadow: 0 12px 40px #49203626; text-align: left; }
+.driver-trip-alert strong { display: block; padding-right: 22px; color: #7b204c; font-size: 15px; }
+.driver-trip-alert p { font-size: 12px; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.driver-trip-alert a { display: inline-block; margin-right: 14px; color: #b52669; font-weight: 650; font-size: 12px; }
+.driver-alert-close { position: absolute; right: 10px; top: 10px; border: 0; background: transparent; color: #927784; cursor: pointer; }
+.notification-sync-error { position: absolute; bottom: 1px; right: 0; width: 6px; height: 6px; border-radius: 50%; background: #cf8e22; }
+.notification-page .data-table td { white-space: normal; min-width: 100px; }
+.notification-page .data-table td:nth-child(2) { min-width: 250px; max-width: 650px; line-height: 1.8; overflow-wrap: anywhere; }
+.notification-page .data-table td:last-child { min-width: 170px; }
+.notification-page .data-table td:last-child .table-action { display: inline-block; margin: 3px; }
+@media(max-width:650px) { .driver-trip-alert { top: 68px; right: 16px; padding: 16px; } }

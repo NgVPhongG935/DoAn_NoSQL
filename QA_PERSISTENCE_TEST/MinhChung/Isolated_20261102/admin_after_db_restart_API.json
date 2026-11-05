@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-02T13:00:17.099Z",
+  "results": [
+    {
+      "url": "/api/admin/trips?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "status": "COMPLETED",
+            "trip_date": "2026-11-02",
+            "booked_at": "2026-11-02T12:45:09.832Z",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "final_fare": "18000",
+            "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "customer_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+            "driver_name": "QA_TEST_ISO_20261102124130_DRIVER"
+          }
+        ]
+      }
+    },
+    {
+      "url": "/api/admin/payments?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+            "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+            "amount": "18000",
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "paid_at": "2026-11-02T12:48:22.991Z",
+            "payment_method": "BANK_TRANSFER",
+            "payment_status": "PAID_DEMO"
+          }
+        ]
+      }
+    },
+    {
+      "url": "/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "role": "ADMIN",
+          "month": "2026-11",
+          "profile": {
+            "id": "admin-demo",
+            "name": "Quản trị RideFlow",
+            "email": "qa_test_admin@example.invalid"
+          },
+          "trips": [
+            {
+              "status": "COMPLETED",
+              "trip_date": "2026-11-02",
+              "booked_at": "2026-11-02T12:45:09.832Z",
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+              "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+              "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+              "final_fare": "18000",
+              "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+              "customer_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+              "driver_name": "QA_TEST_ISO_20261102124130_DRIVER"
+            }
+          ],
+          "stats": {
+            "customerRecords": 100,
+            "driverRecords": 100,
+            "tripCount": 1,
+            "completedTrips": 1,
+            "cancelledTrips": 0,
+            "revenue": 18000,
+            "averageRating": 5
+          },
+          "charts": {
+            "status": [
+              {
+                "name": "COMPLETED",
+                "value": 1
+              }
+            ],
+            "daily": [
+              {
+                "date": "11-02",
+                "trips": 1
+              }
+            ],
+            "revenue": [
+              {
+                "date": "11-02",
+                "amount": 18000
+              }
+            ]
+          },
+          "limitations": {
+            "customerRecords": "Đếm trên tối đa 100 bản ghi đọc trong trang; bảng không có partition tổng hợp toàn hệ thống.",
+            "revenue": "Đọc đủ các trang chuyến COMPLETED theo tháng đặt chuyến (UTC); đây là giá trị chuyến hoàn thành, không phải tiền thu theo tháng thanh toán."
+          }
+        }
+      }
+    }
+  ]
+}

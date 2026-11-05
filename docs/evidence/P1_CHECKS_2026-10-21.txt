@@ -1,0 +1,547 @@
+RideFlow P1 verification. Node v24.17.0. No live Cassandra writes or schema changes.
+
+Typecheck
+
+Exit: 0
+
+P0 + P1 in-memory tests
+✔ two customers racing for one driver produce exactly one active trip (14.6335ms)
+✔ two concurrent accept requests are idempotent and append one history entry (4.5013ms)
+✔ same booking request key replays one result, including concurrent retries (3.9234ms)
+✔ a busy, offline, blocked driver or mismatched vehicle cannot be assigned (1.6659ms)
+✔ older active canonical trip is detected even when absent from the 50-row driver projection (1.5156ms)
+✔ legacy driver with two active trips cannot accept or start another one (1.6835ms)
+✔ invalid transitions and cancellation after starting do not change projections (7.2286ms)
+✔ changing account or vehicle state before acceptance blocks the action (2.5153ms)
+✔ booking resumes after before-write failure at business step 1 (1.2351ms)
+✔ booking resumes after before-write failure at business step 2 (1.1514ms)
+✔ booking resumes after before-write failure at business step 3 (1.2507ms)
+✔ booking resumes after before-write failure at business step 4 (1.0371ms)
+✔ booking resumes after before-write failure at business step 5 (1.4442ms)
+✔ booking resumes after before-write failure at business step 6 (1.469ms)
+✔ booking resumes after before-write failure at business step 7 (2.6158ms)
+✔ booking resumes after before-write failure at business step 8 (1.7897ms)
+✔ booking resumes after after-write failure at business step 1 (1.5424ms)
+✔ booking resumes after after-write failure at business step 2 (1.0969ms)
+✔ booking resumes after after-write failure at business step 3 (1.2518ms)
+✔ booking resumes after after-write failure at business step 4 (1.2512ms)
+✔ booking resumes after after-write failure at business step 5 (1.2687ms)
+✔ booking resumes after after-write failure at business step 6 (1.2023ms)
+✔ booking resumes after after-write failure at business step 7 (1.1321ms)
+✔ booking resumes after after-write failure at business step 8 (1.289ms)
+✔ ambiguous acquisition timeout is recovered using the persisted operation (2.4137ms)
+✔ ambiguous commit timeout is recovered using the persisted operation (1.2108ms)
+✔ another request rolls forward a pending operation before allocating a driver (6.299ms)
+✔ read APIs refuse partial projections and do not perform recovery writes on GET (33.2948ms)
+✔ a read spanning a committed mutation is rejected instead of returning mixed snapshots (2.4756ms)
+✔ a paused old executor cannot overwrite newer trip, driver or status projection state (9.8796ms)
+✔ completion retries and concurrent completion create one payment and one revenue/spending record (6.504ms)
+✔ completion resumes after before-write failure at business step 1 (5.415ms)
+✔ completion resumes after before-write failure at business step 2 (3.9193ms)
+✔ completion resumes after before-write failure at business step 3 (3.1176ms)
+✔ completion resumes after before-write failure at business step 4 (4.0017ms)
+✔ completion resumes after before-write failure at business step 5 (3.6222ms)
+✔ completion resumes after before-write failure at business step 6 (5.2591ms)
+✔ completion resumes after before-write failure at business step 7 (5.7799ms)
+✔ completion resumes after before-write failure at business step 8 (5.2796ms)
+✔ completion resumes after before-write failure at business step 9 (4.3985ms)
+✔ completion resumes after before-write failure at business step 10 (4.5947ms)
+✔ completion resumes after before-write failure at business step 11 (5.582ms)
+✔ completion resumes after after-write failure at business step 1 (3.6133ms)
+✔ completion resumes after after-write failure at business step 2 (10.3205ms)
+✔ completion resumes after after-write failure at business step 3 (3.0956ms)
+✔ completion resumes after after-write failure at business step 4 (3.3842ms)
+✔ completion resumes after after-write failure at business step 5 (2.9866ms)
+✔ completion resumes after after-write failure at business step 6 (3.6409ms)
+✔ completion resumes after after-write failure at business step 7 (3.2387ms)
+✔ completion resumes after after-write failure at business step 8 (4.1495ms)
+✔ completion resumes after after-write failure at business step 9 (5.1807ms)
+✔ completion resumes after after-write failure at business step 10 (5.5573ms)
+✔ completion resumes after after-write failure at business step 11 (7.938ms)
+✔ two users cannot consume the final voucher concurrently (2.3809ms)
+✔ cancellation before departure refunds the exact voucher once and permits reuse (3.4813ms)
+✔ voucher cancellation resumes after before-write failure at step 1 (4.3329ms)
+✔ voucher cancellation resumes after before-write failure at step 2 (2.8556ms)
+✔ voucher cancellation resumes after before-write failure at step 3 (3.5234ms)
+✔ voucher cancellation resumes after before-write failure at step 4 (2.3865ms)
+✔ voucher cancellation resumes after before-write failure at step 5 (3.2077ms)
+✔ voucher cancellation resumes after before-write failure at step 6 (2.0919ms)
+✔ voucher cancellation resumes after before-write failure at step 7 (2.0475ms)
+✔ voucher cancellation resumes after before-write failure at step 8 (5.9041ms)
+✔ voucher cancellation resumes after before-write failure at step 9 (2.8389ms)
+✔ voucher cancellation resumes after after-write failure at step 1 (1.9264ms)
+✔ voucher cancellation resumes after after-write failure at step 2 (1.8127ms)
+✔ voucher cancellation resumes after after-write failure at step 3 (1.7129ms)
+✔ voucher cancellation resumes after after-write failure at step 4 (2.0369ms)
+✔ voucher cancellation resumes after after-write failure at step 5 (1.5595ms)
+✔ voucher cancellation resumes after after-write failure at step 6 (1.6549ms)
+✔ voucher cancellation resumes after after-write failure at step 7 (3.0139ms)
+✔ voucher cancellation resumes after after-write failure at step 8 (2.1433ms)
+✔ voucher cancellation resumes after after-write failure at step 9 (2.2216ms)
+✔ expired, malformed, unavailable or over-100-percent vouchers are refused without writes (2.183ms)
+✔ free trips retain fare zero in trip, payment, revenue and display (18.6721ms)
+✔ invalid service prices never reach driver or trip writes (1.8699ms)
+✔ driver incident reassigns once and synchronizes all projections (1.823ms)
+✔ incident without replacement cancels and refunds voucher (1.7432ms)
+✔ reassignment resumes after before-write failure at step 1 (2.6572ms)
+✔ reassignment resumes after before-write failure at step 2 (3.0912ms)
+✔ reassignment resumes after before-write failure at step 3 (2.2639ms)
+✔ reassignment resumes after before-write failure at step 4 (2.9533ms)
+✔ reassignment resumes after before-write failure at step 5 (2.9696ms)
+✔ reassignment resumes after before-write failure at step 6 (4.4049ms)
+✔ reassignment resumes after before-write failure at step 7 (2.3229ms)
+✔ reassignment resumes after before-write failure at step 8 (3.0944ms)
+✔ reassignment resumes after before-write failure at step 9 (2.5964ms)
+✔ reassignment resumes after before-write failure at step 10 (2.2765ms)
+✔ reassignment resumes after after-write failure at step 1 (11.1522ms)
+✔ reassignment resumes after after-write failure at step 2 (2.0759ms)
+✔ reassignment resumes after after-write failure at step 3 (2.0156ms)
+✔ reassignment resumes after after-write failure at step 4 (2.809ms)
+✔ reassignment resumes after after-write failure at step 5 (2.3306ms)
+✔ reassignment resumes after after-write failure at step 6 (2.8498ms)
+✔ reassignment resumes after after-write failure at step 7 (2.3075ms)
+✔ reassignment resumes after after-write failure at step 8 (2.2807ms)
+✔ reassignment resumes after after-write failure at step 9 (2.6437ms)
+✔ reassignment resumes after after-write failure at step 10 (2.0306ms)
+✔ legacy duplicate payment records are detected and never silently deleted or multiplied (2.1615ms)
+✔ paginated canonical reads do not miss an active driver trip on the second page (0.6553ms)
+✔ Customer and Driver dashboard month filters use partition time ranges (2.3669ms)
+✔ Admin month report reads all pages beyond the former 100-trip cutoff (7.421ms)
+✔ Admin vehicle update uses vehicle_id and refuses driver_id or nonexistent rows (2.4491ms)
+✔ Admin cannot deactivate the vehicle of an active trip (1.1219ms)
+✔ voucher validation rejects invalid date/percentage, and duplicate creation does not overwrite (4.0708ms)
+✔ review recovers its two projections and rating after write failure 1 (4.0954ms)
+✔ review recovers its two projections and rating after write failure 2 (3.1095ms)
+✔ review recovers its two projections and rating after write failure 3 (3.8507ms)
+✔ invalid money values are distinguished from zero and missing final fare (0.4144ms)
+✔ report month follows Vietnam boundary and rejects malformed input (5.4788ms)
+✔ client retains uncertain request keys, rotates on success or changed body (0.7113ms)
+✔ booking API requires a valid idempotency key when durable mode is enabled (31.5366ms)
+✔ durable operations insist on quorum/serial consistency and fail closed on unavailable data (1.1411ms)
+✔ startup rejects missing, old, weak and placeholder secrets even when AUTH_SECRET exists (75.0719ms)
+✔ Admin has no built-in credential or implicit grants (235.9533ms)
+✔ Admin password helper emits a valid salted hash and escapes dotenv dollars (358.8155ms)
+✔ cookie settings and JWT identity/algorithm/lifetime are enforced (1.5583ms)
+✔ forged old-key, expired, modified and malformed JWTs are refused before database access (7.6714ms)
+✔ rotating JWT_SECRET invalidates previously issued sessions (1.1214ms)
+✔ signed payload must identify the configured Admin or a real account in its claimed role (3.8922ms)
+✔ Admin driver profile also respects the vehicles read grant (2.4822ms)
+✔ unknown Admin resources fail closed without querying a table (3.2265ms)
+✔ blocked, deleted and mismatched accounts cannot reuse an issued session (3.5472ms)
+✔ database outage fails closed instead of accepting a stale session (1.0832ms)
+✔ anonymous denied: GET dashboard/route.ts (0.565ms)
+✔ anonymous denied: GET drivers/route.ts (0.442ms)
+✔ anonymous denied: GET services/route.ts (0.4081ms)
+✔ anonymous denied: POST trips/route.ts (0.7008ms)
+✔ anonymous denied: GET admin/[resource]/route.ts (0.5781ms)
+✔ anonymous denied: POST admin/[resource]/route.ts (0.6234ms)
+✔ anonymous denied: GET auth/me/route.ts (0.5317ms)
+✔ anonymous denied: GET customers/[id]/route.ts (0.5081ms)
+✔ anonymous denied: PATCH customers/[id]/route.ts (0.5643ms)
+✔ anonymous denied: GET drivers/[id]/route.ts (0.6476ms)
+✔ anonymous denied: PATCH drivers/[id]/route.ts (0.7995ms)
+✔ anonymous denied: GET maps/geocode/route.ts (0.4892ms)
+✔ anonymous denied: GET maps/reverse-geocode/route.ts (0.3901ms)
+✔ anonymous denied: POST maps/route/route.ts (0.4728ms)
+✔ anonymous denied: GET trips/[id]/route.ts (0.6282ms)
+✔ anonymous denied: PATCH admin/[resource]/[id]/route.ts (0.7786ms)
+✔ anonymous denied: GET customers/[id]/complaints/route.ts (0.4534ms)
+✔ anonymous denied: POST customers/[id]/complaints/route.ts (0.496ms)
+✔ anonymous denied: GET customers/[id]/payments/route.ts (0.4116ms)
+✔ anonymous denied: GET customers/[id]/reviews/route.ts (0.3675ms)
+✔ anonymous denied: GET customers/[id]/trips/route.ts (0.3671ms)
+✔ anonymous denied: GET customers/[id]/vouchers/route.ts (0.4155ms)
+✔ anonymous denied: GET drivers/[id]/reviews/route.ts (0.3961ms)
+✔ anonymous denied: PATCH drivers/[id]/status/route.ts (0.4417ms)
+✔ anonymous denied: GET drivers/[id]/trips/route.ts (0.3749ms)
+✔ anonymous denied: GET drivers/[id]/vehicle/route.ts (0.3684ms)
+✔ anonymous denied: POST trips/[id]/review/route.ts (0.4675ms)
+✔ anonymous denied: PATCH trips/[id]/status/route.ts (0.4436ms)
+✔ anonymous denied: GET users/[id]/notifications/route.ts (0.4362ms)
+✔ anonymous denied: GET drivers/[id]/revenue/[month]/route.ts (0.496ms)
+✔ anonymous denied: PATCH admin/complaints/[customerId]/[createdAt]/[complaintId]/route.ts (0.659ms)
+✔ anonymous denied: PATCH users/[id]/notifications/[createdAt]/[notificationId]/route.ts (0.5609ms)
+✔ ownership matrix: customer GET customers/[id]/route.ts (3.9821ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/route.ts (1.4677ms)
+✔ ownership matrix: driver GET customers/[id]/route.ts (1.3145ms)
+✔ ownership matrix: otherDriver GET customers/[id]/route.ts (0.9925ms)
+✔ ownership matrix: admin GET customers/[id]/route.ts (0.9734ms)
+✔ Admin needs exact grant: customers/[id]/route.ts (1.4728ms)
+✔ ownership matrix: customer GET customers/[id]/trips/route.ts (1.4091ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/trips/route.ts (1.4798ms)
+✔ ownership matrix: driver GET customers/[id]/trips/route.ts (0.9131ms)
+✔ ownership matrix: otherDriver GET customers/[id]/trips/route.ts (0.9715ms)
+✔ ownership matrix: admin GET customers/[id]/trips/route.ts (0.9117ms)
+✔ Admin needs exact grant: customers/[id]/trips/route.ts (1.4912ms)
+✔ ownership matrix: customer GET customers/[id]/payments/route.ts (1.665ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/payments/route.ts (1.4535ms)
+✔ ownership matrix: driver GET customers/[id]/payments/route.ts (1.095ms)
+✔ ownership matrix: otherDriver GET customers/[id]/payments/route.ts (0.8738ms)
+✔ ownership matrix: admin GET customers/[id]/payments/route.ts (0.8095ms)
+✔ Admin needs exact grant: customers/[id]/payments/route.ts (1.2273ms)
+✔ ownership matrix: customer GET customers/[id]/reviews/route.ts (1.3003ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/reviews/route.ts (1.1112ms)
+✔ ownership matrix: driver GET customers/[id]/reviews/route.ts (0.8267ms)
+✔ ownership matrix: otherDriver GET customers/[id]/reviews/route.ts (0.7672ms)
+✔ ownership matrix: admin GET customers/[id]/reviews/route.ts (0.8332ms)
+✔ Admin needs exact grant: customers/[id]/reviews/route.ts (1.4528ms)
+✔ ownership matrix: customer GET customers/[id]/vouchers/route.ts (1.1217ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/vouchers/route.ts (1.3034ms)
+✔ ownership matrix: driver GET customers/[id]/vouchers/route.ts (1.2523ms)
+✔ ownership matrix: otherDriver GET customers/[id]/vouchers/route.ts (1.041ms)
+✔ ownership matrix: admin GET customers/[id]/vouchers/route.ts (0.8026ms)
+✔ Admin needs exact grant: customers/[id]/vouchers/route.ts (1.3538ms)
+✔ ownership matrix: customer GET customers/[id]/complaints/route.ts (0.8718ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/complaints/route.ts (0.9525ms)
+✔ ownership matrix: driver GET customers/[id]/complaints/route.ts (0.8819ms)
+✔ ownership matrix: otherDriver GET customers/[id]/complaints/route.ts (0.9757ms)
+✔ ownership matrix: admin GET customers/[id]/complaints/route.ts (0.9029ms)
+✔ Admin needs exact grant: customers/[id]/complaints/route.ts (1.5559ms)
+✔ ownership matrix: customer GET drivers/[id]/route.ts (0.965ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/route.ts (0.9314ms)
+✔ ownership matrix: driver GET drivers/[id]/route.ts (1.6456ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/route.ts (1.0174ms)
+✔ ownership matrix: admin GET drivers/[id]/route.ts (1.0073ms)
+✔ Admin needs exact grant: drivers/[id]/route.ts (1.8683ms)
+✔ ownership matrix: customer GET drivers/[id]/trips/route.ts (0.9557ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/trips/route.ts (1.3756ms)
+✔ ownership matrix: driver GET drivers/[id]/trips/route.ts (1.3379ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/trips/route.ts (0.9769ms)
+✔ ownership matrix: admin GET drivers/[id]/trips/route.ts (1.3557ms)
+✔ Admin needs exact grant: drivers/[id]/trips/route.ts (1.5511ms)
+✔ ownership matrix: customer GET drivers/[id]/reviews/route.ts (1.9276ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/reviews/route.ts (1.174ms)
+✔ ownership matrix: driver GET drivers/[id]/reviews/route.ts (1.0957ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/reviews/route.ts (0.8284ms)
+✔ ownership matrix: admin GET drivers/[id]/reviews/route.ts (0.7759ms)
+✔ Admin needs exact grant: drivers/[id]/reviews/route.ts (1.8221ms)
+✔ ownership matrix: customer GET drivers/[id]/vehicle/route.ts (1.3363ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/vehicle/route.ts (0.8907ms)
+✔ ownership matrix: driver GET drivers/[id]/vehicle/route.ts (0.8752ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/vehicle/route.ts (0.7245ms)
+✔ ownership matrix: admin GET drivers/[id]/vehicle/route.ts (0.7385ms)
+✔ Admin needs exact grant: drivers/[id]/vehicle/route.ts (1.5375ms)
+✔ ownership matrix: customer GET drivers/[id]/revenue/[month]/route.ts (1.2227ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/revenue/[month]/route.ts (1.1425ms)
+✔ ownership matrix: driver GET drivers/[id]/revenue/[month]/route.ts (1.7952ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/revenue/[month]/route.ts (0.9289ms)
+✔ ownership matrix: admin GET drivers/[id]/revenue/[month]/route.ts (0.9056ms)
+✔ Admin needs exact grant: drivers/[id]/revenue/[month]/route.ts (1.6308ms)
+✔ a driver UUID matching a customer UUID still cannot read or edit the customer (1.7052ms)
+✔ write ownership and explicit Admin grant: customers/[id]/route.ts (3.3698ms)
+✔ write ownership and explicit Admin grant: drivers/[id]/route.ts (3.6519ms)
+✔ write ownership and explicit Admin grant: drivers/[id]/status/route.ts (3.2715ms)
+✔ Admin resource read permission: customers (26.9261ms)
+✔ Admin resource read permission: drivers (3.9378ms)
+✔ Admin resource read permission: vehicles (3.0032ms)
+✔ Admin resource read permission: services (3.1148ms)
+✔ Admin resource read permission: vouchers (2.5712ms)
+✔ Admin resource read permission: trips (5.5421ms)
+✔ Admin resource read permission: payments (4.9569ms)
+✔ Admin resource read permission: reviews (4.1185ms)
+✔ Admin resource read permission: complaints (3.3578ms)
+✔ Admin resource read permission: notifications (2.9674ms)
+✔ Admin resource read permission: reports (5.2265ms)
+✔ Admin writes require write grant: POST services (4.8203ms)
+✔ Admin writes require write grant: POST vouchers (4.5093ms)
+✔ Admin writes require write grant: POST notifications (3.4395ms)
+✔ Admin writes require write grant: PATCH customers (3.4115ms)
+✔ Admin writes require write grant: PATCH drivers (4.0726ms)
+✔ Admin writes require write grant: PATCH vehicles (3.0149ms)
+✔ Admin writes require write grant: PATCH services (3.1417ms)
+✔ Admin writes require write grant: PATCH vouchers (3.0763ms)
+✔ Admin complaint mutation requires complaints:write (3.0813ms)
+✔ driver directory is restricted and grants cannot be supplied in query/body (2.4767ms)
+✔ trip detail permits only owner/assigned driver and minimizes driver identity (3.5282ms)
+✔ Admin trip detail does not bypass payments/reviews grants (2.5208ms)
+✔ trip status cannot be changed by outsiders or escalated through a supplied role (4.2516ms)
+✔ owner cancellation and authorized Admin status update remain functional (2.8075ms)
+✔ review ownership rejects foreign trips and ignores frontend identity (4.3483ms)
+✔ complaint must belong to both the authenticated account and its trip (4.6163ms)
+✔ booking ignores client customer/driver IDs, role and fare (4.7243ms)
+✔ notifications may only be read/marked by their recipient (5.2805ms)
+✔ dashboard scope is derived from the session (5.634ms)
+✔ shared services and maps remain available to authenticated roles (16.308ms)
+✔ login derives role from server credentials and cannot be escalated (120.2131ms)
+✔ public registration cannot create an Admin or honor a frontend ID (39.4731ms)
+Security inventory: 33 route files, 37 API methods exercised. Cassandra transport is in-memory; no live database is contacted.
+✔ public endpoints expose only their intended behavior (12.2902ms)
+ℹ tests 260
+ℹ suites 0
+ℹ pass 260
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1881.5185
+
+Exit: 0
+
+P0 regression with journal enabled
+✔ startup rejects missing, old, weak and placeholder secrets even when AUTH_SECRET exists (65.8553ms)
+✔ Admin has no built-in credential or implicit grants (205.6259ms)
+✔ Admin password helper emits a valid salted hash and escapes dotenv dollars (359.001ms)
+✔ cookie settings and JWT identity/algorithm/lifetime are enforced (1.9848ms)
+✔ forged old-key, expired, modified and malformed JWTs are refused before database access (8.8641ms)
+✔ rotating JWT_SECRET invalidates previously issued sessions (1.2226ms)
+✔ signed payload must identify the configured Admin or a real account in its claimed role (4.2647ms)
+✔ Admin driver profile also respects the vehicles read grant (2.6249ms)
+✔ unknown Admin resources fail closed without querying a table (3.309ms)
+✔ blocked, deleted and mismatched accounts cannot reuse an issued session (3.1082ms)
+✔ database outage fails closed instead of accepting a stale session (1.1252ms)
+✔ anonymous denied: GET dashboard/route.ts (0.6824ms)
+✔ anonymous denied: GET drivers/route.ts (0.5311ms)
+✔ anonymous denied: GET services/route.ts (0.5383ms)
+✔ anonymous denied: POST trips/route.ts (0.6621ms)
+✔ anonymous denied: GET admin/[resource]/route.ts (0.4357ms)
+✔ anonymous denied: POST admin/[resource]/route.ts (0.6234ms)
+✔ anonymous denied: GET auth/me/route.ts (0.3579ms)
+✔ anonymous denied: GET customers/[id]/route.ts (0.3532ms)
+✔ anonymous denied: PATCH customers/[id]/route.ts (0.434ms)
+✔ anonymous denied: GET drivers/[id]/route.ts (0.3601ms)
+✔ anonymous denied: PATCH drivers/[id]/route.ts (0.4232ms)
+✔ anonymous denied: GET maps/geocode/route.ts (0.3555ms)
+✔ anonymous denied: GET maps/reverse-geocode/route.ts (0.8876ms)
+✔ anonymous denied: POST maps/route/route.ts (0.739ms)
+✔ anonymous denied: GET trips/[id]/route.ts (0.9795ms)
+✔ anonymous denied: PATCH admin/[resource]/[id]/route.ts (0.9348ms)
+✔ anonymous denied: GET customers/[id]/complaints/route.ts (0.6009ms)
+✔ anonymous denied: POST customers/[id]/complaints/route.ts (0.7021ms)
+✔ anonymous denied: GET customers/[id]/payments/route.ts (0.4776ms)
+✔ anonymous denied: GET customers/[id]/reviews/route.ts (0.4322ms)
+✔ anonymous denied: GET customers/[id]/trips/route.ts (0.4497ms)
+✔ anonymous denied: GET customers/[id]/vouchers/route.ts (0.5156ms)
+✔ anonymous denied: GET drivers/[id]/reviews/route.ts (0.4557ms)
+✔ anonymous denied: PATCH drivers/[id]/status/route.ts (0.499ms)
+✔ anonymous denied: GET drivers/[id]/trips/route.ts (0.4148ms)
+✔ anonymous denied: GET drivers/[id]/vehicle/route.ts (0.437ms)
+✔ anonymous denied: POST trips/[id]/review/route.ts (0.6356ms)
+✔ anonymous denied: PATCH trips/[id]/status/route.ts (0.7842ms)
+✔ anonymous denied: GET users/[id]/notifications/route.ts (0.4033ms)
+✔ anonymous denied: GET drivers/[id]/revenue/[month]/route.ts (0.5399ms)
+✔ anonymous denied: PATCH admin/complaints/[customerId]/[createdAt]/[complaintId]/route.ts (0.497ms)
+✔ anonymous denied: PATCH users/[id]/notifications/[createdAt]/[notificationId]/route.ts (0.4672ms)
+✔ ownership matrix: customer GET customers/[id]/route.ts (4.8854ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/route.ts (1.1115ms)
+✔ ownership matrix: driver GET customers/[id]/route.ts (1.0361ms)
+✔ ownership matrix: otherDriver GET customers/[id]/route.ts (1.0185ms)
+✔ ownership matrix: admin GET customers/[id]/route.ts (1.2834ms)
+✔ Admin needs exact grant: customers/[id]/route.ts (1.8777ms)
+✔ ownership matrix: customer GET customers/[id]/trips/route.ts (1.3669ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/trips/route.ts (0.8349ms)
+✔ ownership matrix: driver GET customers/[id]/trips/route.ts (0.9186ms)
+✔ ownership matrix: otherDriver GET customers/[id]/trips/route.ts (0.777ms)
+✔ ownership matrix: admin GET customers/[id]/trips/route.ts (0.8929ms)
+✔ Admin needs exact grant: customers/[id]/trips/route.ts (1.6389ms)
+✔ ownership matrix: customer GET customers/[id]/payments/route.ts (1.4498ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/payments/route.ts (0.9381ms)
+✔ ownership matrix: driver GET customers/[id]/payments/route.ts (0.8739ms)
+✔ ownership matrix: otherDriver GET customers/[id]/payments/route.ts (0.7986ms)
+✔ ownership matrix: admin GET customers/[id]/payments/route.ts (1.1221ms)
+✔ Admin needs exact grant: customers/[id]/payments/route.ts (2.3168ms)
+✔ ownership matrix: customer GET customers/[id]/reviews/route.ts (1.7503ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/reviews/route.ts (1.2548ms)
+✔ ownership matrix: driver GET customers/[id]/reviews/route.ts (1.1214ms)
+✔ ownership matrix: otherDriver GET customers/[id]/reviews/route.ts (0.9741ms)
+✔ ownership matrix: admin GET customers/[id]/reviews/route.ts (1.8798ms)
+✔ Admin needs exact grant: customers/[id]/reviews/route.ts (1.9952ms)
+✔ ownership matrix: customer GET customers/[id]/vouchers/route.ts (1.171ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/vouchers/route.ts (0.9255ms)
+✔ ownership matrix: driver GET customers/[id]/vouchers/route.ts (1.2373ms)
+✔ ownership matrix: otherDriver GET customers/[id]/vouchers/route.ts (1.5783ms)
+✔ ownership matrix: admin GET customers/[id]/vouchers/route.ts (1.0526ms)
+✔ Admin needs exact grant: customers/[id]/vouchers/route.ts (1.5297ms)
+✔ ownership matrix: customer GET customers/[id]/complaints/route.ts (0.9389ms)
+✔ ownership matrix: otherCustomer GET customers/[id]/complaints/route.ts (0.8925ms)
+✔ ownership matrix: driver GET customers/[id]/complaints/route.ts (1.3038ms)
+✔ ownership matrix: otherDriver GET customers/[id]/complaints/route.ts (0.9942ms)
+✔ ownership matrix: admin GET customers/[id]/complaints/route.ts (0.9909ms)
+✔ Admin needs exact grant: customers/[id]/complaints/route.ts (1.5902ms)
+✔ ownership matrix: customer GET drivers/[id]/route.ts (0.9293ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/route.ts (0.8159ms)
+✔ ownership matrix: driver GET drivers/[id]/route.ts (1.2598ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/route.ts (1.1364ms)
+✔ ownership matrix: admin GET drivers/[id]/route.ts (1.3705ms)
+✔ Admin needs exact grant: drivers/[id]/route.ts (1.7954ms)
+✔ ownership matrix: customer GET drivers/[id]/trips/route.ts (0.9651ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/trips/route.ts (1.088ms)
+✔ ownership matrix: driver GET drivers/[id]/trips/route.ts (1.9814ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/trips/route.ts (1.4154ms)
+✔ ownership matrix: admin GET drivers/[id]/trips/route.ts (1.0973ms)
+✔ Admin needs exact grant: drivers/[id]/trips/route.ts (2.2363ms)
+✔ ownership matrix: customer GET drivers/[id]/reviews/route.ts (2.1915ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/reviews/route.ts (1.1182ms)
+✔ ownership matrix: driver GET drivers/[id]/reviews/route.ts (1.2962ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/reviews/route.ts (0.8877ms)
+✔ ownership matrix: admin GET drivers/[id]/reviews/route.ts (1.0855ms)
+✔ Admin needs exact grant: drivers/[id]/reviews/route.ts (2.2822ms)
+✔ ownership matrix: customer GET drivers/[id]/vehicle/route.ts (1.2158ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/vehicle/route.ts (0.9893ms)
+✔ ownership matrix: driver GET drivers/[id]/vehicle/route.ts (0.9672ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/vehicle/route.ts (1.0211ms)
+✔ ownership matrix: admin GET drivers/[id]/vehicle/route.ts (1.9959ms)
+✔ Admin needs exact grant: drivers/[id]/vehicle/route.ts (1.9793ms)
+✔ ownership matrix: customer GET drivers/[id]/revenue/[month]/route.ts (1.1666ms)
+✔ ownership matrix: otherCustomer GET drivers/[id]/revenue/[month]/route.ts (0.8439ms)
+✔ ownership matrix: driver GET drivers/[id]/revenue/[month]/route.ts (1.9054ms)
+✔ ownership matrix: otherDriver GET drivers/[id]/revenue/[month]/route.ts (1.2774ms)
+✔ ownership matrix: admin GET drivers/[id]/revenue/[month]/route.ts (1.1351ms)
+✔ Admin needs exact grant: drivers/[id]/revenue/[month]/route.ts (1.7989ms)
+✔ a driver UUID matching a customer UUID still cannot read or edit the customer (1.4968ms)
+✔ write ownership and explicit Admin grant: customers/[id]/route.ts (4.3901ms)
+✔ write ownership and explicit Admin grant: drivers/[id]/route.ts (3.7093ms)
+✔ write ownership and explicit Admin grant: drivers/[id]/status/route.ts (6.2322ms)
+✔ Admin resource read permission: customers (26.5226ms)
+✔ Admin resource read permission: drivers (5.0371ms)
+✔ Admin resource read permission: vehicles (2.8627ms)
+✔ Admin resource read permission: services (3.4567ms)
+✔ Admin resource read permission: vouchers (2.7987ms)
+✔ Admin resource read permission: trips (6.7939ms)
+✔ Admin resource read permission: payments (5.731ms)
+✔ Admin resource read permission: reviews (5.245ms)
+✔ Admin resource read permission: complaints (3.3173ms)
+✔ Admin resource read permission: notifications (4.1478ms)
+✔ Admin resource read permission: reports (6.1285ms)
+✔ Admin writes require write grant: POST services (5.1841ms)
+✔ Admin writes require write grant: POST vouchers (5.8944ms)
+✔ Admin writes require write grant: POST notifications (4.3169ms)
+✔ Admin writes require write grant: PATCH customers (4.4101ms)
+✔ Admin writes require write grant: PATCH drivers (3.8531ms)
+✔ Admin writes require write grant: PATCH vehicles (5.0474ms)
+✔ Admin writes require write grant: PATCH services (3.9957ms)
+✔ Admin writes require write grant: PATCH vouchers (3.5016ms)
+✔ Admin complaint mutation requires complaints:write (3.9481ms)
+✔ driver directory is restricted and grants cannot be supplied in query/body (3.0032ms)
+✔ trip detail permits only owner/assigned driver and minimizes driver identity (5.2923ms)
+✔ Admin trip detail does not bypass payments/reviews grants (2.4435ms)
+✔ trip status cannot be changed by outsiders or escalated through a supplied role (6.5568ms)
+✔ owner cancellation and authorized Admin status update remain functional (4.1025ms)
+✔ review ownership rejects foreign trips and ignores frontend identity (3.717ms)
+✔ complaint must belong to both the authenticated account and its trip (5.3799ms)
+✔ booking ignores client customer/driver IDs, role and fare (5.4004ms)
+✔ notifications may only be read/marked by their recipient (13.1069ms)
+✔ dashboard scope is derived from the session (6.6214ms)
+✔ shared services and maps remain available to authenticated roles (10.9852ms)
+✔ login derives role from server credentials and cannot be escalated (129.224ms)
+✔ public registration cannot create an Admin or honor a frontend ID (39.9162ms)
+Security inventory: 33 route files, 37 API methods exercised. Cassandra transport is in-memory; no live database is contacted.
+✔ public endpoints expose only their intended behavior (11.7515ms)
+ℹ tests 147
+ℹ suites 0
+ℹ pass 147
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1821.8474
+
+Exit: 0
+
+Production build
+▲ Next.js 16.3.6 (Turbopack)
+✓ Running next.config.ts took 53ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.3s
+  Running TypeScript ...
+  Finished TypeScript in 3.5s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/22) ...
+  Generating static pages using 15 workers (5/22) 
+  Generating static pages using 15 workers (10/22) 
+  Generating static pages using 15 workers (16/22) 
+✓ Generating static pages using 15 workers (22/22) in 578ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /admin/[section]
+├ ƒ /admin/dashboard
+├ ƒ /api/admin/[resource]
+├ ƒ /api/admin/[resource]/[id]
+├ ƒ /api/admin/complaints/[customerId]/[createdAt]/[complaintId]
+├ ƒ /api/auth/demo
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/auth/register
+├ ƒ /api/customers/[id]
+├ ƒ /api/customers/[id]/complaints
+├ ƒ /api/customers/[id]/payments
+├ ƒ /api/customers/[id]/reviews
+├ ƒ /api/customers/[id]/trips
+├ ƒ /api/customers/[id]/vouchers
+├ ƒ /api/dashboard
+├ ƒ /api/drivers
+├ ƒ /api/drivers/[id]
+├ ƒ /api/drivers/[id]/revenue/[month]
+├ ƒ /api/drivers/[id]/reviews
+├ ƒ /api/drivers/[id]/status
+├ ƒ /api/drivers/[id]/trips
+├ ƒ /api/drivers/[id]/vehicle
+├ ƒ /api/health
+├ ƒ /api/maps/geocode
+├ ƒ /api/maps/reverse-geocode
+├ ƒ /api/maps/route
+├ ƒ /api/services
+├ ƒ /api/trips
+├ ƒ /api/trips/[id]
+├ ƒ /api/trips/[id]/review
+├ ƒ /api/trips/[id]/status
+├ ƒ /api/users/[id]/notifications
+├ ƒ /api/users/[id]/notifications/[createdAt]/[notificationId]
+├ ƒ /customer/[section]
+├ ƒ /customer/booking
+├ ƒ /customer/dashboard
+├ ƒ /customer/trips/[id]
+├ ƒ /driver/[section]
+├ ƒ /driver/dashboard
+├ ○ /login
+└ ○ /register
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+Exit: 0
+
+Production HTTP security
+✔ actual next start refuses missing JWT_SECRET (470.9726ms)
+✔ actual next start refuses too short JWT_SECRET (426.0753ms)
+✔ actual next start refuses placeholder JWT_SECRET (425.0183ms)
+✔ actual next start refuses low diversity JWT_SECRET (462.1174ms)
+✔ actual next start refuses former fallback JWT_SECRET (426.7552ms)
+Production HTTP: 32 protected API methods rejected both anonymous and old-key requests; valid Admin login/cookie and scoped grants verified.
+✔ actual production HTTP rejects forged tokens and enforces Admin grants (2002.6474ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4360.7696
+
+Exit: 0
+
+Chrome UI with in-memory transport
+PASS Chrome dashboard retry issues a second request; Customer month selector changes the API query.
+PASS Chrome complaint form resets after await and reloads the saved record.
+PASS Chrome trip detail displays fare zero and labels simulated card/wallet payment.
+PASS Chrome /admin/services form resets and reports success after asynchronous save.
+PASS Chrome /admin/vouchers form resets and reports success after asynchronous save.
+PASS Chrome /admin/notifications form resets and reports success after asynchronous save.
+PASS Chrome Admin vehicle action sends vehicle_id, preserves the row and updates its status.
+✔ real Chrome: async forms, retry, month filter, zero fare and vehicle key (3835.7661ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3972.1119
+
+Exit: 0

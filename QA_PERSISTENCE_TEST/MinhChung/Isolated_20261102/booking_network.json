@@ -1,0 +1,581 @@
+{
+  "at": "2026-11-02T12:45:12.288Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "email": "qa_test_iso_20261102124130_c@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "email": "qa_test_iso_20261102124130_c@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/services",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+            "base_fare": "10000",
+            "description": "QA_TEST_ISO_20261102124130_SERVICE",
+            "price_per_km": "5000",
+            "service_name": "BIKE",
+            "status": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/services",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+            "base_fare": "10000",
+            "description": "QA_TEST_ISO_20261102124130_SERVICE",
+            "price_per_km": "5000",
+            "service_name": "BIKE",
+            "status": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/customers/09265dc8-410b-4042-9e43-59c8647bde6f/vouchers",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/customers/09265dc8-410b-4042-9e43-59c8647bde6f/vouchers",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/maps/geocode?q=Ben%20Thanh%20Market%20Ho%20Chi%20Minh",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "label": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.7725301,
+            "lng": 106.6980365
+          },
+          {
+            "label": "Ben Nghe Street Food Market, Nam Kỳ Khởi Nghĩa, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.7773903,
+            "lng": 106.6976422
+          },
+          {
+            "label": "Hẻm 24 Thủ Khoa Huân, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.7736838,
+            "lng": 106.6975146
+          },
+          {
+            "label": "Russian Market, Vo Van Kiet Boulevard, Khánh Hội, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.7625188,
+            "lng": 106.6990871
+          },
+          {
+            "label": "47 Phan Chu Trinh, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.772698,
+            "lng": 106.6971883
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/maps/geocode?q=Independence%20Palace%20Ho%20Chi%20Minh",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "label": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+            "lat": 10.7770348,
+            "lng": 106.695488
+          },
+          {
+            "label": "Trưng bày Từ Dinh Norodom đến Dinh Độc Lập, Nguyễn Du, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.7765844,
+            "lng": 106.6972837
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/maps/route",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "distanceKm": 1.6,
+          "durationMinutes": 2,
+          "geometry": [
+            [
+              10.772788,
+              106.698507
+            ],
+            [
+              10.772262,
+              106.698835
+            ],
+            [
+              10.772167,
+              106.698905
+            ],
+            [
+              10.772093,
+              106.698853
+            ],
+            [
+              10.772016,
+              106.698811
+            ],
+            [
+              10.771934,
+              106.698773
+            ],
+            [
+              10.771847,
+              106.698732
+            ],
+            [
+              10.771767,
+              106.69868
+            ],
+            [
+              10.771598,
+              106.698523
+            ],
+            [
+              10.771566,
+              106.698495
+            ],
+            [
+              10.77146,
+              106.698399
+            ],
+            [
+              10.771502,
+              106.698314
+            ],
+            [
+              10.771545,
+              106.698234
+            ],
+            [
+              10.771576,
+              106.698175
+            ],
+            [
+              10.771602,
+              106.698114
+            ],
+            [
+              10.771686,
+              106.697875
+            ],
+            [
+              10.771683,
+              106.697808
+            ],
+            [
+              10.771674,
+              106.697757
+            ],
+            [
+              10.771661,
+              106.697706
+            ],
+            [
+              10.771259,
+              106.696766
+            ],
+            [
+              10.771172,
+              106.696647
+            ],
+            [
+              10.771424,
+              106.696502
+            ],
+            [
+              10.771506,
+              106.696441
+            ],
+            [
+              10.77184,
+              106.6962
+            ],
+            [
+              10.771975,
+              106.696097
+            ],
+            [
+              10.771998,
+              106.69608
+            ],
+            [
+              10.7721,
+              106.696004
+            ],
+            [
+              10.772173,
+              106.695943
+            ],
+            [
+              10.772705,
+              106.695525
+            ],
+            [
+              10.77273,
+              106.695505
+            ],
+            [
+              10.772795,
+              106.695454
+            ],
+            [
+              10.772844,
+              106.695396
+            ],
+            [
+              10.773475,
+              106.694644
+            ],
+            [
+              10.773519,
+              106.694593
+            ],
+            [
+              10.773619,
+              106.694479
+            ],
+            [
+              10.773695,
+              106.694391
+            ],
+            [
+              10.773814,
+              106.694252
+            ],
+            [
+              10.774178,
+              106.693828
+            ],
+            [
+              10.774416,
+              106.69355
+            ],
+            [
+              10.774497,
+              106.693455
+            ],
+            [
+              10.774688,
+              106.693233
+            ],
+            [
+              10.774879,
+              106.693001
+            ],
+            [
+              10.774971,
+              106.692893
+            ],
+            [
+              10.775298,
+              106.692495
+            ],
+            [
+              10.775509,
+              106.692239
+            ],
+            [
+              10.775739,
+              106.691961
+            ],
+            [
+              10.775884,
+              106.691786
+            ],
+            [
+              10.775912,
+              106.691751
+            ],
+            [
+              10.775995,
+              106.691657
+            ],
+            [
+              10.776075,
+              106.691731
+            ],
+            [
+              10.776436,
+              106.692067
+            ],
+            [
+              10.77652,
+              106.692145
+            ],
+            [
+              10.776726,
+              106.692337
+            ],
+            [
+              10.777023,
+              106.692614
+            ],
+            [
+              10.777484,
+              106.693042
+            ],
+            [
+              10.777398,
+              106.693132
+            ],
+            [
+              10.776647,
+              106.693946
+            ],
+            [
+              10.776485,
+              106.694125
+            ],
+            [
+              10.776111,
+              106.694538
+            ],
+            [
+              10.776163,
+              106.694586
+            ]
+          ],
+          "pickup": {
+            "label": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+            "lat": 10.7725301,
+            "lng": 106.6980365
+          },
+          "destination": {
+            "label": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+            "lat": 10.7770348,
+            "lng": 106.695488
+          }
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips",
+      "status": 201,
+      "body": {
+        "success": true,
+        "data": {
+          "tripId": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "status": "BOOKED",
+          "bookedAt": "2026-11-02T12:45:09.832Z",
+          "distanceKm": 1.6,
+          "durationMinutes": 2,
+          "estimatedFare": 18000,
+          "discountAmount": 0,
+          "finalFare": 18000,
+          "driverId": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "driverName": "QA_TEST_ISO_20261102124130_DRIVER",
+          "vehicleId": "59b10962-9c0e-442f-aa78-e450ea4177d5"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "completed_at": null,
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "distance_km": 1.6,
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "estimated_fare": "18000",
+          "final_fare": "18000",
+          "payment_method": "BANK_TRANSFER",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+          "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+          "started_at": null,
+          "status": "BOOKED",
+          "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+          "history": [
+            {
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "changed_at": "2026-11-02T12:45:09.832Z",
+              "note": "RideFlow tự động phân chuyến cho tài xế QA_TEST_ISO_20261102124130_DRIVER",
+              "status": "BOOKED"
+            }
+          ],
+          "payments": [],
+          "review": null,
+          "reviewSynced": true,
+          "driver": {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+            "phone": "0900000002",
+            "rating": 0
+          },
+          "vehicle": {
+            "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+            "brand": "QA_TEST_BIKE",
+            "model": "QA_TEST_MODEL",
+            "license_plate": "99Z-12345",
+            "vehicle_type": "BIKE",
+            "color": "QA_TEST_WHITE",
+            "seat_count": 2
+          },
+          "service": {
+            "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+            "base_fare": "10000",
+            "description": "QA_TEST_ISO_20261102124130_SERVICE",
+            "price_per_km": "5000",
+            "service_name": "BIKE",
+            "status": "ACTIVE"
+          }
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "completed_at": null,
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "distance_km": 1.6,
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "estimated_fare": "18000",
+          "final_fare": "18000",
+          "payment_method": "BANK_TRANSFER",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+          "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+          "started_at": null,
+          "status": "BOOKED",
+          "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+          "history": [
+            {
+              "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+              "changed_at": "2026-11-02T12:45:09.832Z",
+              "note": "RideFlow tự động phân chuyến cho tài xế QA_TEST_ISO_20261102124130_DRIVER",
+              "status": "BOOKED"
+            }
+          ],
+          "payments": [],
+          "review": null,
+          "reviewSynced": true,
+          "driver": {
+            "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+            "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+            "phone": "0900000002",
+            "rating": 0
+          },
+          "vehicle": {
+            "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+            "brand": "QA_TEST_BIKE",
+            "model": "QA_TEST_MODEL",
+            "license_plate": "99Z-12345",
+            "vehicle_type": "BIKE",
+            "color": "QA_TEST_WHITE",
+            "seat_count": 2
+          },
+          "service": {
+            "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+            "base_fare": "10000",
+            "description": "QA_TEST_ISO_20261102124130_SERVICE",
+            "price_per_km": "5000",
+            "service_name": "BIKE",
+            "status": "ACTIVE"
+          }
+        }
+      }
+    }
+  ]
+}

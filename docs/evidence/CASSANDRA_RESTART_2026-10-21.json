@@ -1,0 +1,15 @@
+{
+  "email": "restart.1792584351670@rideflow.demo",
+  "userId": "ec74355b-2f8a-458b-b5ae-68f39cec346c",
+  "beforeLoginStatus": 200,
+  "afterLoginStatus": 200,
+  "sessionStatus": 200,
+  "samePasswordHash": true,
+  "sameCassandraHostId": true,
+  "tableCount": 19,
+  "realCassandra": true,
+  "serverRestarted": true,
+  "oldCassandraPid": 12068,
+  "newCassandraPid": 24200,
+  "webRestartRequired": true
+}

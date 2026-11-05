@@ -1,0 +1,73 @@
+<!doctype html><meta charset="utf-8"><style>body{font:16px Arial;margin:24px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbb;padding:9px;text-align:left}pre{font:12px Consolas;white-space:pre-wrap;margin:0}h1{font-size:24px}</style><h1>RideFlow — SELECT before / after Cassandra DEMO restart</h1><p>127.0.0.2:9142 · rideflow_qa_demo · RF=1 · durable_writes=true</p><p>Real timestamped SELECT results. Summary viewer, not cqlsh. Full JSON is retained.</p><table><tr><th>Table</th><th>Before: 2026-11-02T12:54:04.970Z</th><th>After: 2026-11-02T12:57:07.048Z</th></tr><tr><th>customers</th><td><pre>{
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "full_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+  "status": "ACTIVE"
+}</pre></td><td><pre>{
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "full_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+  "status": "ACTIVE"
+}</pre></td></tr><tr><th>drivers</th><td><pre>{
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+  "account_status": "ACTIVE",
+  "driver_status": "AVAILABLE",
+  "rating": 5
+}</pre></td><td><pre>{
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+  "account_status": "ACTIVE",
+  "driver_status": "AVAILABLE",
+  "rating": 5
+}</pre></td></tr><tr><th>vehicles</th><td><pre>{
+  "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "status": "ACTIVE"
+}</pre></td><td><pre>{
+  "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "status": "ACTIVE"
+}</pre></td></tr><tr><th>trips_by_id</th><td><pre>{
+  "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "final_fare": "18000",
+  "status": "COMPLETED",
+  "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5"
+}</pre></td><td><pre>{
+  "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "final_fare": "18000",
+  "status": "COMPLETED",
+  "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5"
+}</pre></td></tr><tr><th>drivers</th><td><pre>{
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "driver_status": "AVAILABLE"
+}</pre></td><td><pre>{
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "driver_status": "AVAILABLE"
+}</pre></td></tr><tr><th>payments_by_trip</th><td><pre>{
+  "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+  "amount": "18000",
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "payment_status": "PAID_DEMO"
+}</pre></td><td><pre>{
+  "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+  "amount": "18000",
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "payment_status": "PAID_DEMO"
+}</pre></td></tr><tr><th>reviews_by_trip</th><td><pre>{
+  "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "rating": 5,
+  "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391"
+}</pre></td><td><pre>{
+  "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+  "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+  "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+  "rating": 5,
+  "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391"
+}</pre></td></tr></table><h2>335 / 335 rows unchanged · same Host ID · no differences</h2>

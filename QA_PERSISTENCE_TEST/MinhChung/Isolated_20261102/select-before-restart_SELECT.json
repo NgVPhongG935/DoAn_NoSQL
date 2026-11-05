@@ -1,0 +1,484 @@
+{
+  "at": "2026-11-02T12:54:04.970Z",
+  "label": "select-before-restart",
+  "node": {
+    "cluster_name": "RideFlow_QA_20261102",
+    "host_id": "4ca6b4c4-33a3-4505-b9cf-aa2a92019821"
+  },
+  "target": {
+    "host": "127.0.0.2",
+    "port": 9142,
+    "keyspace": "rideflow_qa_demo"
+  },
+  "queries": [
+    {
+      "cql": "SELECT keyspace_name,durable_writes,replication FROM system_schema.keyspaces WHERE keyspace_name = ?",
+      "params": [
+        "rideflow_qa_demo"
+      ],
+      "rows": [
+        {
+          "keyspace_name": "rideflow_qa_demo",
+          "durable_writes": true,
+          "replication": {
+            "class": "org.apache.cassandra.locator.SimpleStrategy",
+            "replication_factor": "1"
+          }
+        }
+      ]
+    },
+    {
+      "cql": "SELECT customer_id,full_name,phone,email,status FROM customers WHERE customer_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "full_name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "phone": "0900000001",
+          "email": "qa_test_iso_20261102124130_c@example.invalid",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT driver_id,full_name,account_status,driver_status,rating FROM drivers WHERE driver_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+      ],
+      "rows": [
+        {
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "full_name": "QA_TEST_ISO_20261102124130_DRIVER",
+          "account_status": "ACTIVE",
+          "driver_status": "AVAILABLE",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "cql": "SELECT vehicle_id,driver_id,brand,model,vehicle_type,status FROM vehicles WHERE vehicle_id = ?",
+      "params": [
+        "59b10962-9c0e-442f-aa78-e450ea4177d5"
+      ],
+      "rows": [
+        {
+          "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5",
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "brand": "QA_TEST_BIKE",
+          "model": "QA_TEST_MODEL",
+          "vehicle_type": "BIKE",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trips_by_id WHERE trip_id = ?",
+      "params": [
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "completed_at": "2026-11-02T12:47:48.573Z",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "distance_km": 1.6,
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "estimated_fare": "18000",
+          "final_fare": "18000",
+          "payment_method": "BANK_TRANSFER",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+          "service_id": "81c18f56-f75c-4140-9917-7b8a6ed512db",
+          "started_at": "2026-11-02T12:47:34.443Z",
+          "status": "COMPLETED",
+          "vehicle_id": "59b10962-9c0e-442f-aa78-e450ea4177d5"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trips_by_customer WHERE customer_id = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "final_fare": "18000",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+          "status": "COMPLETED"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trips_by_driver WHERE driver_id = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "final_fare": "18000",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
+          "status": "COMPLETED"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "BOOKED",
+        "2026-11-02",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "ACCEPTED",
+        "2026-11-02",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "ARRIVING",
+        "2026-11-02",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "IN_PROGRESS",
+        "2026-11-02",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT * FROM trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "COMPLETED",
+        "2026-11-02",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "status": "COMPLETED",
+          "trip_date": "2026-11-02",
+          "booked_at": "2026-11-02T12:45:09.832Z",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "destination_address": "Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam",
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "final_fare": "18000",
+          "pickup_address": "Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trips_by_status WHERE status = ? AND trip_date = ? AND booked_at = ? AND trip_id = ?",
+      "params": [
+        "CANCELLED",
+        "2026-11-02",
+        "2026-11-02T12:45:09.832Z",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": []
+    },
+    {
+      "cql": "SELECT driver_id,driver_status FROM drivers WHERE driver_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+      ],
+      "rows": [
+        {
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "driver_status": "AVAILABLE"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM trip_status_history WHERE trip_id = ?",
+      "params": [
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "changed_at": "2026-11-02T12:47:48.573Z",
+          "note": "Cập nhật trạng thái: COMPLETED",
+          "status": "COMPLETED"
+        },
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "changed_at": "2026-11-02T12:47:34.443Z",
+          "note": "Cập nhật trạng thái: IN_PROGRESS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "changed_at": "2026-11-02T12:47:21.810Z",
+          "note": "Cập nhật trạng thái: ARRIVING",
+          "status": "ARRIVING"
+        },
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "changed_at": "2026-11-02T12:46:06.166Z",
+          "note": "Cập nhật trạng thái: ACCEPTED",
+          "status": "ACCEPTED"
+        },
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "changed_at": "2026-11-02T12:45:09.832Z",
+          "note": "RideFlow tự động phân chuyến cho tài xế QA_TEST_ISO_20261102124130_DRIVER",
+          "status": "BOOKED"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM payments_by_trip WHERE trip_id = ?",
+      "params": [
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+          "amount": "18000",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "paid_at": "2026-11-02T12:48:22.991Z",
+          "payment_method": "BANK_TRANSFER",
+          "payment_status": "PAID_DEMO"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM payments_by_customer WHERE customer_id = ? AND paid_at = ? AND payment_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f",
+        "2026-11-02T12:48:22.991Z",
+        "84b9d71f-8180-4f09-abc7-e04e0dd8faf2"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "paid_at": "2026-11-02T12:48:22.991Z",
+          "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+          "amount": "18000",
+          "payment_method": "BANK_TRANSFER",
+          "payment_status": "PAID_DEMO",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM driver_revenue_by_month WHERE driver_id = ? AND year_month = ? AND trip_date = ? AND trip_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+        "2026-11",
+        "2026-11-02",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "year_month": "2026-11",
+          "trip_date": "2026-11-02",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "fare": "18000"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM customer_spending_by_month WHERE customer_id = ? AND year_month = ? AND trip_date = ? AND trip_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f",
+        "2026-11",
+        "2026-11-02",
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "year_month": "2026-11",
+          "trip_date": "2026-11-02",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "amount": "18000"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM payments_by_customer WHERE customer_id = ?",
+      "params": [
+        "09265dc8-410b-4042-9e43-59c8647bde6f"
+      ],
+      "rows": [
+        {
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "paid_at": "2026-11-02T12:48:22.991Z",
+          "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+          "amount": "18000",
+          "payment_method": "BANK_TRANSFER",
+          "payment_status": "PAID_DEMO",
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM reviews_by_trip WHERE trip_id = ?",
+      "params": [
+        "3aaf340f-cdd0-4cf1-b323-084d54951754"
+      ],
+      "rows": [
+        {
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754",
+          "comment": "QA_TEST_ISO_20261102124130_REVIEW_5_STARS",
+          "created_at": "2026-11-02T12:48:54.758Z",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "rating": 5,
+          "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM reviews_by_driver WHERE driver_id = ? AND created_at = ? AND review_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+        "2026-11-02T12:48:54.758Z",
+        "3bb62c0c-c3fa-4038-810c-5b6e42dac391"
+      ],
+      "rows": [
+        {
+          "driver_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "created_at": "2026-11-02T12:48:54.758Z",
+          "review_id": "3bb62c0c-c3fa-4038-810c-5b6e42dac391",
+          "comment": "QA_TEST_ISO_20261102124130_REVIEW_5_STARS",
+          "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "rating": 5,
+          "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+        }
+      ]
+    },
+    {
+      "cql": "SELECT * FROM notifications_by_user WHERE user_id = ?",
+      "params": [
+        "392d085f-b7b4-4aa7-8377-61dd3b6a1754"
+      ],
+      "rows": [
+        {
+          "user_id": "392d085f-b7b4-4aa7-8377-61dd3b6a1754",
+          "created_at": "2026-11-02T12:45:09.832Z",
+          "notification_id": "e7da7614-e686-53a7-ab8e-91642980cbc0",
+          "content": "Chuyến #3AAF340F · Mã chuyến: 3aaf340f-cdd0-4cf1-b323-084d54951754 · Đón: Chợ Bến Thành, Công trường Quách Thị Trang, Bến Thành, Thành phố Hồ Chí Minh, Việt Nam → Đến: Dinh Độc Lập, Nam Kỳ Khởi Nghĩa, Bến Thành, Ho Chi Minh City, Việt Nam · Giá chuyến: 18.000 ₫. Mở mục Chuyến đi để kiểm tra và nhận chuyến.",
+          "is_read": false,
+          "notification_type": "TRIP_ASSIGNED",
+          "title": "Bạn có chuyến mới được phân công"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "vehicle driver link",
+      "ok": true
+    },
+    {
+      "name": "canonical status COMPLETED",
+      "ok": true
+    },
+    {
+      "name": "trip actor links",
+      "ok": true
+    },
+    {
+      "name": "trips_by_customer status/fare",
+      "ok": true
+    },
+    {
+      "name": "trips_by_driver status/fare",
+      "ok": true
+    },
+    {
+      "name": "status partition BOOKED",
+      "ok": true
+    },
+    {
+      "name": "status partition ACCEPTED",
+      "ok": true
+    },
+    {
+      "name": "status partition ARRIVING",
+      "ok": true
+    },
+    {
+      "name": "status partition IN_PROGRESS",
+      "ok": true
+    },
+    {
+      "name": "status partition COMPLETED",
+      "ok": true
+    },
+    {
+      "name": "status partition CANCELLED",
+      "ok": true
+    },
+    {
+      "name": "driver availability consistent with canonical trip",
+      "ok": true
+    },
+    {
+      "name": "complete lifecycle history",
+      "ok": true
+    },
+    {
+      "name": "exactly one payment",
+      "ok": true
+    },
+    {
+      "name": "payment projection/status/amount",
+      "ok": true
+    },
+    {
+      "name": "driver_revenue_by_month settlement",
+      "ok": true
+    },
+    {
+      "name": "customer_spending_by_month settlement",
+      "ok": true
+    },
+    {
+      "name": "no duplicate provisional customer payment",
+      "ok": true
+    },
+    {
+      "name": "review projection",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "at": "2026-11-02T12:52:10.008Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:3200/api/auth/login",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/dashboard?month=2026-11",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/payment",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/payment",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/payment",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/payment",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/payment",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/trips/3aaf340f-cdd0-4cf1-b323-084d54951754/payment",
+      "status": 200,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "email": "qa_test_iso_20261102124130_c@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/auth/me",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "userId": "09265dc8-410b-4042-9e43-59c8647bde6f",
+          "role": "CUSTOMER",
+          "name": "QA_TEST_ISO_20261102124130_CUSTOMER",
+          "email": "qa_test_iso_20261102124130_c@example.invalid"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/health",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/users/09265dc8-410b-4042-9e43-59c8647bde6f/notifications",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": []
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/avatars/CUSTOMER/09265dc8-410b-4042-9e43-59c8647bde6f?v=0",
+      "status": 404,
+      "body": "Body unavailable"
+    },
+    {
+      "url": "http://127.0.0.1:3200/api/customers/09265dc8-410b-4042-9e43-59c8647bde6f/payments",
+      "status": 200,
+      "body": {
+        "success": true,
+        "data": [
+          {
+            "customer_id": "09265dc8-410b-4042-9e43-59c8647bde6f",
+            "paid_at": "2026-11-02T12:48:22.991Z",
+            "payment_id": "84b9d71f-8180-4f09-abc7-e04e0dd8faf2",
+            "amount": "18000",
+            "payment_method": "BANK_TRANSFER",
+            "payment_status": "PAID_DEMO",
+            "trip_id": "3aaf340f-cdd0-4cf1-b323-084d54951754"
+          }
+        ]
+      }
+    }
+  ]
+}

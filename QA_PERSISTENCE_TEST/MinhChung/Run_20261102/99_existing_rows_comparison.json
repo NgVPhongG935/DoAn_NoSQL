@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-02T12:25:50.545Z",
+  "existingRowsUnchanged": true,
+  "changes": [],
+  "added": {
+    "complaints_by_customer": [
+      {
+        "created_at": "2026-11-02T12:22:40.390Z",
+        "complaint_id": "32bcd6aa-8bf0-462c-876c-30513e2a5474",
+        "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      }
+    ],
+    "customer_spending_by_month": [],
+    "customer_vouchers": [],
+    "customers": [
+      {
+        "customer_id": "9bfe09c0-f7a2-4dfd-9170-5150e48be477"
+      }
+    ],
+    "driver_revenue_by_month": [],
+    "drivers": [
+      {
+        "driver_id": "91857c4a-2cdc-4d43-8401-28c4cb00dc44"
+      }
+    ],
+    "notifications_by_user": [],
+    "payments_by_customer": [],
+    "payments_by_trip": [],
+    "reviews_by_driver": [],
+    "reviews_by_trip": [],
+    "service_types": [],
+    "trip_status_history": [],
+    "trips_by_customer": [],
+    "trips_by_driver": [],
+    "trips_by_id": [],
+    "trips_by_status": [],
+    "vehicles": [
+      {
+        "vehicle_id": "729edc21-e7c3-40e3-9495-ff8f71a32597"
+      }
+    ],
+    "vouchers": []
+  }
+}
