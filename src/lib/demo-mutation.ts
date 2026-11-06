@@ -10,6 +10,21 @@ const shared = globalThis as typeof globalThis & {
 };
 const state: NonNullable<typeof shared.rideflowDemoWrites> = shared.rideflowDemoWrites ??= { tail: Promise.resolve(), entries: new Map() };
 
+// Backup/restore shares the single-server business-write queue. Never overtake
+// a batch whose outcome is still uncertain, or replay cached results after restore.
+export async function withDemoMaintenance<T>(work: () => Promise<T>, reset = false): Promise<T> {
+  const previous = state.tail;
+  let release!: () => void;
+  state.tail = new Promise<void>(resolve => { release = resolve; });
+  await previous;
+  try {
+    if (state.pending) throw new ApiError("Có thao tác chuyến chưa xác nhận xong. Hãy hoàn tất thao tác đó trước khi sao lưu/khôi phục.", 409);
+    const result = await work();
+    if (reset) state.entries.clear();
+    return result;
+  } finally { release(); }
+}
+
 // A small single-server retry cache, NOT a persistent journal or a distributed lock.
 // Keep an ambiguous batch intact until the same request retries it. Never release
 // its driver or let a newer trip operation overwrite its pending statements.

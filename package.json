@@ -8,7 +8,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "verify:p1": "node scripts/verify-p1.mjs",
-    "test": "node --import ./tests/register.mjs --test tests/security.test.mjs tests/business.test.mjs tests/demo.test.mjs tests/admin-accounts.test.mjs tests/customer-password-reset.test.mjs tests/driver-registration.test.mjs tests/admin-support.test.mjs tests/admin-payments.test.mjs tests/admin-trips.test.mjs tests/text-encoding.test.mjs tests/localized-search.test.mjs tests/maps.test.mjs tests/travel-time.test.mjs tests/payments-reviews.test.mjs tests/payment-history.test.mjs tests/trip-notifications.test.mjs",
+    "test": "node --import ./tests/register.mjs --test tests/security.test.mjs tests/business.test.mjs tests/demo.test.mjs tests/admin-accounts.test.mjs tests/customer-password-reset.test.mjs tests/driver-registration.test.mjs tests/admin-support.test.mjs tests/admin-payments.test.mjs tests/admin-trips.test.mjs tests/text-encoding.test.mjs tests/localized-search.test.mjs tests/maps.test.mjs tests/travel-time.test.mjs tests/payments-reviews.test.mjs tests/payment-history.test.mjs tests/trip-notifications.test.mjs tests/admin-backup.test.mjs",
     "test:business": "node --import ./tests/register.mjs --test tests/business.test.mjs",
     "test:business:browser": "node --test tests/browser-business.test.mjs",
     "test:security": "node --import ./tests/register.mjs --test tests/security.test.mjs",
@@ -19,7 +19,8 @@
     "db:migrate:customer-password": "node scripts/migrate-customer-password-version.mjs",
     "db:business:check": "node scripts/reconcile-business.mjs",
     "db:seed:demo": "node scripts/seed-demo-data.mjs",
-    "db:set-demo-passwords": "node scripts/set-demo-passwords.mjs"
+    "db:set-demo-passwords": "node scripts/set-demo-passwords.mjs",
+    "test:backup": "node --import ./tests/register.mjs --test tests/admin-backup.test.mjs"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.22",

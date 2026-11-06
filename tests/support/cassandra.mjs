@@ -48,7 +48,12 @@ function upsert(table, record, stamp) {
   if (!target) { target = {}; rows.push(target); }
   const time = clocks.get(key) ?? new Map(); clocks.set(key, time);
   for (const [column, value] of Object.entries(record)) {
-    if ((time.get(column) ?? -1) <= stamp) { target[column] = structuredClone(value); time.set(column, stamp); }
+    if ((time.get(column) ?? -1) <= stamp) {
+      // Browser tests use the real driver's scalar wrappers. structuredClone
+      // would strip their prototypes and turn a LocalDate into a plain object.
+      target[column] = ["LocalDate", "LocalTime", "Uuid", "TimeUuid", "BigDecimal", "Long", "Integer"].includes(value?.constructor?.name) ? value.toString() : structuredClone(value);
+      time.set(column, stamp);
+    }
   }
 }
 
@@ -108,7 +113,7 @@ class Client {
       stamp = cql.startsWith("INSERT") ? values.pop() : values.shift();
       cql = cql.replace(" USING TIMESTAMP ?", "");
     }
-    const name = cql.match(/(?:FROM|INTO|UPDATE) (\w+(?:\.\w+)?)/)?.[1];
+    const name = cql.match(/(?:FROM|INTO|UPDATE|TRUNCATE) (\w+(?:\.\w+)?)/)?.[1];
     if (!name) throw new Error(`Unsupported test CQL: ${cql}`);
     if (name === "system.local") return { rows: [{ release_version: "test" }] };
     const rows = tables.get(name) ?? [];
@@ -119,6 +124,13 @@ class Client {
       if (!match) throw new Error(`Unsupported test WHERE: ${part}`);
       return { key: match[1], operator: match[2] };
     }) : [];
+    if (cql.startsWith("TRUNCATE ")) {
+      tables.set(name, []);
+      for (const key of [...clocks.keys()]) if (key.startsWith(`${name}:`)) clocks.delete(key);
+      for (const key of [...tombstones.keys()]) if (key.startsWith(`${name}:`)) tombstones.delete(key);
+      if (fail === "after") throw failure();
+      return { rows: [] };
+    }
     if (cql.startsWith("SELECT ")) {
       if (name === "rideflow_business_journal" && cql.startsWith("SELECT active_operation")) {
         const control = controlRows.get(values[0]);

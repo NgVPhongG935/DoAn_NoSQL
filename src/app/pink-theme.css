@@ -128,7 +128,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 /* Portals */
 .portal-app { background: linear-gradient(135deg, #fff8fb, #fff 42%, #fff5f9); }
-.portal-sidebar { background: linear-gradient(180deg, #4a1835 0%, #681d46 55%, #831843 100%); box-shadow: 8px 0 32px #4a18351f; }
+.portal-sidebar { overflow-y: auto; overscroll-behavior: contain; background: linear-gradient(180deg, #4a1835 0%, #681d46 55%, #831843 100%); box-shadow: 8px 0 32px #4a18351f; }
+.portal-sidebar>.sidebar-nav,.portal-sidebar>.sidebar-bottom { flex-shrink: 0; }
+.portal-sidebar>.sidebar-bottom { padding-top: 18px; }
 .portal-brand .brand-period { color: #f9a8d4; }
 .workspace-label, .sidebar-caption { color: #d8a9c0; }
 .workspace-switch { border-color: #ffffff24; border-radius: 12px; background: #ffffff0c; }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { ArrowDownLeft, BadgeDollarSign, Bell, Bike, CarFront, ChevronDown, CircleHelp, ClipboardList, CreditCard, Gauge, LayoutDashboard, LogOut, Menu, MessageSquareText, Settings2, ShieldCheck, TicketPercent, Users, WalletCards } from "lucide-react";
+import { ArrowDownLeft, BadgeDollarSign, Bell, Bike, CarFront, ChevronDown, CircleHelp, ClipboardList, CreditCard, DatabaseBackup, Gauge, LayoutDashboard, LogOut, Menu, MessageSquareText, Settings2, ShieldCheck, TicketPercent, Users, WalletCards } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Role } from "@/lib/demo-users";
 import { ConnectionIndicator } from "@/components/portal/ConnectionIndicator";
@@ -44,6 +44,7 @@ const menus: Record<Role, NavItem[]> = {
     { label: "Khiếu nại", href: "/admin/complaints", icon: CircleHelp },
     { label: "Thông báo", href: "/admin/notifications", icon: Bell },
     { label: "Báo cáo", href: "/admin/reports", icon: BadgeDollarSign },
+    { label: "Sao lưu & khôi phục", href: "/admin/backup", icon: DatabaseBackup },
   ],
 };
 const workspaceTitle: Record<Role, string> = { CUSTOMER: "Không gian khách hàng", DRIVER: "Không gian tài xế", ADMIN: "Trung tâm điều hành" };
