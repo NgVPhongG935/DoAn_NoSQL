@@ -105,6 +105,17 @@
 .admin-trips-page .empty-state { min-height: 240px; gap: 12px; }
 .admin-trips-page .empty-state h2 { font-size: 15px; }
 .admin-trips-page .empty-state p { font-size: 12px; }
+.trip-pagination-footer { gap: 14px; }
+.trip-pagination-summary { margin-right: auto; }
+.trip-page-size { display: flex; align-items: center; gap: 8px; color: #7d6b78; white-space: nowrap; }
+.trip-page-size select { min-height: 34px; padding: 0 25px 0 9px; border: 1px solid #eadce4; border-radius: 6px; background: #fff; color: #6c4a60; font: inherit; }
+.trip-pagination { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; }
+.trip-pagination button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 32px; min-height: 34px; padding: 5px 9px; border: 1px solid #eddee6; border-radius: 6px; background: #fff; color: #8c5877; font: inherit; cursor: pointer; }
+.trip-pagination button:hover:not(:disabled) { background: #fff0f7; border-color: #dda0be; }
+.trip-pagination button[aria-current="page"] { border-color: #b92d70; background: #b92d70; color: #fff; font-weight: 700; }
+.trip-pagination button:disabled { opacity: .4; cursor: not-allowed; }
+.trip-pagination button:focus-visible,.trip-page-size select:focus-visible { outline: 2px solid #d64c8e; outline-offset: 3px; }
+.trip-pagination-gap { padding: 0 3px; color: #a592a0; }
 @media(max-width:1100px) {
   .admin-overview { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
@@ -126,4 +137,7 @@
   .admin-trips-page .page-heading { align-items: flex-start; flex-direction: column; }
   .trip-history-heading { align-items: stretch; padding: 0 15px 16px; }
   .admin-trips-page .table-search { width: 100%; }
+  .trip-pagination-summary { flex-basis: 100%; }
+  .trip-pagination { width: 100%; justify-content: center; }
+  .trip-pagination button { min-width: 30px; padding: 5px 7px; }
 }
