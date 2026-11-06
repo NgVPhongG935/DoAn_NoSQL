@@ -113,6 +113,20 @@ test("Dashboards, payments and notifications retain distinct rows without React 
     assert.deepEqual(dashboard.charts.status, [{ name: "COMPLETED", value: 2 }]);
     await command("Page.captureScreenshot",{format:"png"}).then(result=>writeFile(path.join(directory,"admin-dashboard.png"),Buffer.from(result.data,"base64")));
 
+    await navigate("/admin/trips", ".admin-trip-id");
+    const tripId=await evaluate("document.querySelector('.admin-trip-id').textContent");
+    assert.match(tripId,/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i);
+    await evaluate("Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.__copiedTripId=value;}}}); document.querySelector('.admin-trip-copy').click()");
+    await poll(()=>evaluate("document.querySelector('.admin-trip-copy').textContent.includes('Đã chép ID')"));
+    assert.equal(await evaluate("window.__copiedTripId"),tripId);
+    await evaluate(`(() => {const input=document.querySelector('input[aria-label="Tìm chuyến đi"]');Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input,${JSON.stringify(tripId)});input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+    await poll(()=>evaluate("document.querySelectorAll('.admin-trip-table tbody tr').length===1"));
+    assert.equal(await evaluate("document.querySelector('.admin-trip-id').textContent"),tripId);
+    await command("Page.captureScreenshot",{format:"png"}).then(result=>writeFile(path.join(directory,"admin-trip-full-id.png"),Buffer.from(result.data,"base64")));
+    await evaluate("navigator.clipboard.writeText=async()=>{throw new Error('Clipboard unavailable')};document.querySelector('.admin-trip-copy').click()");
+    await poll(()=>evaluate("document.querySelector('.data-error')?.textContent.includes('Không thể tự sao chép')"));
+    assert.equal(await evaluate("document.querySelector('.admin-trip-id').textContent"),tripId);
+
     await setRole("CUSTOMER");
     await navigate("/customer/payments", ".data-table tbody tr");
     await poll(()=>evaluate("document.querySelectorAll('.data-table tbody tr').length===4"));
