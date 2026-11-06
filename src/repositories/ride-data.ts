@@ -1,4 +1,5 @@
 import { jsonSafe, query, queryAll } from "@/lib/cassandra";
+import { currentReportMonth } from "@/lib/business-values";
 
 export async function getMonthlyPartition(table: "trips_by_customer" | "trips_by_driver" | "payments_by_customer", id: string, month: string) {
   const owner = table === "trips_by_driver" ? "driver_id" : "customer_id";
@@ -131,20 +132,16 @@ export async function getTripsByStatusAndDate(status: string, date: string, limi
 }
 
 export async function getRecentAdminTrips(month: string, limit?: number) {
-  const [yearText, monthText] = month.split("-");
-  const year = Number(yearText);
-  const monthNumber = Number(monthText);
-  const dayCount = new Date(year, monthNumber, 0).getDate();
-  const statuses = ["BOOKED", "ACCEPTED", "ARRIVING", "IN_PROGRESS", "COMPLETED", "CANCELLED"];
-  const dates = Array.from({ length: dayCount }, (_, index) => {
-    const day = String(index + 1).padStart(2, "0");
-    return `${month}-${day}`;
-  });
-  const results = await Promise.all(
-    statuses.flatMap((status) => dates.map((date) => getTripsByStatusAndDate(status, date, limit))),
-  );
-  const sorted = results.flat().sort((left, right) =>
-    String(right.booked_at).localeCompare(String(left.booked_at)),
+  // Old/imported status projections can retain both BOOKED and COMPLETED for
+  // one trip. Use the authoritative table for lists, counts and chart totals.
+  const trips = await queryAll("SELECT * FROM trips_by_id");
+  const sorted = trips.filter((trip) => {
+    if (!trip.booked_at) return false;
+    const bookedAt = new Date(String(trip.booked_at));
+    return !Number.isNaN(bookedAt.getTime()) && currentReportMonth(bookedAt) === month;
+  }).sort((left, right) =>
+    String(right.booked_at).localeCompare(String(left.booked_at))
+    || String(left.trip_id).localeCompare(String(right.trip_id)),
   );
   return limit === undefined ? sorted : sorted.slice(0, limit);
 }

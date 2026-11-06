@@ -4,6 +4,7 @@ import { getJwtSecret } from "./src/lib/security-config";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["cassandra-driver"],
+  devIndicators: { position: "bottom-right" },
 
 };
 

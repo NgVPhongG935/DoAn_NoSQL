@@ -384,10 +384,47 @@ test("Customer and Driver dashboard month filters use partition time ranges", as
 
 test("Admin month report reads all pages beyond the former 100-trip cutoff", async () => {
   const rows = Array.from({ length: 125 }, (_, n) => ({ trip_id: id(300 + n), customer_id: C1, driver_id: D1, status: "COMPLETED", trip_date: "2026-10-10", booked_at: "2026-10-10T00:00:00.000Z", final_fare: "10000" }));
-  tables.set("trips_by_status", rows); setPageSize(30);
+  tables.set("trips_by_id", rows); setPageSize(30);
   const result = await getRecentAdminTrips("2026-10");
   assert.equal(result.length, 125);
   assert.equal(new Set(result.map((trip) => trip.trip_id)).size, 125);
+});
+
+test("Admin dashboard counts a completed trip once despite a stale BOOKED status copy", async () => {
+  const trip = { trip_id: id(500), customer_id: C1, driver_id: D1, booked_at: "2026-10-10T00:00:00.000Z", status: "COMPLETED", final_fare: "61500" };
+  tables.set("trips_by_id", [trip]);
+  tables.set("trips_by_status", [{ ...trip, status: "BOOKED", trip_date: "2026-10-10" }, { ...trip, trip_date: "2026-10-10" }]);
+  const dashboard = await getAdminDashboard("2026-10");
+  assert.equal(dashboard.trips.length, 1);
+  assert.equal(dashboard.trips[0].status, "COMPLETED");
+  assert.equal(dashboard.stats.tripCount, 1);
+  assert.equal(dashboard.stats.completedTrips, 1);
+  assert.equal(dashboard.stats.revenue, 61500);
+  assert.deepEqual(dashboard.charts.status, [{ name: "COMPLETED", value: 1 }]);
+  assert.equal(businessWrites().length, 0);
+});
+
+test("Admin month reports include missing projections and use Vietnam booking months before limiting", async () => {
+  const trip = { trip_id: id(501), customer_id: C1, driver_id: D1, booked_at: "2026-09-30T17:30:00.000Z", status: "COMPLETED", final_fare: "0" };
+  tables.set("trips_by_id", [trip, { ...trip, trip_id: id(502), booked_at: "2026-10-02T00:00:00.000Z" }, { ...trip, trip_id: id(503), booked_at: "invalid" }]);
+  tables.set("trips_by_status", []);
+  assert.equal((await getRecentAdminTrips("2026-10")).length, 2);
+  assert.deepEqual((await getRecentAdminTrips("2026-10", 1)).map(row => row.trip_id), [id(502)]);
+  assert.deepEqual(await getRecentAdminTrips("2026-09"), []);
+});
+
+test("An old COMPLETED projection cannot override a currently BOOKED trip or inflate revenue", async () => {
+  const trip = { trip_id: id(504), customer_id: C1, driver_id: D1, booked_at: "2026-10-10T00:00:00.000Z", status: "BOOKED", final_fare: "61500" };
+  tables.set("trips_by_id", [trip]);
+  tables.set("trips_by_status", [{ ...trip, trip_date: "2026-10-10" }, { ...trip, status: "COMPLETED", trip_date: "2026-10-10" }]);
+  const dashboard = await getAdminDashboard("2026-10");
+  assert.equal(dashboard.trips.length, 1);
+  assert.equal(dashboard.trips[0].status, "BOOKED");
+  assert.equal(dashboard.stats.tripCount, 1);
+  assert.equal(dashboard.stats.completedTrips, 0);
+  assert.equal(dashboard.stats.revenue, 0);
+  assert.deepEqual(dashboard.charts.status, [{ name: "BOOKED", value: 1 }]);
+  assert.equal(businessWrites().length, 0);
 });
 
 test("Admin vehicle update uses vehicle_id and refuses driver_id or nonexistent rows", async () => {
