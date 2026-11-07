@@ -138,16 +138,16 @@ test("Dashboards, payments and notifications retain distinct rows without React 
     await filter("");
     await poll(()=>evaluate("document.querySelectorAll('.data-table tbody tr').length===4"));
     // A browser in UTC must still display Vietnam time with seconds, retaining
-    // the original milliseconds in machine-readable/hover timestamps for CQL.
+    // the original milliseconds visibly and in machine-readable timestamps for CQL.
     await command("Emulation.setTimezoneOverride", { timezoneId: "UTC" });
     await navigate("/customer/trips/20000000-0000-4000-8000-000000000041", ".timeline time");
     const timeline=await evaluate("[...document.querySelectorAll('.timeline time')].map(node=>({text:node.textContent,iso:node.getAttribute('datetime'),title:node.title}))");
     assert.equal(timeline.length,5);
-    for(const [index,time] of ["07:00:00","07:01:24","07:02:35","07:03:46","07:04:57"].entries()) assert.ok(timeline[index].text.includes(time));
+    for(const [index,time] of ["07:00:00.000","07:01:24.018","07:02:35.092","07:03:46.841","07:04:57.871"].entries()) assert.ok(timeline[index].text.includes(time));
     assert.equal(timeline[1].iso,"2026-10-10T00:01:24.018Z");
     assert.equal(timeline[1].title,timeline[1].iso);
     assert.equal(await evaluate("document.querySelector('.trip-booked-timestamp code').textContent"),"2026-10-10T00:00:00.000Z");
-    assert.ok(await evaluate("document.querySelector('.detail-heading time').textContent.includes('07:00:00')"));
+    assert.ok(await evaluate("document.querySelector('.detail-heading time').textContent.includes('07:00:00.000')"));
     await command("Page.captureScreenshot",{format:"png"}).then(result=>writeFile(path.join(directory,"trip-seconds-desktop.png"),Buffer.from(result.data,"base64")));
     await command("Emulation.setDeviceMetricsOverride",{width:375,height:812,deviceScaleFactor:1,mobile:true});
     assert.equal(await evaluate("document.documentElement.scrollWidth<=innerWidth"),true);
